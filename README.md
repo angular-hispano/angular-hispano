@@ -1,6 +1,6 @@
 # Angular Latino
 
-Para la comunidad de habla hispana de Angular.
+Comunidad Castellano de Angular.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
