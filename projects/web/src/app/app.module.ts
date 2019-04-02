@@ -9,6 +9,13 @@ import {
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Angulartics2Module } from 'angulartics2';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', pathMatch: 'full', component: AppComponent, children: []},
+  {path: '**', component: AppComponent, children: []}
+];
 
 @NgModule({
   declarations: [
@@ -18,6 +25,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(routes, {useHash: false, preloadingStrategy: PreloadAllModules }),
+    Angulartics2Module.forRoot(),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
