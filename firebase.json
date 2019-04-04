@@ -6,7 +6,12 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "appAssociation": "AUTO",
     "rewrites": [
+      {
+        "source": "/enlaces/**",
+        "dynamicLinks": true
+      },
       {
         "source": "**",
         "destination": "/index.html"
