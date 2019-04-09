@@ -70,6 +70,7 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
   }
 }

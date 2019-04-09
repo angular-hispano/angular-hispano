@@ -11,20 +11,28 @@ import {
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Angulartics2Module } from 'angulartics2';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LandingComponent } from './landing/landing.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: AppComponent, children: []},
-  {path: '**', component: AppComponent, children: []}
+  {path: '', pathMatch: 'full', component: LandingComponent, children: []},
+  {path: '**', component: PageNotFoundComponent, children: []}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    LandingComponent,
+    PageNotFoundComponent,
+    TopNavComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     RouterModule.forRoot(routes, {useHash: false, preloadingStrategy: PreloadAllModules }),
     Angulartics2Module.forRoot(),
     LayoutModule,

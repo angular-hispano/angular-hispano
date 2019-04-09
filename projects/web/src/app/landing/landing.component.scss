@@ -1,0 +1,32 @@
+@import "../../theme";
+
+.centrar {
+  text-align: center;
+}
+main {
+  height: calc(100% - 56px);
+
+  section {
+    margin: 16px 28px;
+    max-width: 800px;
+
+    @media (max-width: 350px) {
+      &#call-to-action {
+        flex-direction: column !important;
+
+        a {
+          margin: 8px 0 !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 600px) {
+  main {
+    height: calc(100% - 64px);
+  }
+}
+h1,
+h2 {
+  color: mat-color($app-primary);
+}
