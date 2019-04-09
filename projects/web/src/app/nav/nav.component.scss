@@ -1,3 +1,5 @@
+@import "../../theme";
+
 .sidenav-container {
   height: 100%;
 }
@@ -7,19 +9,6 @@
 .sidenav .mat-toolbar {
   background: inherit;
 }
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-.centrar {
-  text-align: center;
-}
-.container {
-  height: calc(100% - 56px);
-}
-@media (min-width: 600px) {
-  .container {
-    height: calc(100% - 64px);
-  }
+a.active {
+  color: mat-color($app-primary);
 }
