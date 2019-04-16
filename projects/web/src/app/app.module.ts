@@ -1,20 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './nav/nav.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Angulartics2Module } from 'angulartics2';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AngularFireModule } from '@angular/fire';
+
+import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
 import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { TopNavComponent } from './top-nav/top-nav.component';
-import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent, children: []},
@@ -34,6 +36,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     CommonModule,
     RouterModule.forRoot(routes, {useHash: false, preloadingStrategy: PreloadAllModules }),
+    AngularFireModule.initializeApp(environment.firebase),
     Angulartics2Module.forRoot(),
     LayoutModule,
     MatToolbarModule,

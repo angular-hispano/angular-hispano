@@ -8,7 +8,8 @@ import { NavService } from '../nav.service';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor(public navService: NavService) { }
+  constructor(public navService: NavService) {
+  }
 
   ngOnInit() {
   }

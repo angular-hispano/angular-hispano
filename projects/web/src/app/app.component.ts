@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
 import { environment } from '../environments/environment';
+import '../../third-party/performance';
+import { FirebaseApp } from '@angular/fire';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,11 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(angulartics: Angulartics2GoogleGlobalSiteTag) {
+  constructor(private angulartics: Angulartics2GoogleGlobalSiteTag,
+              private firebaseApp: FirebaseApp) {
     if (environment.production) {
+      // @ts-ignore
+      firebaseApp.performance();
       angulartics.startTracking();
     }
   }
