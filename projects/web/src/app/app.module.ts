@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { Angulartics2Module } from 'angulartics2';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirePerformanceModule } from '@angular/fire/performance';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { environment } from '../environments/environment';
 
@@ -30,10 +33,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { MeetupsComponent } from './meetups/meetups.component';
+import { AuthComponent } from './auth/auth.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'acerca' },
   { path: 'acerca', component: LandingComponent, children: [] },
+  { path: 'auth', component: AuthComponent, children: [] },
   { path: 'coc', component: CodeOfConductComponent, children: [] },
   { path: 'conferencias', component: ConferencesComponent, children: [] },
   { path: 'organizar/meetup', component: OrganizeMeetupComponent, children: [] },
@@ -48,6 +53,7 @@ export const routes: Routes = [
     LandingComponent,
     PageNotFoundComponent,
     TopNavComponent,
+    AuthComponent,
     CodeOfConductComponent,
     SponsorsComponent,
     ConferencesComponent,
@@ -67,6 +73,7 @@ export const routes: Routes = [
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirePerformanceModule,
+    NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     Angulartics2Module.forRoot(),
     LayoutModule,
     MatToolbarModule,
