@@ -17,9 +17,12 @@ import { NavComponent } from './nav/nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: LandingComponent, children: []},
+  {path: '', pathMatch: 'full', redirectTo: 'acerca'},
+  {path: 'acerca', component: LandingComponent, children: []},
+  {path: 'coc', component: CodeOfConductComponent, children: []},
   {path: '**', component: PageNotFoundComponent, children: []}
 ];
 
@@ -29,7 +32,8 @@ const routes: Routes = [
     NavComponent,
     LandingComponent,
     PageNotFoundComponent,
-    TopNavComponent
+    TopNavComponent,
+    CodeOfConductComponent
   ],
   imports: [
     BrowserModule,

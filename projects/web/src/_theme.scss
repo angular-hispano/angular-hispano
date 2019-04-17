@@ -31,3 +31,7 @@ $mat-light-theme-background: (
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+$custom-typography: mat-typography-config(
+  $body-1: mat-typography-level(16px, 24px, 400)
+);

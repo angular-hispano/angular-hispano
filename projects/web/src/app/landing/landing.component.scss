@@ -1,14 +1,14 @@
 @import "../../theme";
 
-.centrar {
-  text-align: center;
-}
 main {
-  height: calc(100% - 56px);
+  padding: 32px 22px 80px;
 
   section {
-    margin: 16px 28px;
     max-width: 800px;
+
+    &#call-to-action {
+      padding-top: 24px;
+    }
 
     @media (max-width: 350px) {
       &#call-to-action {
@@ -19,11 +19,6 @@ main {
         }
       }
     }
-  }
-}
-@media (min-width: 600px) {
-  main {
-    height: calc(100% - 64px);
   }
 }
 h1,
