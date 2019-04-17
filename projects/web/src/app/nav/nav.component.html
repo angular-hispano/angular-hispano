@@ -5,7 +5,7 @@
       [opened]="!(navService.isHandset$ | async)">
     <mat-toolbar>Menú</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['']" routerLinkActive="active">
+      <a mat-list-item [routerLink]="['acerca']" routerLinkActive="active">
         <mat-icon matListIcon>group</mat-icon>
         Conócenos
       </a>
@@ -16,6 +16,10 @@
       <a mat-list-item href="https://chat.angular.lat" target="_blank" rel="noopener">
         <mat-icon matListIcon>chat</mat-icon>
         Chatear
+      </a>
+      <a mat-list-item [routerLink]="['coc']" routerLinkActive="active">
+        <mat-icon matListIcon>verified_user</mat-icon>
+        Código de Conducta
       </a>
     </mat-nav-list>
   </mat-sidenav>
