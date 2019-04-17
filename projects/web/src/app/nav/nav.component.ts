@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavService } from '../nav.service';
 import { MatDrawer } from '@angular/material';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements AfterViewInit {
   @ViewChild('drawer') drawer: MatDrawer;
