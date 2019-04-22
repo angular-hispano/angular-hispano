@@ -6,6 +6,15 @@ main {
   section {
     max-width: 800px;
 
+    &#last-section {
+      padding-bottom: 80px;
+      padding-top: 64px;
+
+      li {
+        font-size: 14px;
+      }
+    }
+
     &#call-to-action {
       padding-top: 24px;
     }
@@ -24,4 +33,8 @@ main {
 h1,
 h2 {
   color: mat-color($app-primary);
+}
+
+#sponsors {
+  padding-top: 80px;
 }
