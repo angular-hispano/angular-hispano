@@ -18,6 +18,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'acerca'},
@@ -33,7 +34,8 @@ const routes: Routes = [
     LandingComponent,
     PageNotFoundComponent,
     TopNavComponent,
-    CodeOfConductComponent
+    CodeOfConductComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
