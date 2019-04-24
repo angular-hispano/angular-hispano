@@ -1,10 +1,11 @@
 @import "../../theme";
+@import "../../variables";
 
 main {
   padding: 32px 22px 80px;
 
   section {
-    max-width: 800px;
+    max-width: $section-width;
 
     &#call-to-action {
       padding-top: 24px;
@@ -19,6 +20,9 @@ main {
         }
       }
     }
+  }
+  app-sponsors {
+    padding-top: 80px;
   }
 }
 h1,

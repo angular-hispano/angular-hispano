@@ -3,28 +3,6 @@
 // Take care: this component has ViewEncapsulation.None
 .sidenav-container {
   height: 100%;
-
-  .mat-sidenav-content {
-    overflow: hidden;
-
-    router-outlet ~ * {
-      overflow: auto;
-      height: calc(100% - 56px);
-
-      @media (min-width: 600px) {
-        height: calc(100% - 64px);
-      }
-
-      & > * {
-        overflow: auto;
-        height: calc(100% - 56px);
-
-        @media (min-width: 600px) {
-          height: calc(100% - 64px);
-        }
-      }
-    }
-  }
 }
 .sidenav {
   width: 210px;

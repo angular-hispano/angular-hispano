@@ -11,7 +11,7 @@ $app-accent: mat-palette($mat-red, 700);
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($mat-deep-orange);
 
-// anular el fondo gris con blanco
+// Override the grey background with white
 $mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
   app-bar:    map_get($mat-grey, 100),
