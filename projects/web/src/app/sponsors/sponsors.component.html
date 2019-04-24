@@ -1,10 +1,7 @@
-<h2 id="sponsors">Patrocinadores</h2>
-<section fxLayout="row wrap" fxLayoutAlign="center center"
-fxLayoutGap="16px" id="last-section">
-  <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">
-    <img width="150px" alt="Logo de Google Cloud" src="assets/google-cloud-platform.svg">
-  </a>
-  <a href="https://www.devintent.com/" target="_blank" rel="noopener noreferrer">
-    <img width="150px" alt="Logo de DevIntent" src="assets/DevIntentLogo_40h.png">
+<h2>Patrocinadores</h2>
+<section fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="16px">
+  <a *ngFor="let sponsor of sponsors" [href]="sponsor.url" target="_blank"
+     rel="noopener noreferrer">
+    <img width="150px" [alt]="sponsor.alt" [src]="'assets/' + sponsor.image">
   </a>
 </section>
