@@ -1,6 +1,7 @@
 @import "../../theme";
 
-  h1 {
+  h1,
+  h2 {
     color: mat-color($app-primary);
   }
 
@@ -8,7 +9,11 @@
     max-width: 800px;
 
     &#last-section {
-      padding-bottom:30px;
+      padding-bottom: 30px;
       padding-top: 10px;
     }
+  }
+
+  #sponsors {
+    padding-top: 80px;
   }
