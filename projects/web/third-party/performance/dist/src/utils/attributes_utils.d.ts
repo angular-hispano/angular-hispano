@@ -1,5 +1,6 @@
 /**
- * Copyright 2018 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare enum ServiceWorkerStatus {
+declare const enum ServiceWorkerStatus {
     UNKNOWN = 0,
     UNSUPPORTED = 1,
     CONTROLLED = 2,
@@ -26,7 +27,7 @@ export declare enum VisibilityState {
     PRERENDER = 3,
     UNLOADED = 4
 }
-export declare enum EffectiveConnectionType {
+declare const enum EffectiveConnectionType {
     UNKNOWN = 0,
     CONNECTION_SLOW_2G = 1,
     CONNECTION_2G = 2,
@@ -36,3 +37,4 @@ export declare enum EffectiveConnectionType {
 export declare function getServiceWorkerStatus(): ServiceWorkerStatus;
 export declare function getVisibilityState(): VisibilityState;
 export declare function getEffectiveConnectionType(): EffectiveConnectionType;
+export {};

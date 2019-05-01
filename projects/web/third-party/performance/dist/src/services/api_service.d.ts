@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,29 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare type EntryType = 'mark' | 'measure' | 'paint' | 'resource' | 'frame' | 'navigation';
+declare global {
+    interface Window {
+        PerformanceObserver: typeof PerformanceObserver;
+        perfMetrics?: {
+            onFirstInputDelay: Function;
+        };
+    }
+}
+declare type EntryType = 'mark' | 'measure' | 'paint' | 'resource' | 'frame' | 'navigation';
 /**
  * This class holds a reference to various browser related objects injected by set methods.
  */
 export declare class Api {
-    performance: Performance;
-    PerformanceObserver: any;
-    windowLocation: Location;
+    private performance;
+    /** PreformanceObserver constructor function. */
+    private PerformanceObserver;
+    private windowLocation;
     onFirstInputDelay?: Function;
     localStorage: Storage;
     document: Document;
     navigator: Navigator;
-    constructor();
-    setPerformance(perf: Performance): void;
-    setPerformanceObserver(performanceObserver: any): void;
-    setWindowLocation(location: Location): void;
-    getUrl(): string | undefined;
+    constructor(window?: Window);
+    getUrl(): string;
     mark(name: string): void;
     measure(measureName: string, mark1: string, mark2: string): void;
-    getEntriesByType(type: string): PerformanceEntry[];
+    getEntriesByType(type: EntryType): PerformanceEntry[];
     getEntriesByName(name: string): PerformanceEntry[];
     getTimeOrigin(): number;
-    setupObserver(entryType: any, callback: any): void;
+    setupObserver(entryType: EntryType, callback: (entry: PerformanceEntry) => void): void;
     static getInstance(): Api;
 }
-export declare function setupApi(window: any): void;
+export declare function setupApi(window: Window): void;
+export {};

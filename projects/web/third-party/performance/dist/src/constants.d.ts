@@ -13,13 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare const SDK_VERSION = "${PERF_SDK_VERSION}";
+export declare const SDK_VERSION = "<PERF_SDK_VERSION>";
+/** The prefix for start User Timing marks used for creating Traces. */
 export declare const TRACE_START_MARK_PREFIX = "FB-PERF-TRACE-START";
+/** The prefix for stop User Timing marks used for creating Traces. */
 export declare const TRACE_STOP_MARK_PREFIX = "FB-PERF-TRACE-STOP";
+/** The prefix for User Timing measure used for creating Traces. */
 export declare const TRACE_MEASURE_PREFIX = "FB-PERF-TRACE-MEASURE";
+/** The prefix for out of the box page load Trace name. */
 export declare const OOB_TRACE_PAGE_LOAD_PREFIX = "_wt_";
 export declare const FIRST_PAINT_COUNTER_NAME = "_fp";
 export declare const FIRST_CONTENTFUL_PAINT_COUNTER_NAME = "_fcp";
 export declare const FIRST_INPUT_DELAY_COUNTER_NAME = "_fid";
 export declare const CONFIG_LOCAL_STORAGE_KEY = "@firebase/performance/config";
 export declare const CONFIG_EXPIRY_LOCAL_STORAGE_KEY = "@firebase/performance/configexpire";
+export declare const SERVICE = "performance";
+export declare const SERVICE_NAME = "Performance";

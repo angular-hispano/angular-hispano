@@ -1,24 +1,26 @@
 {
-  "_from": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
-  "_id": "@firebase/performance@0.0.2",
+  "_from": "https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
+  "_id": "@firebase/performance@0.0.3",
   "_inBundle": false,
-  "_integrity": "sha512-JOetHBQuoBFSToC4DIQrI0Yxiz6iqbV++apfkEtaEYF95UlBilhhP2XHtWZzl3EULf1pxR/Okt1O7BmfbhcMYQ==",
+  "_integrity": "sha512-PApeBDub5WsbD5cNuWWgmbhVv+O2ZmgyPcOGbyWMPTP7ma5IA9cEeQ9WiknmOOAhqIOZ7knC4p/tf2tQqFlQhQ==",
   "_location": "/@firebase/performance",
   "_phantomChildren": {},
   "_requested": {
     "type": "remote",
-    "raw": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
-    "rawSpec": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
-    "saveSpec": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
-    "fetchSpec": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz"
+    "raw": "@firebase/performance@https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
+    "name": "@firebase/performance",
+    "escapedName": "@firebase%2fperformance",
+    "scope": "@firebase",
+    "rawSpec": "https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
+    "saveSpec": "https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
+    "fetchSpec": "https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
-  "_shasum": "2d88c82a9c03b826d8b456f4517902cc4f4c7216",
-  "_spec": "https://fireperffw.firebaseapp.com/v002/firebase-performance-0.0.2.tgz",
+  "_resolved": "https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
+  "_shasum": "e108e495b0abd51bb73ec103a36a367a6a415282",
+  "_spec": "@firebase/performance@https://fireperffw.firebaseapp.com/v003/firebase-performance-0.0.3.tgz",
   "_where": "/Users/splaktar/Git/angular-hispano/angular-hispano",
   "author": {
     "name": "Firebase",
@@ -37,6 +39,7 @@
     "@types/chai": "4.1.7",
     "@types/mocha": "5.2.6",
     "@types/sinon": "7.0.10",
+    "@types/sinon-chai": "3.2.2",
     "chai": "4.2.0",
     "karma": "4.0.1",
     "karma-chrome-launcher": "2.2.0",
@@ -55,6 +58,8 @@
     "rollup-plugin-node-resolve": "4.0.1",
     "rollup-plugin-replace": "2.1.1",
     "rollup-plugin-typescript2": "0.20.1",
+    "sinon": "7.3.1",
+    "sinon-chai": "3.3.0",
     "ts-loader": "5.3.3",
     "ts-node": "8.0.3",
     "typescript": "3.3.4000",
@@ -89,8 +94,8 @@
     "prettier": "prettier --write 'src/**/*.js' 'test/**/*.js' 'src/**/*.ts' 'test/**/*.ts'",
     "test": "run-p test:browser",
     "test:browser": "karma start --single-run",
-    "test:node": "nyc --reporter lcovonly -- mocha test/**/*.test.* --compilers ts:ts-node/register --exit"
+    "test:debug": "karma start --browsers=Chrome --auto-watch"
   },
   "typings": "dist/index.d.ts",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

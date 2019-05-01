@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,10 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare class Counter {
-    private value;
-    constructor();
-    incrementCounter(num?: number): void;
-    getCounterValue(): number;
-    putCounter(num: number): void;
-}
+import { LogHandler } from '@firebase/logger';
+/** Log handler for cc service to send the performance logs to the server. */
+export declare function ccHandler(serializer: (...args: any[]) => string): LogHandler;

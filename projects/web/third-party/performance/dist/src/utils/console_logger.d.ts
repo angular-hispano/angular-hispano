@@ -14,5 +14,5 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare function getInitializationPromise(): Promise<void>;
-export declare function isPerfInitialized(): boolean;
+import { Logger } from '@firebase/logger';
+export declare const consoleLogger: Logger;

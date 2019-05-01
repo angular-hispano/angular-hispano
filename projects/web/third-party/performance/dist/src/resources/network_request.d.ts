@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare type HTTP_METHOD = 'GET' | 'PUT' | 'POST' | 'DELETE' | 'HEAD' | 'PATCH' | 'OPTIONS' | 'TRACE' | 'CONNECT' | 'UNKNOWN';
-export declare class NetworkRequest {
-    readonly url: string;
-    readonly httpMethod?: HTTP_METHOD;
-    readonly requestPayloadBytes?: number;
-    readonly responsePayloadBytes?: number;
-    readonly httpResponseCode?: number;
-    readonly responseContentType?: string;
-    readonly startTimeUs?: number;
-    readonly timeToRequestCompletedUs?: number;
-    readonly timeToResponseInitiatedUs?: number;
-    readonly timeToResponseCompletedUs?: number;
-    constructor(url: string, httpMethod?: HTTP_METHOD, requestPayloadBytes?: number, responsePayloadBytes?: number, httpResponseCode?: number, responseContentType?: string, startTimeUs?: number, timeToRequestCompletedUs?: number, timeToResponseInitiatedUs?: number, timeToResponseCompletedUs?: number);
-    static createNetworkRequestEntry(performanceEntry: any): void;
+export declare const enum HttpMethod {
+    HTTP_METHOD_UNKNOWN = 0,
+    GET = 1,
+    PUT = 2,
+    POST = 3,
+    DELETE = 4,
+    HEAD = 5,
+    PATCH = 6,
+    OPTIONS = 7,
+    TRACE = 8,
+    CONNECT = 9
 }
+export interface NetworkRequest {
+    url: string;
+    httpMethod?: HttpMethod;
+    requestPayloadBytes?: number;
+    responsePayloadBytes?: number;
+    httpResponseCode?: number;
+    responseContentType?: string;
+    startTimeUs?: number;
+    timeToRequestCompletedUs?: number;
+    timeToResponseInitiatedUs?: number;
+    timeToResponseCompletedUs?: number;
+}
+export declare function createNetworkRequestEntry(entry: PerformanceEntry): void;

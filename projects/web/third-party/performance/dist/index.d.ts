@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,9 +20,7 @@ import { PerformanceController } from './src/controllers/perf';
 export declare function registerPerformance(instance: FirebaseNamespace): void;
 declare module '@firebase/app-types' {
     interface FirebaseNamespace {
-        performance?: {
-            (app?: FirebaseApp): PerformanceController;
-        };
+        performance?: (app?: FirebaseApp) => PerformanceController;
     }
     interface FirebaseApp {
         performance?(): PerformanceController;

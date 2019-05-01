@@ -14,5 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export declare function getInitializationPromise(): Promise<void>;
-export declare function isPerfInitialized(): boolean;
+import { ErrorFactory } from '@firebase/util';
+export declare const enum ErrorCode {
+    TRACE_STARTED_BEFORE = "trace started",
+    TRACE_STOPPED_BEFORE = "trace stopped",
+    NO_WINDOW = "no window",
+    NO_APP_ID = "no app id",
+    NO_PROJECT_ID = "no project id",
+    NO_API_KEY = "no api key",
+    INVALID_CC_LOG = "invalid cc log",
+    FB_NOT_DEFAULT = "FB not default",
+    RC_NOT_OK = "RC response not ok"
+}
+export declare const ERROR_FACTORY: ErrorFactory<string>;

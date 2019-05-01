@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Counter } from './counter';
-export declare class Trace {
+import { PerformanceTrace } from '@firebase/performance-types';
+export declare class Trace implements PerformanceTrace {
     readonly name: string;
     readonly isAuto: boolean;
     private state;
@@ -22,7 +23,7 @@ export declare class Trace {
     durationUs: number;
     private customAttributes;
     counters: {
-        [counterName: string]: Counter;
+        [counterName: string]: number;
     };
     private api;
     private randomId;
@@ -97,9 +98,6 @@ export declare class Trace {
     getAttributes(): {
         [key: string]: string;
     };
-    getCounters(): {
-        [key: string]: number;
-    };
     private setStartTime;
     private setDuration;
     /**
@@ -107,10 +105,12 @@ export declare class Trace {
      * entry.
      */
     private calculateTraceMetrics;
-    static createOobTrace(eventsTiming: any[], paintTimings: any[], fid?: number): void;
     /**
-     *
-     * @param measureName
+     * @param navigationTimings A single element array which contains the navigationTIming object of
+     * the page load
+     * @param paintTimings A array which contains paintTiming object of the page load
+     * @param firstInputDelay First input delay in millisec
      */
+    static createOobTrace(navigationTimings: PerformanceNavigationTiming[], paintTimings: PerformanceEntry[], firstInputDelay?: number): void;
     static createUserTimingTrace(measureName: string): void;
 }

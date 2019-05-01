@@ -1,5 +1,5 @@
 /**
- * Copyright 2017 Google Inc.
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 import { Trace } from '../resources/trace';
-export declare class PerformanceController {
-    constructor();
+import { FirebaseApp } from '@firebase/app-types';
+import { FirebasePerformance } from '@firebase/performance-types';
+export declare class PerformanceController implements FirebasePerformance {
+    readonly app: FirebaseApp;
+    constructor(app: FirebaseApp);
     trace(name: string): Trace;
     instrumentationEnabled: boolean;
     dataCollectionEnabled: boolean;

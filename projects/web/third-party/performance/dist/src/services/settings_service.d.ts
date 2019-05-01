@@ -1,5 +1,6 @@
 /**
- * Copyright 2018 Google Inc.
+ * @license
+ * Copyright 2019 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { FirebaseApp } from '@firebase/app-types';
 export declare class SettingsService {
     instrumentationEnabled: boolean;
     dataCollectionEnabled: boolean;
@@ -21,18 +23,12 @@ export declare class SettingsService {
     networkRequestsSamplingRate: number;
     logEndPointUrl: string;
     logSource: number;
+    logTraceAfterSampling: boolean;
+    logNetworkAfterSampling: boolean;
     configTimeToLive: number;
-    private appId;
-    private projectId;
-    private apiKey;
-    setAppConfig(config: {}): void;
+    firebaseAppInstance: FirebaseApp;
     getAppId(): string;
     getProjectId(): string;
     getApiKey(): string;
-    getAppConfig(): {
-        appId: string;
-        projectId: string;
-        apiKey: string;
-    };
     static getInstance(): SettingsService;
 }
