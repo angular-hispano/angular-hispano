@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavService } from '../nav.service';
-import { MatDrawer } from '@angular/material';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +9,7 @@ import { MatDrawer } from '@angular/material';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements AfterViewInit {
-  @ViewChild('drawer') drawer: MatDrawer;
+  @ViewChild('drawer', { static: true }) drawer: MatDrawer;
 
   constructor(public navService: NavService) {
   }
