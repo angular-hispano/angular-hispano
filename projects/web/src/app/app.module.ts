@@ -22,11 +22,14 @@ import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { ConferencesComponent } from './conferences/conferences.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'acerca'},
   {path: 'acerca', component: LandingComponent, children: []},
   {path: 'coc', component: CodeOfConductComponent, children: []},
+  {path: 'conferences', component: ConferencesComponent, children: []},
   {path: '**', component: PageNotFoundComponent, children: []}
 ];
 
@@ -38,7 +41,9 @@ const routes: Routes = [
     PageNotFoundComponent,
     TopNavComponent,
     CodeOfConductComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    ConferencesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
