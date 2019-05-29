@@ -21,10 +21,15 @@
         <mat-icon matListIcon>verified_user</mat-icon>
         Código de Conducta
       </a>
+      <a mat-list-item [routerLink]="['conferences']" routerLinkActive="active">
+        <mat-icon matListIcon>group_work</mat-icon>
+        Conferencias
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-top-nav></app-top-nav>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
