@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "angular-latino"
+  },
+  "targets": {
+    "angular-latino": {
+      "hosting": {
+        "web": [
+          "angular-latino"
+        ]
+      }
+    }
   }
 }
