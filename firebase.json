@@ -1,21 +1,24 @@
 {
-  "hosting": {
-    "public": "dist/web",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "appAssociation": "AUTO",
-    "rewrites": [
-      {
-        "source": "/enlaces/**",
-        "dynamicLinks": true
-      },
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "target": "web",
+      "public": "dist/web",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "appAssociation": "AUTO",
+      "rewrites": [
+        {
+          "source": "/enlaces/**",
+          "dynamicLinks": true
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
 }
