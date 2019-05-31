@@ -1,22 +1,21 @@
 @import "../../theme";
 
-.content {
-    margin: 10px 0px 20px 0px;
-    background: #1976d2;
-    color: white;
-    padding: 10px;
-}
+footer {
+  background: mat-color($app-primary, 400);
+  color: $light-primary-text;
+  padding: 64px 16px 48px;
 
-ul {
-    padding: 0px;
-}
+  ul {
+    padding: 0;
+  }
 
-li {
+  li {
     list-style-type: none;
     padding: 5px 0;
-}
+  }
 
-a {
+  a {
     text-decoration: none;
-    color: white; 
+    color: $light-primary-text;
+  }
 }
