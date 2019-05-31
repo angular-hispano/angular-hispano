@@ -1,21 +1,27 @@
 @import "../../theme";
+
 footer {
-    background: mat-color($app-primary, 400);
+  background: mat-color($app-primary, 400);
+  color: $light-primary-text;
+  padding: 64px 16px 48px;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 5px 0;
+  }
+
+  a {
+    text-decoration: none;
     color: $light-primary-text;
-    padding: 64px 16px 48px;
-    ul {
-        padding: 0;
-    }
-    li {
-        list-style-type: none;
-        padding: 5px 0;
-    }
-    a {
-        text-decoration: none;
-        color: $light-primary-text;
-    }
-    a:hover {
-        color: blue;
-        text-decoration: underline;
-    }
+  }
+
+  a:hover,
+  a:focus {
+    color: mat-color($app-primary, 50);
+    text-decoration: underline;
+  }
 }

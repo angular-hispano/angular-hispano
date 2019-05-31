@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Angulartics2Module } from 'angulartics2';
 import { AngularFireModule } from '@angular/fire';
@@ -29,7 +31,7 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'acerca'},
   {path: 'acerca', component: LandingComponent, children: []},
   {path: 'coc', component: CodeOfConductComponent, children: []},
-  {path: 'conferences', component: ConferencesComponent, children: []},
+  {path: 'conferencias', component: ConferencesComponent, children: []},
   {path: '**', component: PageNotFoundComponent, children: []}
 ];
 
@@ -49,7 +51,13 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
-    RouterModule.forRoot(routes, {useHash: false, preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes,
+      {
+        useHash: false,
+        preloadingStrategy: PreloadAllModules,
+        scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled'
+      }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirePerformanceModule,
     Angulartics2Module.forRoot(),
@@ -59,7 +67,9 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
