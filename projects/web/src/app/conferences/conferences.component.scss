@@ -1,8 +1,6 @@
 @import '../../theme';
 
-
 main {
-  
   padding: 32px 22px 80px;
 
   h1,
@@ -11,4 +9,33 @@ main {
     color: mat-color($app-primary);
   }
 
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    a {
+      text-decoration: none;
+
+      .mat-card {
+        width: 212px;
+        height: 364px;
+        margin: 8px;
+        cursor: pointer;
+
+        .mat-card-subtitle {
+          font-size: 14px;
+        }
+
+        .mat-card-image {
+          width: 100%;
+          margin: auto;
+        }
+
+        .mat-card-actions .mat-button {
+          text-transform: uppercase;
+        }
+      }
+    }
   }
+}
