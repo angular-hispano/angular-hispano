@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { NavService } from './nav.service';
+import {NavService} from './nav.service';
 
 describe('NavService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

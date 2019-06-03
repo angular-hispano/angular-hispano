@@ -1,0 +1,11 @@
+{
+  // Lista de extensiones que deben recomendarse para los usuarios de este espacio de trabajo.
+  "recommendations": [
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "xaver.clang-format",
+    "angular.ng-template",
+    "dbaeumer.vscode-eslint",
+    "shinnn.stylelint",
+    "editorconfig.editorconfig"
+  ]
+}

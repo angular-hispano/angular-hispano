@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
-import { environment } from '../environments/environment';
+import {Component} from '@angular/core';
+import {Angulartics2GoogleGlobalSiteTag} from 'angulartics2/gst';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
