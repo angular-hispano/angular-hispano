@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavService } from '../nav.service';
+import {Component, OnInit} from '@angular/core';
+import {NavService} from '../nav.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,11 +7,7 @@ import { NavService } from '../nav.service';
   styleUrls: ['./top-nav.component.scss']
 })
 export class TopNavComponent implements OnInit {
+  constructor(public navService: NavService) {}
 
-  constructor(public navService: NavService) {
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

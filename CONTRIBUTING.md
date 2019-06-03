@@ -10,7 +10,6 @@
 1. Instala [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 1. Configurar GitHub 2FA (sin SMS)
 
-
 ## Aprender git
 
 Te recomendamos que te tomes un tiempo para sentirte cómodo con git antes de contribuir.
@@ -32,18 +31,91 @@ Por favor siga estas guías:
 
 #### WebStorm
 
+Pronto...
 
 #### VSCode
 
-1. Instala [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-
+Por favor mira [.vscode/README.md](.vscode/README.md) para instrucciones.
 
 ### Guía de Commits
 
+Tenemos reglas muy precisas sobre cómo se pueden formatear nuestros mensajes de confirmación de git.
+Esto lleva a **más mensajes legibles** que son fáciles de seguir al mirar a través del
+**historial del proyecto**.
+
+#### <a name="commit-message-format"></a> Commit Message Format
+Cada mensaje de confirmación consta de un **encabezado**, un **cuerpo** y un **pie**.
+El encabezado tiene un especial formato que incluye un **tipo**, un **alcance** y un **tema**:
+
+```html
+<tipo>(<alcance>): <tema>
+<linea en blanco>
+<cuerpo>
+<linea en blanco>
+<pie>
+```
+
+> ¡Cualquier línea del mensaje de confirmación no puede tener más de 100 caracteres!<br/>
+  Esto permite que el mensaje sea más fácil de leer en GitHub así como en varias herramientas de Git.
+
+##### Tipo
+Debe ser uno de los siguientes:
+
+* **build**: Cambios en el proceso de compilación o dependencias utilizadas para la compilación
+* **chore**: Cambios a los herramientas de projecto como scripts, configuración de CI, etc.
+* **docs**: La documentación solo cambia
+* **feat**: Una nueva característica
+* **fix**: Una corrección de errores
+* **perf**: Un cambio de código que mejora el rendimiento
+* **refactor**: Un cambio de código que no corrige un error ni agrega una característica
+* **style**: Cambios que no afectan el significado del código (espacios en blanco, formato, puntos y
+  comas que faltan, etc.)
+* **test**: Añadiendo pruebas faltantes
+
+##### Alcance
+El alcance podría ser cualquier cosa que ayude a especificar el alcance (o característica) que está
+cambiando.
+
+Ejemplos:
+- `feat(conferences): `
+- `fix(landing): `
+
+##### Tema
+El tema contiene una breve descripción del cambio:
+
+* usar el imperativo, tiempo presente: "cambio" no "cambiado" ni "cambios"
+* no escribir en mayúscula la primera letra
+* sin punto (.) al final
+
+##### Body
+Al igual que en el **tema**, usas el imperativo, tiempo presente: "cambio" no "cambiado" ni "cambios"
+El cuerpo debe incluir la motivación para el cambio y contrastarlo con el comportamiento anterior.
+
+##### Pie
+El pie está el lugar para referencia los problemas de GitHub que esta confirmación **Closes**,
+**Fixes** o **Relates to**.
+
+##### Sample Commit messages:
+```text
+feat(conferences): añadir ng-honduras
+
+Hace poco anunciaron sus fechas de conferencia
+
+Fixes #34
+```
+```text
+fix(conferences): no ordenado correctamente
+
+* ordenar conferencias por fecha
+* la próxima conferencia tiene que estar primera
+
+Fixes #78
+```
 
 ### Guía de PRs
 
+Pronto...
 
 #### Revisiones
 
-
+Pronto...
