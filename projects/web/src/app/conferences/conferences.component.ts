@@ -22,7 +22,15 @@ export class ConferencesComponent implements OnInit {
       siteUrl: 'https://ngspain.com/',
       ticketsUrl: undefined,
       cfpUrl: 'https://forms.gle/87xT2jwdQgCKtTcZA'
-    }
+    },
+    {
+      name: 'NG Honduras',
+      logoUrl: 'https://ng-honduras.org/images/logo.svg',
+      dateString: '18 y 19 de octubre, 2019',
+      siteUrl: 'https://ng-honduras.org',
+      ticketsUrl: undefined,
+      cfpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSej6MAID9G4DwH1YEFlEZuJK-5mGV3Tzq729XDh-OdEAR6qgQ/viewform'
+     }
   ];
 
   constructor() {
