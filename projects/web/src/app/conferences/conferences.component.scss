@@ -18,6 +18,9 @@ main {
       text-decoration: none;
 
       .mat-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         width: 212px;
         height: 364px;
         margin: 8px;
@@ -32,8 +35,12 @@ main {
           margin: auto;
         }
 
-        .mat-card-actions .mat-button {
-          text-transform: uppercase;
+        .mat-card-actions {
+          padding: 0;
+
+          .mat-button {
+            text-transform: uppercase;
+          }
         }
       }
     }

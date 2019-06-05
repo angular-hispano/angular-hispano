@@ -9,7 +9,6 @@
             <mat-card-subtitle>{{conference.dateString}}</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image [src]="conference.logoUrl" [alt]="conference.name + ' logo'">
-          <mat-card-content></mat-card-content>
           <mat-card-actions align="end">
             <a mat-button [href]="conference.siteUrl" color="accent">Sitio</a>
             <a mat-button [href]="conference.ticketsUrl" *ngIf="conference.ticketsUrl"
