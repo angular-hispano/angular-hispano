@@ -114,7 +114,12 @@ Fixes #78
 
 ### Guía de PRs
 
-Pronto...
+Por favor asegurate que tú `pull request` cumpla los siguientes lineamientos:
+
+- Crea un `pull request` individual por cada aporte.
+- Sigue las indicaciones dadas en la plantilla de `pulls requests`.
+- Presta mucha atención a tu ortografía.
+- Nuevos aportes o mejoras a lo que ya existe, siempre es bienvenido.
 
 #### Revisiones
 
