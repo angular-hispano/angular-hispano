@@ -9,6 +9,28 @@ h2 {
   color: mat-color($app-primary);
 }
 section {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+  align-items: center;
   max-width: $section-width;
   padding-top: 16px;
+
+  > a {
+    margin: 0 0 32px;
+  }
+  > a:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: 350px) {
+    flex-direction: row;
+
+    > a {
+      margin: 0 16px 0 0;
+    }
+    > a:last-child {
+      margin: 0;
+    }
+  }
 }
