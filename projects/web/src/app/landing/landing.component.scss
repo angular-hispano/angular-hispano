@@ -8,21 +8,35 @@ main {
     max-width: $section-width;
 
     &#call-to-action {
+      display: flex;
+      box-sizing: border-box;
+      flex-flow: column wrap;
+      place-content: center;
       padding-top: 24px;
+
+      > a {
+        margin: 0 0 32px;
+      }
+      > a:last-child {
+        margin: 0;
+      }
     }
 
-    @media (max-width: 350px) {
+    @media (min-width: 350px) {
       &#call-to-action {
-        flex-direction: column !important;
+        flex-direction: row;
 
-        a {
-          margin: 8px 0 !important;
+        > a {
+          margin: 0 32px 0 0;
+        }
+        > a:last-child {
+          margin: 0;
         }
       }
     }
   }
   app-sponsors {
-    padding-top: 80px;
+    padding-top: 40px;
   }
   h1,
   h2 {
