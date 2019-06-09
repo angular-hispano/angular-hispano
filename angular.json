@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/web",
             "index": "projects/web/src/index.html",
             "main": "projects/web/src/main.ts",
