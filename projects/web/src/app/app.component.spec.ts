@@ -1,8 +1,12 @@
 import {async, TestBed} from '@angular/core/testing';
-import {
-  MatCardModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule
-} from '@angular/material';
 import {RouterTestingModule} from '@angular/router/testing';
+import {Angulartics2Module} from 'angulartics2';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 import {routes} from './app.module';
 import {AppComponent} from './app.component';
@@ -15,8 +19,6 @@ import {OrganizeMeetupComponent} from './organize-meetup/organize-meetup.compone
 import {ConferencesComponent} from './conferences/conferences.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
-import {Angulartics2Module} from 'angulartics2';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

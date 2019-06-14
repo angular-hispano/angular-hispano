@@ -1,5 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatIconModule, MatToolbarModule} from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import {TopNavComponent} from './top-nav.component';
 
