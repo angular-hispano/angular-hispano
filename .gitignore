@@ -41,7 +41,8 @@ speed-measure-plugin.json
 yarn-error.log
 testem.log
 /typings
-.firebase
+firebase-debug.log
+.firebase/
 
 # System Files
 .DS_Store
