@@ -4,7 +4,6 @@
     "ms-vscode.vscode-typescript-tslint-plugin",
     "xaver.clang-format",
     "angular.ng-template",
-    "dbaeumer.vscode-eslint",
     "shinnn.stylelint",
     "editorconfig.editorconfig"
   ]
