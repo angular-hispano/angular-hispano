@@ -26,6 +26,8 @@
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/assets",
+              "projects/web/src/robots.txt",
+              "projects/web/src/sitemap.xml",
               {
                 "glob": "**/*",
                 "input": "node_modules/ngx-auth-firebaseui/assets/",
