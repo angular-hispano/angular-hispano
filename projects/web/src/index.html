@@ -13,26 +13,32 @@
   <meta name="description" content="La Comunidad Angular de habla castellana.">
   <meta name="keywords" content="Angular, Comunidad, castellano, desarrollo, web">
   <meta name="author" content="Michael Prentice">
-  <!--Twitter Open Graph-->
+
+  <!--Twitter card metadata-->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@AngularHispana" />
   <meta name="twitter:creator" content="@AngularHispana" />
   <meta name="twitter:title" content="Angular Hispano" />
   <meta name="twitter:description" content="La Comunidad Angular de habla castellana." />
+  <meta name="twitter:image" content="https://angular.lat/assets/site-preview.png">
+
   <!--Facebook Open Graph-->
   <meta property="og:url" content="https://angular.lat/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Angular Hispano" />
+  <meta property="og:site_name" content="Angular Hispano">
+  <meta property="og:locale" content="es_LA">
+  <meta property="fb:admins" content="Splaktar"/>
+  <meta property="fb:pages" content="ComunidadAngularHispano"/>
   <meta property="og:description" content="La Comunidad Angular de habla castellana." />
-  <meta property="og:image" content="assets/angular.png" />
+  <meta property="og:image" content="https://angular.lat/assets/site-preview.png" />
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="150" />
-  <meta property="og:image:height" content="150" />
+  <meta property="og:image:width" content="1220" />
+  <meta property="og:image:height" content="860" />
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,13 +53,19 @@
   <!--Datos Estructurados-->
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
+      "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "https://angular.lat/",
-      "name": "Angular Hispano"
+      "name": "Angular Hispano",
+      "description": "La Comunidad Angular de habla castellana.",
+      "url": "https://angular.lat",
+      "logo": "https://angular.lat/assets/angular.png",
+      "image": "https://angular.lat/assets/site-preview.png",
+      "sameAs": [
+        "https://twitter.com/AngularHispana",
+        "https://www.facebook.com/ComunidadAngularHispano"
+      ]
     }
   </script>
-
 </head>
 <body class="mat-typography">
   <app-root></app-root>
