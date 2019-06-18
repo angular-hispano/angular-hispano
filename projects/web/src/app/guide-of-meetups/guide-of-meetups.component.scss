@@ -1,0 +1,19 @@
+@import '../../theme';
+
+main {
+  padding: 32px 22px 0;
+
+  h1,
+  h2,
+  h3 {
+    color: mat-color($app-primary);
+  }
+
+  section {
+    max-width: 800px;
+
+    &#last-section {
+      padding-bottom: 80px;
+    }
+  }
+}
