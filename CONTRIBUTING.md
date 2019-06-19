@@ -45,7 +45,7 @@ Esto lleva a **más mensajes legibles** que son fáciles de seguir al mirar a tr
 
 #### <a name="commit-message-format"></a> Commit Message Format
 Cada mensaje de confirmación consta de un **encabezado**, un **cuerpo** y un **pie**.
-El encabezado tiene un especial formato que incluye un **tipo**, un **alcance** y un **tema**:
+El encabezado tiene un formato especial que incluye un **tipo**, un **alcance** y un **tema**:
 
 ```html
 <tipo>(<alcance>): <tema>
@@ -62,7 +62,7 @@ El encabezado tiene un especial formato que incluye un **tipo**, un **alcance** 
 Debe ser uno de los siguientes:
 
 * **build**: Cambios en el proceso de compilación o dependencias utilizadas para la compilación
-* **chore**: Cambios a los herramientas de projecto como scripts, configuración de CI, etc.
+* **chore**: Cambios a las herramientas del proyecto como scripts, configuración de CI, etc.
 * **docs**: La documentación solo cambia
 * **feat**: Una nueva característica
 * **fix**: Una corrección de errores
@@ -114,7 +114,12 @@ Fixes #78
 
 ### Guía de PRs
 
-Pronto...
+Por favor asegurate que tú `pull request` cumpla los siguientes lineamientos:
+
+- Crea un `pull request` individual por cada aporte.
+- Sigue las indicaciones dadas en la plantilla de `pulls requests`.
+- Presta mucha atención a tu ortografía.
+- Nuevos aportes o mejoras a lo que ya existe, siempre es bienvenido.
 
 #### Revisiones
 

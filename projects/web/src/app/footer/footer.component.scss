@@ -1,27 +1,39 @@
 @import '../../theme';
 
 footer {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  place-content: center;
   background: mat-color($app-primary, 400);
   color: $light-primary-text;
   padding: 64px 16px 48px;
 
-  ul {
-    padding: 0;
-  }
+  > div {
+    flex-basis: 20%;
+    margin-right: 24px;
 
-  li {
-    list-style-type: none;
-    padding: 5px 0;
-  }
+    ul {
+      padding: 0;
+    }
 
-  a {
-    text-decoration: none;
-    color: $light-primary-text;
-  }
+    li {
+      list-style-type: none;
+      padding: 5px 0;
+    }
 
-  a:hover,
-  a:focus {
-    color: mat-color($app-primary, 50);
-    text-decoration: underline;
+    a {
+      text-decoration: none;
+      color: $light-primary-text;
+
+      &:hover,
+      &:focus {
+        color: mat-color($app-primary, 50);
+        text-decoration: underline;
+      }
+    }
+  }
+  > div:last-child {
+    margin-right: 0;
   }
 }

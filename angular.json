@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": false,
             "outputPath": "dist/web",
             "index": "projects/web/src/index.html",
             "main": "projects/web/src/main.ts",
@@ -25,6 +26,8 @@
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/assets",
+              "projects/web/src/robots.txt",
+              "projects/web/src/sitemap.xml",
               {
                 "glob": "**/*",
                 "input": "node_modules/ngx-auth-firebaseui/assets/",

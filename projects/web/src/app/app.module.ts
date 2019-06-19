@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirePerformanceModule} from '@angular/fire/performance';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -50,7 +49,7 @@ const routes: Routes = [
     }),
     AngularFireModule.initializeApp(environment.firebase), AngularFirePerformanceModule,
     Angulartics2Module.forRoot(), LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule,
-    MatIconModule, MatListModule, FlexLayoutModule, MatCardModule, MatTooltipModule
+    MatIconModule, MatListModule, MatCardModule, MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
