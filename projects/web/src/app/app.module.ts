@@ -23,6 +23,7 @@ import {ConferencesComponent} from './conferences/conferences.component';
 import {FooterComponent} from './footer/footer.component';
 import {LandingComponent} from './landing/landing.component';
 import {NavComponent} from './nav/nav.component';
+import {OrganizeMeetupComponent} from './organize-meetup/organize-meetup.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {TopNavComponent} from './top-nav/top-nav.component';
@@ -32,13 +33,15 @@ const routes: Routes = [
   {path: 'acerca', component: LandingComponent, children: []},
   {path: 'coc', component: CodeOfConductComponent, children: []},
   {path: 'conferencias', component: ConferencesComponent, children: []},
+  {path: 'organizar/meetup', component: OrganizeMeetupComponent, children: []},
   {path: '**', component: PageNotFoundComponent, children: []}
 ];
 
 @NgModule({
   declarations: [
     AppComponent, NavComponent, LandingComponent, PageNotFoundComponent, TopNavComponent,
-    CodeOfConductComponent, SponsorsComponent, ConferencesComponent, FooterComponent
+    CodeOfConductComponent, SponsorsComponent, ConferencesComponent, FooterComponent,
+    OrganizeMeetupComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, CommonModule, RouterModule.forRoot(routes, {
