@@ -14,7 +14,9 @@ export class ConferencesComponent implements OnInit {
       siteUrl: 'https://ng-bolivia.org/',
       ticketsUrl: undefined,
       cfpUrl:
-          'https://docs.google.com/forms/d/e/1FAIpQLSeXyM2y97HYshC8aHAeGOdUOC6Qf2y8yUpyZfNZbB00LtpG_w/viewform?usp=sf_link'
+          'https://docs.google.com/forms/d/e/1FAIpQLSeXyM2y97HYshC8aHAeGOdUOC6Qf2y8yUpyZfNZbB00LtpG_w/viewform?usp=sf_link',
+      country: 'Bolivia',
+      city: 'Cochabamba,'
     },
     {
       name: 'NG Honduras',
@@ -22,7 +24,10 @@ export class ConferencesComponent implements OnInit {
       dateString: '18 y 19 de octubre, 2019',
       siteUrl: 'https://ng-honduras.org',
       ticketsUrl: undefined,
-      cfpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSej6MAID9G4DwH1YEFlEZuJK-5mGV3Tzq729XDh-OdEAR6qgQ/viewform'
+      cfpUrl:
+          'https://docs.google.com/forms/d/e/1FAIpQLSej6MAID9G4DwH1YEFlEZuJK-5mGV3Tzq729XDh-OdEAR6qgQ/viewform',
+      country: 'Honduras',
+      city: 'San Pedro Sula,'
     },
     {
       name: 'ngSpain',
@@ -30,7 +35,9 @@ export class ConferencesComponent implements OnInit {
       dateString: '19 y 20 de octubre, 2019',
       siteUrl: 'https://ngspain.com/',
       ticketsUrl: undefined,
-      cfpUrl: 'https://forms.gle/87xT2jwdQgCKtTcZA'
+      cfpUrl: 'https://forms.gle/87xT2jwdQgCKtTcZA',
+      country: 'España',
+      city: 'Madrid,'
     }
   ];
 

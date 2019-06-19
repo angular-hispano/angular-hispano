@@ -2,19 +2,20 @@
   <h1 class="mat-display-1">Próximas Conferencias</h1>
   <section>
     <ng-container *ngFor="let conference of conferences">
-      <a [href]="conference.siteUrl">
+      <a [href]="conference.siteUrl" rel="noopener" target="_blank">
         <mat-card>
           <mat-card-header>
-            <mat-card-title>{{conference.name}}</mat-card-title>
+            <mat-card-title>{{conference.name }}</mat-card-title>
+            <mat-card-subtitle>{{conference.city}} {{conference.country}}</mat-card-subtitle>
             <mat-card-subtitle>{{conference.dateString}}</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image [src]="conference.logoUrl" [alt]="conference.name + ' logo'">
           <mat-card-actions align="end">
-            <a mat-button [href]="conference.siteUrl" color="accent">Sitio</a>
+            <a mat-button [href]="conference.siteUrl" color="accent" rel="noopener" target="_blank">Sitio</a>
             <a mat-button [href]="conference.ticketsUrl" *ngIf="conference.ticketsUrl"
-               color="accent">Boletas</a>
+            color="accent" rel="noopener" target="_blank">Boletas</a>
             <a mat-button [href]="conference.cfpUrl" *ngIf="conference.cfpUrl"
-               color="accent" matTooltip="Convocatoria Para Presentadores">CFP</a>
+            color="accent" matTooltip="Convocatoria Para Presentadores" rel="noopener" target="_blank">CFP</a>
           </mat-card-actions>
         </mat-card>
       </a>
