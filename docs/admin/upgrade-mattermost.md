@@ -128,6 +128,16 @@ Your current settings are preserved, and new settings are added with default val
   verification is complete. Also let them know about any major new features that may effect them.
 
 
+## Troubleshooting
+
+1. If link preview images fail to load, verify that the `config.json` has the following and not an
+  IP address:
+    - `"SiteURL": "https://chat.angular.lat",`
+1. If emojis render as `????????`, check that the `"SqlSettings"` in `config.json` includes
+  the `utf-8` charset in `"DataSource"`:
+    - `?charset=utf8mb4,utf8`
+
+
 ## Plugins
 
 The prepackaged plugins we use are in these repositories
