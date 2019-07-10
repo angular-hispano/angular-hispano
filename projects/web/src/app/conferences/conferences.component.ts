@@ -13,8 +13,7 @@ export class ConferencesComponent implements OnInit {
       dateString: '23 y 24 de agosto, 2019',
       siteUrl: 'https://ng-bolivia.org/',
       ticketsUrl: undefined,
-      cfpUrl:
-          'https://docs.google.com/forms/d/e/1FAIpQLSeXyM2y97HYshC8aHAeGOdUOC6Qf2y8yUpyZfNZbB00LtpG_w/viewform?usp=sf_link',
+      cfpUrl: '',
       country: 'Bolivia',
       city: 'Cochabamba,'
     },
@@ -35,7 +34,7 @@ export class ConferencesComponent implements OnInit {
       dateString: '19 y 20 de octubre, 2019',
       siteUrl: 'https://ngspain.com/',
       ticketsUrl: undefined,
-      cfpUrl: 'https://forms.gle/87xT2jwdQgCKtTcZA',
+      cfpUrl: '',
       country: 'España',
       city: 'Madrid,'
     }
