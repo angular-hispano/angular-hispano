@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild, ViewEncapsulation} from '@angular/c
 import {MatDrawer} from '@angular/material/sidenav';
 
 import {NavService} from '../nav.service';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav',
@@ -16,5 +17,18 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.navService.drawer = this.drawer;
+  }
+
+  onNavigation() {
+    // Check display size so that we don't close a locked open sidenav on larger displays
+    this.navService.isHandset$.pipe(
+      take(1)
+    ).subscribe((isHandset: boolean) => {
+      // Need to manually close an 'over' mode sidenav, used on mobile,
+      // after the update to @angular/material 8.1.1.
+      if (isHandset) {
+        this.navService.drawer.close();
+      }
+    });
   }
 }

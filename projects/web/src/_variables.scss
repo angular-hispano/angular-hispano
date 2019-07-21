@@ -1,1 +1,13 @@
 $section-width: 800px;
+
+// Breakpoints
+$handset: 360px;
+$large-handset: 480px;
+$x-large-handset: 600px; // sm
+$tablet: 640px; /* app drawer breakpoint */
+$large-tablet: 840px;
+$desktop: 960px; // md
+$large-desktop: 1280px; // lg
+$x-large-desktop: 1440px;
+$xx-large-desktop: 1920px; // xl
+$ultra-hd-desktop: 2560px;

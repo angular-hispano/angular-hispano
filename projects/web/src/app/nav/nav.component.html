@@ -5,7 +5,7 @@
                [mode]="(navService.isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(navService.isHandset$ | async)">
     <mat-toolbar>Menú</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list (click)="onNavigation()">
       <a mat-list-item [routerLink]="['acerca']" routerLinkActive="active">
         <mat-icon matListIcon>group</mat-icon>
         Conócenos
