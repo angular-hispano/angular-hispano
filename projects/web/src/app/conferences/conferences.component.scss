@@ -31,8 +31,10 @@ main {
         }
 
         .mat-card-image {
-          width: 100%;
-          margin: auto;
+          &.svg {
+            width: 100%;
+            margin: auto;
+          }
         }
 
         .mat-card-actions {
