@@ -24,7 +24,7 @@ export class ConferencesComponent implements OnInit {
       logoType: 'png',
       dateString: '23 y 24 de agosto, 2019',
       siteUrl: 'https://ng-bolivia.org/',
-      ticketsUrl: null,
+      ticketsUrl: 'https://ti.to/angular-bolivia/2019/',
       cfpUrl: null,
       country: 'Bolivia',
       city: 'Cochabamba'
