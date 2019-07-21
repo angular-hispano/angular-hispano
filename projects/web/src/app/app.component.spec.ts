@@ -1,12 +1,49 @@
 import {async, TestBed} from '@angular/core/testing';
+import {
+  MatCardModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule
+} from '@angular/material';
+import {RouterTestingModule} from '@angular/router/testing';
 
+import {routes} from './app.module';
 import {AppComponent} from './app.component';
+import {NavComponent} from './nav/nav.component';
+import {TopNavComponent} from './top-nav/top-nav.component';
+import {FooterComponent} from './footer/footer.component';
+import {LandingComponent} from './landing/landing.component';
+import {CodeOfConductComponent} from './code-of-conduct/code-of-conduct.component';
+import {OrganizeMeetupComponent} from './organize-meetup/organize-meetup.component';
+import {ConferencesComponent} from './conferences/conferences.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {SponsorsComponent} from './sponsors/sponsors.component';
+import {Angulartics2Module} from 'angulartics2';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed
         .configureTestingModule({
-          declarations: [AppComponent],
+          imports: [
+            RouterTestingModule.withRoutes(routes),
+            MatSidenavModule,
+            MatToolbarModule,
+            MatIconModule,
+            MatListModule,
+            MatCardModule,
+            Angulartics2Module.forRoot(),
+            NoopAnimationsModule
+          ],
+          declarations: [
+            AppComponent,
+            NavComponent,
+            TopNavComponent,
+            FooterComponent,
+            LandingComponent,
+            CodeOfConductComponent,
+            OrganizeMeetupComponent,
+            ConferencesComponent,
+            PageNotFoundComponent,
+            SponsorsComponent
+          ],
         })
         .compileComponents();
   }));
@@ -17,16 +54,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'web'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('web');
-  });
-
-  it('should render title in a h1 tag', () => {
+  it(`should have an app-nav element'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to web!');
+    expect(compiled.querySelector('app-nav')).toBeTruthy();
   });
 });

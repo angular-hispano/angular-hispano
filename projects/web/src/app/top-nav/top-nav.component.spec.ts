@@ -1,4 +1,5 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {MatIconModule, MatToolbarModule} from '@angular/material';
 
 import {TopNavComponent} from './top-nav.component';
 
@@ -7,7 +8,10 @@ describe('NavSuperiorComponent', () => {
   let fixture: ComponentFixture<TopNavComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [TopNavComponent]}).compileComponents();
+    TestBed.configureTestingModule({
+      imports: [MatIconModule, MatToolbarModule],
+      declarations: [TopNavComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
