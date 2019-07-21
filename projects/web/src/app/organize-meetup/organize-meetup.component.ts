@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-organize-meetups',
+  selector: 'app-organize-meetup',
   templateUrl: './organize-meetup.component.html',
   styleUrls: ['./organize-meetup.component.scss']
 })

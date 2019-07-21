@@ -28,7 +28,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SponsorsComponent} from './sponsors/sponsors.component';
 import {TopNavComponent} from './top-nav/top-nav.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'acerca'},
   {path: 'acerca', component: LandingComponent, children: []},
   {path: 'coc', component: CodeOfConductComponent, children: []},
@@ -44,15 +44,26 @@ const routes: Routes = [
     OrganizeMeetupComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, CommonModule, RouterModule.forRoot(routes, {
+    BrowserModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    RouterModule.forRoot(routes, {
       useHash: false,
       preloadingStrategy: PreloadAllModules,
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled'
     }),
-    AngularFireModule.initializeApp(environment.firebase), AngularFirePerformanceModule,
-    Angulartics2Module.forRoot(), LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule,
-    MatIconModule, MatListModule, MatCardModule, MatTooltipModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirePerformanceModule,
+    Angulartics2Module.forRoot(),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

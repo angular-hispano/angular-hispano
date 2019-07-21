@@ -18,17 +18,17 @@
         <mat-icon matListIcon>chat</mat-icon>
         Chatear
       </a>
+      <a mat-list-item [routerLink]="['coc']" routerLinkActive="active">
+        <mat-icon matListIcon>verified_user</mat-icon>
+        Código de Conducta
+      </a>
       <a mat-list-item [routerLink]="['conferencias']" routerLinkActive="active">
         <mat-icon matListIcon>group_work</mat-icon>
         Conferencias
       </a>
       <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active" >
         <mat-icon matListIcon>event_available</mat-icon>
-        Meetups
-      </a>
-      <a mat-list-item [routerLink]="['coc']" routerLinkActive="active">
-        <mat-icon matListIcon>verified_user</mat-icon>
-        Código de Conducta
+        Guía de Meetups
       </a>
     </mat-nav-list>
   </mat-sidenav>
