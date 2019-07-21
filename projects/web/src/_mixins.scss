@@ -1,0 +1,12 @@
+/*
+ * Sass mixins
+ */
+
+// Generate min-width breakpoint. Mobile first, Preferred!
+@mixin breakpoint($point) {
+  @media (min-width: $point) { @content ; }
+}
+// Generate max-width breakpoint. Use sparingly!
+@mixin breakpoint-max($point) {
+  @media (max-width: $point) { @content ; }
+}

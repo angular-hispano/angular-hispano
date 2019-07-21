@@ -1,4 +1,6 @@
 @import '../../theme';
+@import '../../mixins';
+@import '../../variables';
 
 main {
   padding: 32px 22px 80px;
@@ -11,18 +13,18 @@ main {
 
   section {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 
     a {
       text-decoration: none;
+      width: 100%;
+      max-width: 400px;
 
       .mat-card {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        width: 212px;
-        height: 392px;
         margin: 8px;
         cursor: pointer;
 
@@ -43,6 +45,30 @@ main {
           .mat-button {
             text-transform: uppercase;
           }
+        }
+      }
+    }
+  }
+
+  // Match the Angular Material SideNav's behavior
+  @include breakpoint('601px') {
+    section {
+      align-items: start;
+    }
+  }
+
+  @include breakpoint($large-tablet) {
+    section {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a {
+        width: auto;
+        max-width: none;
+
+        .mat-card {
+          width: 212px;
+          height: 392px;
         }
       }
     }
