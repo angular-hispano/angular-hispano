@@ -11,8 +11,13 @@ main {
 
   section {
     max-width: 800px;
+    padding-top: 32px;
 
-    &#last-section {
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
       padding-bottom: 80px;
     }
   }
