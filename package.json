@@ -5,6 +5,7 @@
     "e2e": "ng e2e",
     "ng": "ng",
     "start": "ng serve",
+    "start:mobile-testing": "ng serve --host 0.0.0.0 --disable-host-check",
     "build": "ng build",
     "build:sm": "ng build --prod --source-map",
     "build:prod": "ng build --prod",
