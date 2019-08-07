@@ -17,12 +17,17 @@
   </url>
   <url>
     <loc>https://angular.lat/conferencias</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://angular.lat/coc</loc>
+    <loc>https://angular.lat/organizar/meetup</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://angular.lat/coc</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 </urlset>
