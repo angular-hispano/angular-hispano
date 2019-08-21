@@ -15,6 +15,7 @@
     "smex": "source-map-explorer",
     "stylelint": "stylelint '**/*.scss' --config .stylelintrc --syntax scss",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "update": "npm-check -u"
   },
   "private": true,
