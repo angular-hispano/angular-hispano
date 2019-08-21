@@ -1,0 +1,97 @@
+version: 2.1
+
+1: &project_path ~/app
+2: &docker_image circleci/node:12.4.0
+3: &docker_image_browsers circleci/node:12.4.0-browsers
+4: &repo_key v1-repository-{{ .Environment.CIRCLE_SHA1 }}
+5: &dep_key v1-dependencies-{{ checksum "package-lock.json" }}
+6: &save_dep_cache
+  save_cache:
+    paths:
+      - node_modules
+    key: *dep_key
+7: &save_repo_cache
+  save_cache:
+    key: *repo_key
+    paths:
+      - *project_path
+
+commands:
+  restore-deps:
+    description: 'Restore dependencies'
+    steps:
+      - restore_cache:
+          keys:
+            - *dep_key
+            - v1-dependencies-
+  restore-repo:
+    steps:
+      - restore_cache:
+          key: *repo_key
+          paths:
+            - *project_path
+
+executors:
+  exc-node:
+    docker:
+      - image: *docker_image
+    working_directory: *project_path
+
+  exc-node-browsers:
+    docker:
+      - image: *docker_image_browsers
+    working_directory: *project_path
+
+jobs:
+  checkout-code:
+    executor: exc-node
+    steps:
+      - checkout
+      - *save_repo_cache
+
+  install-dependencies:
+    executor: exc-node
+    steps:
+      - restore-repo
+      - restore-deps
+      - run: npm ci
+      - *save_dep_cache
+
+  tslint:
+    executor: exc-node
+    steps:
+      - restore-repo
+      - restore-deps
+      - run: npm run lint
+
+  stylelint:
+    executor: exc-node
+    steps:
+      - restore-repo
+      - restore-deps
+      - run: npm run stylelint
+
+  unit-test:
+    executor: exc-node-browsers
+    steps:
+      - restore-repo
+      - restore-deps
+      - run: npm run test:ci
+
+workflows:
+  version: 2
+  build-n-test:
+    jobs:
+      - checkout-code
+      - install-dependencies:
+          requires:
+            - checkout-code
+      - tslint:
+          requires:
+            - install-dependencies
+      - stylelint:
+          requires:
+            - install-dependencies
+      - unit-test:
+          requires:
+            - install-dependencies
