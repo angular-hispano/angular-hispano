@@ -24,8 +24,8 @@ export class ConferencesComponent implements OnInit {
       logoType: 'svg',
       dateString: '18 y 19 de octubre, 2019',
       siteUrl: 'https://ng-honduras.org',
-      ticketsUrl: null,
-      cfpUrl: 'https://angular.lat/enlaces/ng-honduras-cfp',
+      ticketsUrl: 'https://www.eventbrite.es/e/entradas-ng-honduras-2019-62088406094',
+      cfpUrl: null,
       country: 'Honduras',
       city: 'San Pedro Sula'
     },
