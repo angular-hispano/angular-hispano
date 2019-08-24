@@ -1,3 +1,11 @@
+# Configuration file for https://circleci.com/gh/angular-hispano/angular-hispano
+
+# Note: YAML anchors allow an object to be re-used, reducing duplication.
+# The ampersand declares an alias for an object, then later the `<<: *name`
+# syntax dereferences it.
+# See http://blog.daemonl.com/2016/02/yaml.html
+# To validate changes, use an online parser, eg. http://yaml-online-parser.appspot.com/
+
 version: 2.1
 
 1: &project_path ~/app
@@ -8,7 +16,8 @@ version: 2.1
 6: &save_dep_cache
   save_cache:
     paths:
-      - node_modules
+      - "node_modules"
+      - "$HOME/.npm"
     key: *dep_key
 7: &save_repo_cache
   save_cache:
@@ -80,7 +89,7 @@ jobs:
 
 workflows:
   version: 2
-  build-n-test:
+  build_and_test:
     jobs:
       - checkout-code
       - install-dependencies:
