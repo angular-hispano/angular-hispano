@@ -24,8 +24,7 @@ export class NavComponent implements AfterViewInit {
     this.navService.isHandset$.pipe(
       take(1)
     ).subscribe((isHandset: boolean) => {
-      // Need to manually close an 'over' mode sidenav, used on mobile,
-      // after the update to @angular/material 8.1.1.
+      // Need to close an 'over' mode sidenav, used on mobile.
       if (isHandset) {
         this.navService.drawer.close();
       }

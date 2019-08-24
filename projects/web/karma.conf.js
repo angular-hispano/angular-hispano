@@ -5,6 +5,17 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    browsers: ['Chrome', 'Firefox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      },
+      FirefoxHeadless: {
+        base: 'Firefox',
+        flags: ['-headless'],
+      },
+    },
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
@@ -26,7 +37,6 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'Firefox'],
     singleRun: false,
     restartOnFileChange: true
   });
