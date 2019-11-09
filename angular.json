@@ -35,9 +35,7 @@
               },
               "projects/web/src/manifest.webmanifest"
             ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -97,9 +95,7 @@
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "projects/web/karma.conf.js",
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": [],
             "assets": [
               "projects/web/src/favicon.ico",
@@ -111,13 +107,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "deploy": {

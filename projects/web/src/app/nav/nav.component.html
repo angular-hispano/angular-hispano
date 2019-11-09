@@ -1,9 +1,13 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-               [disableClose]="!(navService.isHandset$ | async)"
-               [attr.role]="(navService.isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(navService.isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(navService.isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [disableClose]="!(navService.isHandset$ | async)"
+    [attr.role]="(navService.isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(navService.isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(navService.isHandset$ | async) === false"
+  >
     <mat-toolbar>Menú</mat-toolbar>
     <mat-nav-list (click)="onNavigation()">
       <a mat-list-item [routerLink]="['acerca']" routerLinkActive="active">
@@ -26,7 +30,7 @@
         <mat-icon matListIcon>group_work</mat-icon>
         Conferencias
       </a>
-      <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active" >
+      <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active">
         <mat-icon matListIcon>event_available</mat-icon>
         Guía de Meetups
       </a>

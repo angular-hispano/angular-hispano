@@ -14,11 +14,11 @@ $app-warn: mat-palette($mat-deep-orange);
 // Override the grey background with white
 $mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
-  app-bar:    map_get($mat-grey, 100),
+  app-bar: map_get($mat-grey, 100),
   background: map_get($mat-grey, A100),
-  hover:      rgba(black, 0.04),
-  card:       white,
-  dialog:     white,
+  hover: rgba(black, 0.04),
+  card: white,
+  dialog: white,
   disabled-button: rgba(black, 0.12),
   raised-button: white,
   focused-button: $dark-focused,

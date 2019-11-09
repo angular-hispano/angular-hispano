@@ -1,7 +1,7 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatCardModule} from '@angular/material/card';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 
-import {ConferencesComponent} from './conferences.component';
+import { ConferencesComponent } from './conferences.component';
 
 describe('ConferencesComponent', () => {
   let component: ConferencesComponent;

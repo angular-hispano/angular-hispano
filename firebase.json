@@ -3,11 +3,7 @@
     {
       "target": "web",
       "public": "dist/web",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "appAssociation": "AUTO",
       "rewrites": [
         {

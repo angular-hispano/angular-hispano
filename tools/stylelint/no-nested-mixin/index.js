@@ -2,9 +2,8 @@ const stylelint = require('stylelint');
 
 const ruleName = 'material/no-nested-mixin';
 const messages = stylelint.utils.ruleMessages(ruleName, {
-  expected: () => 'Nested mixins are not allowed.',
+  expected: () => 'Nested mixins are not allowed.'
 });
-
 
 /**
  * Stylelint plugin that prevents nesting Sass mixins.

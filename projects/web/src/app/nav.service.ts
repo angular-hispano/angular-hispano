@@ -1,13 +1,14 @@
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Injectable} from '@angular/core';
-import {MatDrawer} from '@angular/material/sidenav';
-import {Observable} from 'rxjs';
-import {map, shareReplay} from 'rxjs/operators';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Injectable } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class NavService {
   private _drawer: MatDrawer;
-  public isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  public isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()

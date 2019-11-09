@@ -8,8 +8,8 @@ que el equipo Angular recomienda. Son necesarios cuando se trabaja en este repos
 
 Para utilizar la configuración sigas los pasos a continuación:
 
-- Para monstrar las extensiones recomendadas, seleccionas "Extensiones: Mostrar extensiones recomendadas"
- en la [Paleta de comandos](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+- Para mostrar las extensiones recomendadas, seleccionas "Extensiones: Mostrar extensiones recomendadas"
+  en la [Paleta de comandos](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
 - Instalar las extensiones recomendadas de [extensions.json](extensions.json)
 - Reinicie el editor
 

@@ -2,8 +2,8 @@ const stylelint = require('stylelint');
 const path = require('path');
 const ruleName = 'material/no-top-level-ampersand-in-mixin';
 const messages = stylelint.utils.ruleMessages(ruleName, {
-  expected: () => `Selectors starting with an ampersand ` +
-                  `are not allowed inside top-level mixin rules`
+  expected: () =>
+    `Selectors starting with an ampersand ` + `are not allowed inside top-level mixin rules`
 });
 
 /**

@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, ViewChild, ViewEncapsulation} from '@angular/core';
-import {MatDrawer} from '@angular/material/sidenav';
+import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 
-import {NavService} from '../nav.service';
-import {take} from 'rxjs/operators';
+import { NavService } from '../nav.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav',
@@ -11,7 +11,7 @@ import {take} from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements AfterViewInit {
-  @ViewChild('drawer', {static: true}) drawer: MatDrawer;
+  @ViewChild('drawer', { static: true }) drawer: MatDrawer;
 
   constructor(public navService: NavService) {}
 
@@ -21,9 +21,7 @@ export class NavComponent implements AfterViewInit {
 
   onNavigation() {
     // Check display size so that we don't close a locked open sidenav on larger displays
-    this.navService.isHandset$.pipe(
-      take(1)
-    ).subscribe((isHandset: boolean) => {
+    this.navService.isHandset$.pipe(take(1)).subscribe((isHandset: boolean) => {
       // Need to close an 'over' mode sidenav, used on mobile.
       if (isHandset) {
         this.navService.drawer.close();

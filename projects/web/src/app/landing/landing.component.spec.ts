@@ -1,8 +1,8 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatIconModule} from '@angular/material/icon';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material/icon';
 
-import {LandingComponent} from './landing.component';
-import {SponsorsComponent} from '../sponsors/sponsors.component';
+import { LandingComponent } from './landing.component';
+import { SponsorsComponent } from '../sponsors/sponsors.component';
 
 describe('InicioComponent', () => {
   let component: LandingComponent;
@@ -11,10 +11,7 @@ describe('InicioComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [MatIconModule],
-      declarations: [
-        LandingComponent,
-        SponsorsComponent
-      ]
+      declarations: [LandingComponent, SponsorsComponent]
     }).compileComponents();
   }));
 
