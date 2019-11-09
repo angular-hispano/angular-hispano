@@ -5,7 +5,7 @@ const isStandardSyntaxSelector = require('stylelint/lib/utils/isStandardSyntaxSe
 
 const ruleName = 'material/no-ampersand-beyond-selector-start';
 const messages = stylelint.utils.ruleMessages(ruleName, {
-  expected: () => 'Ampersand is only allowed at the beginning of a selector',
+  expected: () => 'Ampersand is only allowed at the beginning of a selector'
 });
 
 /**
@@ -30,8 +30,8 @@ const plugin = stylelint.createPlugin(ruleName, (isEnabled, options) => {
         isStandardSyntaxRule(rule) &&
         isStandardSyntaxSelector(rule.selector) &&
         // Using the ampersand at the beginning is fine, anything else can cause issues in themes.
-        rule.selector.indexOf('&') > 0) {
-
+        rule.selector.indexOf('&') > 0
+      ) {
         const mixinName = getClosestMixinName(rule);
 
         // Skip rules inside private mixins.

@@ -1,13 +1,13 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {OrganizeMeetupComponent} from './organize-meetup.component';
+import { OrganizeMeetupComponent } from './organize-meetup.component';
 
 describe('OrganizeMeetupComponent', () => {
   let component: OrganizeMeetupComponent;
   let fixture: ComponentFixture<OrganizeMeetupComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [OrganizeMeetupComponent]}).compileComponents();
+    TestBed.configureTestingModule({ declarations: [OrganizeMeetupComponent] }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -3,10 +3,10 @@
 ## Prerrequisitos
 
 1. Instala un gestor de versiones de NodeJS
-    - macOS/Linux: usar [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
-    - Windows: usar [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
+   - macOS/Linux: usar [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
+   - Windows: usar [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 1. Instala NodeJS LTS
-    - `nvm install 12`
+   - `nvm install 12`
 1. Instala [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 1. Configurar GitHub 2FA (sin SMS)
 
@@ -18,6 +18,7 @@ Puedes empezar en [castellano](https://learngitbranching.js.org/?locale=es_AR) o
 en [inglés](https://learngitbranching.js.org/?locale=en_US).
 
 ## Configurando Git
+
 Es necesario configurar git correctamente para contribuir.
 
 Por favor siga estas guías:
@@ -44,6 +45,7 @@ Esto lleva a **más mensajes legibles** que son fáciles de seguir al mirar a tr
 **historial del proyecto**.
 
 #### <a name="commit-message-format"></a> Commit Message Format
+
 Cada mensaje de confirmación consta de un **encabezado**, un **cuerpo** y un **pie**.
 El encabezado tiene un formato especial que incluye un **tipo**, un **alcance** y un **tema**:
 
@@ -56,46 +58,53 @@ El encabezado tiene un formato especial que incluye un **tipo**, un **alcance** 
 ```
 
 > ¡Cualquier línea del mensaje de confirmación no puede tener más de 100 caracteres!<br/>
-  Esto permite que el mensaje sea más fácil de leer en GitHub así como en varias herramientas de Git.
+> Esto permite que el mensaje sea más fácil de leer en GitHub así como en varias herramientas de Git.
 
 ##### Tipo
+
 Debe ser uno de los siguientes:
 
-* **build**: Cambios en el proceso de compilación o dependencias utilizadas para la compilación
-* **chore**: Cambios a las herramientas del proyecto como scripts, configuración de CI, etc.
-* **docs**: La documentación solo cambia
-* **feat**: Una nueva característica
-* **fix**: Una corrección de errores
-* **perf**: Un cambio de código que mejora el rendimiento
-* **refactor**: Un cambio de código que no corrige un error ni agrega una característica
-* **style**: Cambios que no afectan el significado del código (espacios en blanco, formato, puntos y
+- **build**: Cambios en el proceso de compilación o dependencias utilizadas para la compilación
+- **chore**: Cambios a las herramientas del proyecto como scripts, configuración de CI, etc.
+- **docs**: La documentación solo cambia
+- **feat**: Una nueva característica
+- **fix**: Una corrección de errores
+- **perf**: Un cambio de código que mejora el rendimiento
+- **refactor**: Un cambio de código que no corrige un error ni agrega una característica
+- **style**: Cambios que no afectan el significado del código (espacios en blanco, formato, puntos y
   comas que faltan, etc.)
-* **test**: Añadiendo pruebas faltantes
+- **test**: Añadiendo pruebas faltantes
 
 ##### Alcance
+
 El alcance podría ser cualquier cosa que ayude a especificar el alcance (o característica) que está
 cambiando.
 
 Ejemplos:
-- `feat(conferences): `
-- `fix(landing): `
+
+- `feat(conferences):`
+- `fix(landing):`
 
 ##### Tema
+
 El tema contiene una breve descripción del cambio:
 
-* usar el imperativo, tiempo presente: "cambio" no "cambiado" ni "cambios"
-* no escribir en mayúscula la primera letra
-* sin punto (.) al final
+- usar el imperativo, tiempo presente: "cambio" no "cambiado" ni "cambios"
+- no escribir en mayúscula la primera letra
+- sin punto (.) al final
 
 ##### Body
+
 Al igual que en el **tema**, usas el imperativo, tiempo presente: "cambio" no "cambiado" ni "cambios"
 El cuerpo debe incluir la motivación para el cambio y contrastarlo con el comportamiento anterior.
 
 ##### Pie
+
 El pie está el lugar para referencia los problemas de GitHub que esta confirmación **Closes**,
 **Fixes** o **Relates to**.
 
 ##### Sample Commit messages:
+
 ```text
 feat(conferences): añadir ng-honduras
 
@@ -103,6 +112,7 @@ Hace poco anunciaron sus fechas de conferencia
 
 Fixes #34
 ```
+
 ```text
 fix(conferences): no ordenado correctamente
 

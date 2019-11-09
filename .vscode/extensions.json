@@ -2,7 +2,7 @@
   // Lista de extensiones que deben recomendarse para los usuarios de este espacio de trabajo.
   "recommendations": [
     "ms-vscode.vscode-typescript-tslint-plugin",
-    "xaver.clang-format",
+    "esbenp.prettier-vscode",
     "angular.ng-template",
     "shinnn.stylelint",
     "editorconfig.editorconfig"

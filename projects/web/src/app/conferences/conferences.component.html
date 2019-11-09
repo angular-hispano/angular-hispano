@@ -5,20 +5,45 @@
       <a [href]="conference.siteUrl" rel="noopener" target="_blank">
         <mat-card>
           <mat-card-header>
-            <mat-card-title>{{conference.name }}</mat-card-title>
-            <mat-card-subtitle>{{conference.city}}, {{conference.country}}</mat-card-subtitle>
-            <mat-card-subtitle>{{conference.dateString}}</mat-card-subtitle>
+            <mat-card-title>{{ conference.name }}</mat-card-title>
+            <mat-card-subtitle>{{ conference.city }}, {{ conference.country }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ conference.dateString }}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image [src]="conference.logoUrl" [alt]="conference.name + ' logo'"
-               [ngClass]="conference.logoType">
+          <img
+            mat-card-image
+            [src]="conference.logoUrl"
+            [alt]="conference.name + ' logo'"
+            [ngClass]="conference.logoType"
+          />
           <mat-card-actions align="end">
-            <a mat-button [href]="conference.siteUrl" *ngIf="conference.siteUrl" color="accent"
-               rel="noopener" target="_blank">Sitio</a>
-            <a mat-button [href]="conference.ticketsUrl" *ngIf="conference.ticketsUrl"
-               color="accent" rel="noopener" target="_blank">Entradas</a>
-            <a mat-button [href]="conference.cfpUrl" *ngIf="conference.cfpUrl"
-               color="accent" matTooltip="Convocatoria Para Presentadores" rel="noopener"
-               target="_blank">CFP</a>
+            <a
+              mat-button
+              [href]="conference.siteUrl"
+              *ngIf="conference.siteUrl"
+              color="accent"
+              rel="noopener"
+              target="_blank"
+              >Sitio</a
+            >
+            <a
+              mat-button
+              [href]="conference.ticketsUrl"
+              *ngIf="conference.ticketsUrl"
+              color="accent"
+              rel="noopener"
+              target="_blank"
+              >Entradas</a
+            >
+            <a
+              mat-button
+              [href]="conference.cfpUrl"
+              *ngIf="conference.cfpUrl"
+              color="accent"
+              matTooltip="Convocatoria Para Presentadores"
+              rel="noopener"
+              target="_blank"
+              >CFP</a
+            >
           </mat-card-actions>
         </mat-card>
       </a>

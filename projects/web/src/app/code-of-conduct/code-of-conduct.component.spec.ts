@@ -1,13 +1,13 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {CodeOfConductComponent} from './code-of-conduct.component';
+import { CodeOfConductComponent } from './code-of-conduct.component';
 
 describe('CodeOfConductComponent', () => {
   let component: CodeOfConductComponent;
   let fixture: ComponentFixture<CodeOfConductComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [CodeOfConductComponent]}).compileComponents();
+    TestBed.configureTestingModule({ declarations: [CodeOfConductComponent] }).compileComponents();
   }));
 
   beforeEach(() => {
