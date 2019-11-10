@@ -13,6 +13,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {ServiceWorkerModule} from '@angular/service-worker';
 import {Angulartics2Module} from 'angulartics2';
 
 import {environment} from '../environments/environment';
@@ -63,7 +64,14 @@ export const routes: Routes = [
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Workaround, debido a que hay un bug con el modulo de AngularFirePerformanceModule
+      // el service worker se va registrar apenas inicie el app
+      // Referencia: https://github.com/angular/angularfire2/issues/2110
+      registrationStrategy: 'registerWithDelay:5000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

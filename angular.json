@@ -32,7 +32,8 @@
                 "glob": "**/*",
                 "input": "node_modules/ngx-auth-firebaseui/assets/",
                 "output": "./assets/"
-              }
+              },
+              "projects/web/src/manifest.webmanifest"
             ],
             "styles": [
               "projects/web/src/styles.scss"
@@ -66,7 +67,9 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/web/ngsw-config.json"
             }
           }
         },
@@ -100,7 +103,8 @@
             "scripts": [],
             "assets": [
               "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
+              "projects/web/src/assets",
+              "projects/web/src/manifest.webmanifest"
             ]
           }
         },
