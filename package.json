@@ -31,6 +31,7 @@
     "@angular/platform-browser": "~9.0.0-next.9",
     "@angular/platform-browser-dynamic": "~9.0.0-next.9",
     "@angular/router": "~9.0.0-next.9",
+    "@angular/service-worker": "~9.0.0-next.9",
     "angulartics2": "^8.1.0",
     "core-js": "^2.6.9",
     "firebase": "^6.4.2",
