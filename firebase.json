@@ -11,7 +11,7 @@
           "dynamicLinks": true
         },
         {
-          "source": "**",
+          "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg|webp|gif))",
           "destination": "/index.html"
         }
       ]

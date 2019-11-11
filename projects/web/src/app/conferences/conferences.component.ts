@@ -20,7 +20,7 @@ export class ConferencesComponent implements OnInit {
     },
     {
       name: 'NG Honduras',
-      logoUrl: 'https://ng-honduras.org/images/logo.svg',
+      logoUrl: 'assets/ng-honduras-logo.svg',
       logoType: 'svg',
       dateString: 'febrero, 2020',
       siteUrl: 'https://ng-honduras.org',
