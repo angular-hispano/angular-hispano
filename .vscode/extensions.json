@@ -1,10 +1,17 @@
 {
   // Lista de extensiones que deben recomendarse para los usuarios de este espacio de trabajo.
   "recommendations": [
-    "ms-vscode.vscode-typescript-tslint-plugin",
-    "esbenp.prettier-vscode",
     "angular.ng-template",
+    "editorconfig.editorconfig",
+    "christian-kohler.path-intellisense",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "firefox-devtools.vscode-firefox-debug",
+    "johnpapa.Angular2",
+    "msjsdiag.debugger-for-chrome",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "nrwl.angular-console",
     "shinnn.stylelint",
-    "editorconfig.editorconfig"
+    "pkief.material-icon-theme"
   ]
 }
