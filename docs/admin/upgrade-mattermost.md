@@ -1,75 +1,75 @@
-# Upgrading Mattermost
+# Actualización de Mattermost
 
-## References
+## Referencias
 
-1. [Upgrading Bitnami Mattermost for GCP](https://docs.bitnami.com/google/apps/mattermost/administration/upgrade/)
-1. [Mattermost Upgrade Guide](https://docs.mattermost.com/administration/upgrade.html)
-1. [Mattermost Release Changelog](https://docs.mattermost.com/administration/changelog.html)
+1. [Actualización de Bitnami Mattermost para GCP](https://docs.bitnami.com/google/apps/mattermost/administration/upgrade/)
+1. [Guía de actualización de Mattermost](https://docs.mattermost.com/administration/upgrade.html)
+1. [Registro de cambios de Mattermost](https://docs.mattermost.com/administration/changelog.html)
 
-## Server Configuration
+## Configuración del servidor
 
-- Existing install directory
+- Directorio de instalación existente
   - `/opt/bitnami/apps/mattermost`
-- Location of your local storage directory
+- Ubicación de su directorio de almacenamiento local
   - `/opt/bitnami/apps/mattermost/data/`
-- Mattermost configuration
+- Configuración de Mattermost
   - `/opt/bitnami/apps/mattermost/server/config/config.json`
-- Nginx configuration
+- Configuración de Nginx
   - `/opt/bitnami/apps/mattermost/conf/mattermost.conf`
 
-## Stop the servers
+## Detener los servidores
 
-1. Warn the [Administración channel](https://chat.angular.lat/default/channels/administracin) as
-   early in the process as possible.
-1. Warn the [General channel](https://chat.angular.lat/default/channels/town-square) that you are
-   taking the server down to perform an upgrade.
+1. Avise al [Canal de Administración](https://chat.angular.lat/default/channels/administracin)
+   como temprano en el proceso como sea posible.
+1. Avise al [Canal general](https://chat.angular.lat/default/channels/town-square)
+   que va a quitar el servidor para realizar una actualización.
 1. `sudo /opt/bitnami/ctlscript.sh stop`
 
-## Backup Files to Google Cloud Storage (GCS)
+## Copia de seguridad de archivos en Google Cloud Storage (GCS)
 
-1. Backup the `config.json`
+1. Haga una copia de seguridad de `config.json`
    ```bash
    gsutil cp /opt/bitnami/apps/mattermost/server/config/config.json gs://angular-latino.appspot.com/mattermost-backups/5.9.0/
    ```
-1. Create a tarball of the full Bitnami Stack (Mattermost, Nginx, MySQL)
+1. Crea un tarball de la pila completa de Bitnami (Mattermost, Nginx, MySQL)
    ```bash
    sudo tar -pczvf ~/mattermost-mysql-nginx-5.9.0-backup.tar.gz /opt/bitnami
    ```
-1. Backup the tarball to GCS
+1. Mueve el tarball a GCS
    ```bash
    gsutil cp mattermost-mysql-nginx-5.9.0-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.9.0/
    ```
 
-## Do the Upgrade
+## Haz la actualización
 
-### Download the latest version of Mattermost
+### Descargue la última versión de Mattermost
 
 - `cd /opt/bitnami/apps/mattermost/`
 - `sudo wget https://releases.mattermost.com/5.12.1/mattermost-team-5.12.1-linux-amd64.tar.gz`
 
-### Remove previous Mattermost files
+### Eliminar archivos anteriores de Mattermost
 
-Ensure they were already backed up in previous steps.
+Asegúrese de que ya estaban respaldados en los pasos anteriores.
 
 - `sudo rm -rf /opt/bitnami/apps/mattermost/server/*`
 
-### Uncompress the new version
+### Descomprime la nueva versión
 
 ```bash
 sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/mattermost/server --strip-components=1
 ```
 
-### Backup the Config and Restore the previous Config
+### Haga una copia de seguridad de la configuración y restaure la configuración anterior
 
-1. Backup the default config
+1. Haga una copia de seguridad de la configuración predeterminada
    ```bash
    sudo mv /opt/bitnami/apps/mattermost/server/config/config.json /opt/bitnami/apps/mattermost/server/config/default.json
    ```
-1. Restore the previous config
+1. Restaurar la configuración anterior
    ```bash
    sudo gsutil cp gs://angular-latino.appspot.com/mattermost-backups/5.9.0/config.json config.json
    ```
-1. Adjust file permissions
+1. Ajustar permisos de archivo
    ```bash
    sudo chown -R root:root /opt/bitnami/apps/mattermost/server
    sudo touch /opt/bitnami/apps/mattermost/server/logs/mattermost.log
@@ -78,73 +78,77 @@ sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/matt
    sudo chown -R bitnami:mattermost /opt/bitnami/apps/mattermost/server/client/
    sudo chmod -R g+w /opt/bitnami/apps/mattermost/server/client/
    ```
-1. Set the `config.json`'s owner to `mattermost` so that the System Console can make changes
+1. Establezca el propietario de `config.json` en`mattermost` para que la consola del sistema pueda
+   realizar cambios
    ```bash
    sudo chown mattermost config.json
    ```
 
-### Restart Mattermost, Nginx, and MySQL
+### Reiniciar Mattermost, Nginx, y MySQL
 
 1. `sudo /opt/bitnami/ctlscript.sh start`
-1. Verify that the "Acerca de Mattermost" page lists the version that you installed
+1. Verifique que la página "Acerca de Mattermost" enumere la versión que instaló
 
-#### Update the `config.json` file to include the fields from the new version
+#### Actualice el archivo `config.json` para incluir los campos de la nueva versión
 
-1. Open the System Console and change a setting, then revert it
-   This should enable the Save button for that page
-1. Click Save
-1. Refresh the page
+1. Abra la consola del sistema y cambie una configuración, luego revísela.
+      Esto debería habilitar el botón Guardar para esa página
+1. Haga clic en Guardar
+1. Actualiza la página
 
-Your current settings are preserved, and new settings are added with default values.
+Su configuración actual se conserva y se agregan nuevas configuraciones con valores predeterminados.
 
-### Clean Up
+### Limpiar
 
-- Remove new version archive
+- Eliminar el archivo de la nueva versión
   ```bash
   sudo rm /opt/bitnami/apps/mattermost/mattermost-team-5.12.1-linux-amd64.tar.gz
   ```
-- After you've verified that the backup was successfully copied to the GCS bucket, delete the local
-  copy of the file
+- Una vez que haya verificado que la copia de seguridad se copió correctamente al depósito de GCS,
+  elimine la copia local del archivo
   ```bash
   rm ~/mattermost-mysql-nginx-5.9.0-backup.tar.gz
   ```
 
-### Test the new version
+### Prueba la nueva versión
 
-1. Review the new `config.json` settings from the new release
-1. Update settings as appropriate
-1. Test out some of the new features mentioned in the
-   [changelog](https://docs.mattermost.com/administration/changelog.html)
-1. Verify that the different clients are working
+1. Revise la nueva configuración `config.json` de la nueva versión
+1. Actualice la configuración según corresponda
+1. Pruebe algunas de las nuevas funciones mencionadas en el
+      [registro de cambios](https://docs.mattermost.com/administration/changelog.html)
+1. Verifique que los diferentes clientes estén trabajando
 
 - Web
-- Desktop
+- Escritorio
 - Android
 - iOS
 
-### Server Up Notifications
+### Notificaciones de servidor activo
 
-1. Let the [Administración channel](https://chat.angular.lat/default/channels/administracin) know
-   when the server is back online. Also let them know about any issues that you ran into or important
-   settings that were changed.
-1. Notify the [General channel](https://chat.angular.lat/default/channels/town-square) when all
-   verification is complete. Also let them know about any major new features that may effect them.
+1. Infórmele al [canal de Administración](https://chat.angular.lat/default/channels/administracin)
+      cuando el servidor vuelve a estar en línea. También hágales saber sobre cualquier problema que
+   haya encontrado o importante ajustes que fueron cambiados.
+1. Notifique el [Canal General](https://chat.angular.lat/default/channels/town-square) cuando todos
+      La verificación está completa. También hágales saber acerca de las principales características
+   nuevas que puedan afectarlos.
 
-## Troubleshooting
+## Solución de problemas
 
-1. If link preview images fail to load, verify that the `config.json` has the following and not an
-   IP address:
-   - `"SiteURL": "https://chat.angular.lat",`
-1. If emojis render as `????????`, check that the `"SqlSettings"` in `config.json` includes
-   the `utf-8` charset in `"DataSource"`:
-   - `?charset=utf8mb4,utf8`
+1. Si las imágenes de vista previa del enlace no se cargan, verifique que `config.json` tenga lo
+   siguiente y no un Dirección IP:
+       - `" SiteURL ":" https://chat.angular.lat ",`
+1. Si los emojis se muestran como `????????`, verifique que el `"" SqlSettings "` en `config.json`
+   incluya el conjunto de caracteres `utf-8` en `"DataSource"`:
+       - `? charset = utf8mb4, utf8`
+1. Si http://chat.angular.lat no se reenvía correctamente, vea la solución en
+      [#80](https://github.com/angular-hispano/angular-hispano/issues/80)
 
-## Plugins
+## Complementos
 
-The prepackaged plugins we use are in these repositories
+Los complementos preempaquetados que utilizamos están en estos repositorios
 
 - [GitHub](https://github.com/mattermost/mattermost-plugin-github/releases)
 - [Matterpoll](https://github.com/matterpoll/matterpoll/releases)
 
-We do not use any non-prepackaged plugins at this time. So no plugin migration or upgrades are
-required outside of the normal Mattermost upgrade process.
+No utilizamos complementos no preempaquetados en este momento. Por lo tanto, no hay migración de
+plugins ni actualizaciones requerido fuera del proceso normal de actualización de Mattermost.
