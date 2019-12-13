@@ -11,12 +11,14 @@ import { take } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements AfterViewInit {
-  @ViewChild('drawer', { static: true }) drawer: MatDrawer;
+  @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
 
   constructor(public navService: NavService) {}
 
   ngAfterViewInit(): void {
-    this.navService.drawer = this.drawer;
+    if (this.drawer) {
+      this.navService.setDrawer(this.drawer);
+    }
   }
 
   onNavigation() {
@@ -24,7 +26,7 @@ export class NavComponent implements AfterViewInit {
     this.navService.isHandset$.pipe(take(1)).subscribe((isHandset: boolean) => {
       // Need to close an 'over' mode sidenav, used on mobile.
       if (isHandset) {
-        this.navService.drawer.close();
+        this.navService.closeDrawer();
       }
     });
   }
