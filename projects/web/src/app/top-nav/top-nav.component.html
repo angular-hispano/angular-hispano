@@ -3,7 +3,7 @@
     type="button"
     aria-label="Toggle sidenav"
     mat-icon-button
-    (click)="navService.drawer.toggle()"
+    (click)="navService.toggleDrawer()"
     *ngIf="navService.isHandset$ | async"
   >
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
