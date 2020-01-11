@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -68,6 +69,7 @@ export const routes: Routes = [
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatSnackBarModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
