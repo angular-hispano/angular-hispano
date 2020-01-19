@@ -19,6 +19,8 @@ import { OrganizeMeetupComponent } from './organize-meetup/organize-meetup.compo
 import { ConferencesComponent } from './conferences/conferences.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -30,8 +32,10 @@ describe('AppComponent', () => {
         MatIconModule,
         MatListModule,
         MatCardModule,
+        MatSnackBarModule,
         Angulartics2Module.forRoot(),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        ServiceWorkerModule.register('', { enabled: false })
       ],
       declarations: [
         AppComponent,
