@@ -12,12 +12,10 @@ export class NavService {
     return this._drawer;
   }
 
-  public isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay(1)
-    );
+  public isHandset: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+    map(result => result.matches),
+    shareReplay(1)
+  );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 

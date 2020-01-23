@@ -3,10 +3,10 @@
     #drawer
     class="sidenav"
     fixedInViewport="true"
-    [disableClose]="!(navService.isHandset$ | async)"
-    [attr.role]="(navService.isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(navService.isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(navService.isHandset$ | async) === false"
+    [disableClose]="!(navService.isHandset | async)"
+    [attr.role]="(navService.isHandset | async) ? 'dialog' : 'navigation'"
+    [mode]="(navService.isHandset | async) ? 'over' : 'side'"
+    [opened]="(navService.isHandset | async) === false"
   >
     <mat-toolbar>Menú</mat-toolbar>
     <mat-nav-list (click)="onNavigation()">

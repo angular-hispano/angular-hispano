@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "extends": ["tslint:recommended", "tslint-config-prettier", "rxjs-tslint-rules"],
   "rulesDirectory": ["codelyzer"],
   "rules": {
     "array-type": false,
@@ -30,6 +30,13 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [true, "single"],
+    "rxjs-no-create": true,
+    "rxjs-no-exposed-subjects": true,
+    "rxjs-no-finnish": true,
+    "rxjs-no-ignored-subscribe": true,
+    "rxjs-no-nested-subscribe": true,
+    "rxjs-no-subject-value": true,
+    "rxjs-no-unsafe-takeuntil": [true, { "options": [{ "allow": [] }] }],
     "trailing-comma": false,
     "no-output-on-prefix": true,
     "no-inputs-metadata-property": true,
@@ -41,6 +48,12 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "ban-types": [
+      true,
+      ["Number", "Use number instead."],
+      ["String", "Use string instead."],
+      ["Boolean", "Use boolean instead."]
+    ]
   }
 }
