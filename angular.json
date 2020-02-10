@@ -41,6 +41,35 @@
             "es5BrowserSupport": true
           },
           "configurations": {
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/web/src/environments/environment.ts",
+                  "with": "projects/web/src/environments/environment.staging.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/web/ngsw-config.json"
+            },
             "production": {
               "fileReplacements": [
                 {

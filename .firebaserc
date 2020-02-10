@@ -1,8 +1,17 @@
 {
   "projects": {
-    "default": "angular-latino"
+    "default": "angular-hispano-staging",
+    "staging": "angular-hispano-staging",
+    "production": "angular-latino"
   },
   "targets": {
+    "angular-hispano-staging": {
+      "hosting": {
+        "web": [
+          "angular-hispano-staging"
+        ]
+      }
+    },
     "angular-latino": {
       "hosting": {
         "web": [
