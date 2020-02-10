@@ -15,6 +15,7 @@ export class AppComponent {
   ) {
     if (environment.production) {
       angulartics.startTracking();
+      this.swUpdateService.checkForUpdate();
     }
   }
 }
