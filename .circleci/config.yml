@@ -66,6 +66,14 @@ jobs:
       - run: npm ci
       - *save_dep_cache
 
+  build-prod:
+    executor: exc-node
+    steps:
+      - restore-repo
+      - restore-deps
+      - run: npm run build:prod
+      - *save_dep_cache
+
   tslint:
     executor: exc-node
     steps:
@@ -95,6 +103,9 @@ workflows:
       - install-dependencies:
           requires:
             - checkout-code
+      - build-prod:
+          requires:
+            - install-dependencies
       - tslint:
           requires:
             - install-dependencies
