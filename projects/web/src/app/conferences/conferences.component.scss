@@ -33,6 +33,9 @@ main {
         }
 
         .mat-card-image {
+          margin: 0 0 16px;
+          width: 100%;
+
           &.svg {
             width: 100%;
             margin: auto;
@@ -69,6 +72,11 @@ main {
         .mat-card {
           width: 212px;
           height: 392px;
+
+          .mat-card-image {
+            margin: 0 0 4px;
+            max-height: 260px;
+          }
         }
       }
     }
