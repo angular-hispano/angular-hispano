@@ -1,0 +1,32 @@
+<main>
+  <h1 class="mat-display-1">Listado de Meetups</h1>
+  <section>
+    <ng-container *ngFor="let meeting of meetings">
+      <a [href]="meeting.meetupUrl" [title]="meeting.name" rel="noopener" target="_blank">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ meeting.name }}</mat-card-title>
+            <mat-card-subtitle>{{ meeting.city }}, {{ meeting.country }}</mat-card-subtitle>
+          </mat-card-header>
+          <img
+            mat-card-image
+            [src]="meeting.logoUrl === null ? 'assets/no_image.jpg' : meeting.logoUrl"
+            [alt]="meeting.name + ' logo'"
+            [ngClass]="meeting.logoType"
+          />
+          <mat-card-actions align="end">
+            <a
+              mat-button
+              [href]="meeting.meetupUrl"
+              *ngIf="meeting.meetupUrl"
+              color="accent"
+              rel="noopener"
+              target="_blank"
+              >Sitio</a
+            >
+          </mat-card-actions>
+        </mat-card>
+      </a>
+    </ng-container>
+  </section>
+</main>

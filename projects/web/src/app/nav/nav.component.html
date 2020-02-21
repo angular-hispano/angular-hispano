@@ -30,10 +30,17 @@
         <mat-icon matListIcon>group_work</mat-icon>
         Conferencias
       </a>
-      <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active">
-        <mat-icon matListIcon>event_available</mat-icon>
-        Guía de Meetups
-      </a>
+      <mat-list>
+        <h3 matSubheader>Meetups</h3>
+        <a mat-list-item [routerLink]="['listado/meetup']" routerLinkActive="active">
+          <mat-icon matListIcon>list_alt</mat-icon>
+          Listado
+        </a>
+        <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active">
+          <mat-icon matListIcon>event_available</mat-icon>
+          Guía para organizar
+        </a>
+      </mat-list>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
