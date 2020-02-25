@@ -39,6 +39,14 @@ export class MeetupsListComponent implements OnInit {
       logoUrl: 'assets/meetups/angular-bog.jpg',
       logoType: 'jpg',
       meetupUrl: 'https://www.meetup.com/es-ES/Angular-Bogota/'
+    },
+    {
+      name: 'Angular Quito',
+      city: 'Quito',
+      country: 'Ecuador',
+      logoUrl: 'assets/meetups/angular-quito.png',
+      logoType: 'png',
+      meetupUrl: 'https://www.meetup.com/es/angularQuito/'
     }
   ];
   constructor() {}
