@@ -11,7 +11,7 @@
     "msjsdiag.debugger-for-chrome",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "nrwl.angular-console",
-    "shinnn.stylelint",
+    "stylelint.vscode-stylelint",
     "pkief.material-icon-theme"
   ]
 }
