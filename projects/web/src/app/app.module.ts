@@ -29,14 +29,15 @@ import { OrganizeMeetupComponent } from './organize-meetup/organize-meetup.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
-import { MeetupsListComponent } from './meetups-list/meetups-list.component';
+import { MeetupsComponent } from './meetups/meetups.component';
+
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'acerca' },
   { path: 'acerca', component: LandingComponent, children: [] },
   { path: 'coc', component: CodeOfConductComponent, children: [] },
   { path: 'conferencias', component: ConferencesComponent, children: [] },
   { path: 'organizar/meetup', component: OrganizeMeetupComponent, children: [] },
-  { path: 'listado/meetup', component: MeetupsListComponent, children: [] },
+  { path: 'meetups', component: MeetupsComponent, children: [] },
   { path: '**', component: PageNotFoundComponent, children: [] }
 ];
 
@@ -52,7 +53,7 @@ export const routes: Routes = [
     ConferencesComponent,
     FooterComponent,
     OrganizeMeetupComponent,
-    MeetupsListComponent
+    MeetupsComponent
   ],
   imports: [
     BrowserModule,
