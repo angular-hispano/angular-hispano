@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Meeting } from './meeting';
+import { Meetup } from './meetup';
 
 @Component({
-  selector: 'app-meetups-list',
-  templateUrl: './meetups-list.component.html',
-  styleUrls: ['./meetups-list.component.scss']
+  selector: 'app-meetups',
+  templateUrl: './meetups.component.html',
+  styleUrls: ['./meetups.component.scss']
 })
-export class MeetupsListComponent implements OnInit {
-  meetings: Meeting[] = [
+export class MeetupsComponent implements OnInit {
+  meetings: Meetup[] = [
     {
       name: 'NG-BAIRES',
       city: 'Buenos Aires',

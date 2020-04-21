@@ -1,4 +1,4 @@
-export interface Meeting {
+export interface Meetup {
   name: string;
   city: string;
   country: string;
