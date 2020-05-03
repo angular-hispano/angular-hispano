@@ -9,18 +9,10 @@ import { Meetup } from './meetup';
 export class MeetupsComponent implements OnInit {
   meetings: Meetup[] = [
     {
-      name: 'NG-BAIRES',
-      city: 'Buenos Aires',
-      country: 'Argentina',
-      logoUrl: null,
-      logoType: 'png',
-      meetupUrl: 'https://www.meetup.com/es-ES/NG-BAIRES/'
-    },
-    {
       name: 'She Codes Angular',
       city: 'Medellín',
       country: 'Colombia',
-      logoUrl: null,
+      logoUrl: 'assets/meetups/she-codes-angular.jpg',
       logoType: 'png',
       meetupUrl: 'http://meetu.ps/c/4c8yM/bykrj/d'
     },
@@ -47,6 +39,14 @@ export class MeetupsComponent implements OnInit {
       logoUrl: 'assets/meetups/angular-quito.png',
       logoType: 'png',
       meetupUrl: 'https://www.meetup.com/es/angularQuito/'
+    },
+    {
+      name: 'NG-BAIRES',
+      city: 'Buenos Aires',
+      country: 'Argentina',
+      logoUrl: 'assets/meetups/ng-baires.png',
+      logoType: 'png',
+      meetupUrl: 'https://twitter.com/ngbaires'
     }
   ];
   constructor() {}
