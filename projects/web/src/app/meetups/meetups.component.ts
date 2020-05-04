@@ -47,6 +47,14 @@ export class MeetupsComponent implements OnInit {
       logoUrl: 'assets/meetups/angular-quito.png',
       logoType: 'png',
       meetupUrl: 'https://www.meetup.com/es/angularQuito/'
+    },
+    {
+      name: 'Angular Dominicana',
+      city: 'Santo Domingo',
+      country: 'República Dominicana',
+      logoUrl: 'assets/meetups/ng-dominican.svg',
+      logoType: 'svg',
+      meetupUrl: 'https://www.twitter.com/ngdominican'
     }
   ];
   constructor() {}
