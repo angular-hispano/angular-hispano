@@ -1,6 +1,6 @@
 # Angular Hispano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
@@ -46,6 +46,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/maleja111"><img src="https://avatars3.githubusercontent.com/u/6992488?v=4" width="100px;" alt=""/><br /><sub><b>maleja111</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3Amaleja111" title="Reviewed Pull Requests">👀</a> <a href="#ideas-maleja111" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-maleja111" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/mahcr"><img src="https://avatars2.githubusercontent.com/u/16544451?v=4" width="100px;" alt=""/><br /><sub><b>Mariano Alvarez</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3Amahcr" title="Reviewed Pull Requests">👀</a> <a href="#translation-mahcr" title="Translation">🌍</a></td>
     <td align="center"><a href="https://julianduque.co"><img src="https://avatars3.githubusercontent.com/u/733877?v=4" width="100px;" alt=""/><br /><sub><b>Julián Duque</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3Ajulianduque" title="Reviewed Pull Requests">👀</a> <a href="#translation-julianduque" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.DevIntent.com"><img src="https://avatars1.githubusercontent.com/u/3506071?v=4" width="100px;" alt=""/><br /><sub><b>Michael Prentice</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3ASplaktar" title="Reviewed Pull Requests">👀</a> <a href="#ideas-Splaktar" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-Splaktar" title="Translation">🌍</a></td>
   </tr>
 </table>
 
