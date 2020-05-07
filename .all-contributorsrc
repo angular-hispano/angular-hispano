@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Villanuevand",
+      "name": "Andrés Villanueva",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1209238?v=4",
+      "profile": "http://www.andresvillanueva.com.ve",
+      "contributions": [
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "angular-hispano",
+  "projectOwner": "angular-hispano",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
