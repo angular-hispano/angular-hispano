@@ -14,6 +14,7 @@
     "deploy:prod": "npm run build:prod && firebase use production && firebase deploy --only hosting",
     "format": "npm run prettier",
     "prettier": "prettier --write \"**/*.{js,json,css,scss,md,ts,html,component.html}\"",
+    "postinstall": "ngcc --async false --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "lint": "ng lint",
     "smex": "source-map-explorer",
     "stylelint": "stylelint '**/*.scss' --config .stylelintrc --syntax scss",
