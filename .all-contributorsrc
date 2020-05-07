@@ -88,7 +88,14 @@
         "ideas",
         "translation",
         "code",
-        "design"
+        "design",
+        "projectManagement",
+        "maintenance",
+        "infra",
+        "doc",
+        "content",
+        "bug",
+        "a11y"
       ]
     },
     {
