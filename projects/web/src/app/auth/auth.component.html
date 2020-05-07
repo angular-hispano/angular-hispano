@@ -1,2 +1,33 @@
-<ngx-auth-firebaseui [providers]="[providers.Google]" (onSuccess)="onSuccess($event)">
-</ngx-auth-firebaseui>
+<main class="auth-container">
+  <ngx-auth-firebaseui
+    [providers]="[providers.Google]"
+    (onSuccess)="onSuccess($event)"
+    [signInTabText]="'ngxauthfirebaseui.signInTabText'"
+    [signInCardTitleText]="'ngxauthfirebaseui.signInCardTitleText'"
+    [loginButtonText]="'ngxauthfirebaseui.loginButtonText'"
+    [forgotPasswordButtonText]="'ngxauthfirebaseui.forgotPasswordButtonText'"
+    [nameText]="'ngxauthfirebaseui.nameText'"
+    [nameErrorRequiredText]="'ngxauthfirebaseui.nameErrorRequiredText'"
+    [nameErrorMinLengthText]="'ngxauthfirebaseui.nameErrorMinLengthText'"
+    [nameErrorMaxLengthText]="'ngxauthfirebaseui.nameErrorMaxLengthText'"
+    [emailText]="'ngxauthfirebaseui.emailText'"
+    [emailErrorRequiredText]="'ngxauthfirebaseui.emailErrorRequiredText'"
+    [emailErrorPatternText]="'ngxauthfirebaseui.emailErrorPatternText'"
+    [passwordText]="'ngxauthfirebaseui.passwordText'"
+    [passwordErrorRequiredText]="'ngxauthfirebaseui.passwordErrorRequiredText'"
+    [registerTabText]="'ngxauthfirebaseui.registerTabText'"
+    [registerCardTitleText]="'ngxauthfirebaseui.registerCardTitleText'"
+    [registerButtonText]="'ngxauthfirebaseui.registerButtonText'"
+    [guestButtonText]="'ngxauthfirebaseui.guestButtonText'"
+    [resetPasswordTabText]="'ngxauthfirebaseui.resetPasswordTabText'"
+    [resetPasswordInputText]="'ngxauthfirebaseui.resetPasswordInputText'"
+    [resetPasswordErrorRequiredText]="'ngxauthfirebaseui.resetPasswordErrorRequiredText'"
+    [resetPasswordErrorPatternText]="'ngxauthfirebaseui.resetPasswordErrorPatternText'"
+    [resetPasswordActionButtonText]="'ngxauthfirebaseui.resetPasswordActionButtonText'"
+    [resetPasswordInstructionsText]="'ngxauthfirebaseui.resetPasswordInstructionsText'"
+    [emailConfirmationTitle]="'ngxauthfirebaseui.emailConfirmationTitle'"
+    [emailConfirmationText]="'ngxauthfirebaseui.emailConfirmationText'"
+  >
+  </ngx-auth-firebaseui>
+  <mat-divider></mat-divider>
+</main>

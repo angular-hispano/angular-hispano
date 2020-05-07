@@ -11,12 +11,11 @@ import { Router } from '@angular/router';
 export class AuthComponent implements OnInit {
   providers = AuthProvider;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  onSuccess(event) {
+  onSuccess(event: any) {
     this.router.navigate(['/']);
   }
 }

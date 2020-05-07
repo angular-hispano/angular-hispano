@@ -1,6 +1,14 @@
 // Take care: this component has ViewEncapsulation.None
-ngx-auth-firebaseui {
-  mat-icon {
-    vertical-align: middle !important;
+main.auth-container {
+  max-width: 800px;
+  margin-bottom: 64px;
+
+  ngx-auth-firebaseui {
+    display: block;
+    border-right: rgba(0, 0, 0, 0.12) solid 1px;
+
+    mat-icon {
+      vertical-align: middle !important;
+    }
   }
 }
