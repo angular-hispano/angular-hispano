@@ -135,6 +135,15 @@
         "review",
         "userTesting"
       ]
+    },
+    {
+      "login": "Cristian-Hernandez",
+      "name": "Chernan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32974460?v=4",
+      "profile": "https://github.com/Cristian-Hernandez",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
