@@ -34,9 +34,9 @@ Este es un trabajo de amor y todos los colaboradores son voluntarios que pasan s
 libre ayudando a otros.
 ([traducir los emojis](https://allcontributors.org/docs/en/emoji-key))
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <table>
   <tr>
     <td align="center"><a href="http://www.andresvillanueva.com.ve"><img src="https://avatars3.githubusercontent.com/u/1209238?v=4" width="100px;" alt=""/><br /><sub><b>Andrés Villanueva</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AVillanuevand" title="Reviewed Pull Requests">👀</a> <a href="#ideas-Villanuevand" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-Villanuevand" title="Answering Questions">💬</a> <a href="#translation-Villanuevand" title="Translation">🌍</a> <a href="https://github.com/angular-hispano/angular-hispano/commits?author=Villanuevand" title="Code">💻</a> <a href="#design-Villanuevand" title="Design">🎨</a> <a href="https://github.com/angular-hispano/angular-hispano/issues?q=author%3AVillanuevand" title="Bug reports">🐛</a></td>
@@ -64,10 +64,9 @@ libre ayudando a otros.
   </tr>
 </table>
 
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Este proyecto sigue la especificación
 [all-contributors](https://github.com/all-contributors/all-contributors).
