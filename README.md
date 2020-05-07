@@ -1,7 +1,10 @@
 # Angular Hispano
+
+<!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- prettier-ignore-end -->
 
 La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
 
@@ -15,12 +18,6 @@ a este proyecto.
 Todas las interacciones con este repositorio y los miembros de Angular Hispano están protegidas por
 nuestro [Código de Conducta](CODE_OF_CONDUCT.md).
 
-## Contribuyentes
-
-Muchas gracias a [los colaboradores](https://github.com/angular-hispano/angular-hispano/graphs/contributors)
-de código abierto que han hecho posible este proyecto. Este es un trabajo de amor y todos los colaboradores
-son voluntarios que pasan su tiempo libre ayudando a otros.
-
 ## Licencia
 
 [MIT](LICENSE)
@@ -30,9 +27,12 @@ son voluntarios que pasan su tiempo libre ayudando a otros.
 - [Google Cloud Platform](https://cloud.google.com/)
 - [DevIntent](https://www.devintent.com/)
 
-## Contributors ✨
+## Contribuyentes ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Muchas gracias a los colaboradores de código abierto que han hecho posible este proyecto.
+Este es un trabajo de amor y todos los colaboradores son voluntarios que pasan su tiempo
+libre ayudando a otros.
+([traducir los emojis](https://allcontributors.org/docs/en/emoji-key))
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -66,6 +66,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Este proyecto sigue la especificación
+[all-contributors](https://github.com/all-contributors/all-contributors).
+¡Contribuciones de cualquier tipo bienvenidas!

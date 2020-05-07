@@ -4,6 +4,7 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "commitConvention": 'angular',
   "contributors": [
     {
       "login": "Villanuevand",
@@ -209,7 +210,7 @@
       ]
     }
   ],
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 5,
   "projectName": "angular-hispano",
   "projectOwner": "angular-hispano",
   "repoType": "github",
