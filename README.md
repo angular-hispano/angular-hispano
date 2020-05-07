@@ -1,6 +1,6 @@
 # Angular Hispano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
@@ -50,6 +50,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.DevIntent.com"><img src="https://avatars1.githubusercontent.com/u/3506071?v=4" width="100px;" alt=""/><br /><sub><b>Michael Prentice</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3ASplaktar" title="Reviewed Pull Requests">👀</a> <a href="#ideas-Splaktar" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-Splaktar" title="Translation">🌍</a> <a href="https://github.com/angular-hispano/angular-hispano/commits?author=Splaktar" title="Code">💻</a> <a href="#design-Splaktar" title="Design">🎨</a> <a href="#projectManagement-Splaktar" title="Project Management">📆</a> <a href="#maintenance-Splaktar" title="Maintenance">🚧</a> <a href="#infra-Splaktar" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/angular-hispano/angular-hispano/commits?author=Splaktar" title="Documentation">📖</a> <a href="#content-Splaktar" title="Content">🖋</a> <a href="https://github.com/angular-hispano/angular-hispano/issues?q=author%3ASplaktar" title="Bug reports">🐛</a> <a href="#a11y-Splaktar" title="Accessibility">️️️️♿️</a></td>
     <td align="center"><a href="https://github.com/AXEL1988"><img src="https://avatars2.githubusercontent.com/u/24749008?v=4" width="100px;" alt=""/><br /><sub><b>Edison Fernández</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/commits?author=AXEL1988" title="Code">💻</a> <a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AAXEL1988" title="Reviewed Pull Requests">👀</a> <a href="#design-AXEL1988" title="Design">🎨</a> <a href="#maintenance-AXEL1988" title="Maintenance">🚧</a> <a href="#content-AXEL1988" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.brolag.com/"><img src="https://avatars0.githubusercontent.com/u/1393385?v=4" width="100px;" alt=""/><br /><sub><b>Alfredo Bonilla</b></sub></a><br /><a href="#content-brolag" title="Content">🖋</a></td>
   </tr>
 </table>
 
