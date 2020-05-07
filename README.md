@@ -1,6 +1,6 @@
 # Angular Hispano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
@@ -52,6 +52,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/AXEL1988"><img src="https://avatars2.githubusercontent.com/u/24749008?v=4" width="100px;" alt=""/><br /><sub><b>Edison Fernández</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/commits?author=AXEL1988" title="Code">💻</a> <a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AAXEL1988" title="Reviewed Pull Requests">👀</a> <a href="#design-AXEL1988" title="Design">🎨</a> <a href="#maintenance-AXEL1988" title="Maintenance">🚧</a> <a href="#content-AXEL1988" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.brolag.com/"><img src="https://avatars0.githubusercontent.com/u/1393385?v=4" width="100px;" alt=""/><br /><sub><b>Alfredo Bonilla</b></sub></a><br /><a href="#content-brolag" title="Content">🖋</a></td>
     <td align="center"><a href="https://luisreinoso.github.io"><img src="https://avatars0.githubusercontent.com/u/7484215?v=4" width="100px;" alt=""/><br /><sub><b>Luis Reinoso</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3ALuisReinoso" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-LuisReinoso" title="User Testing">📓</a></td>
+    <td align="center"><a href="https://github.com/MahR"><img src="https://avatars0.githubusercontent.com/u/8479466?v=4" width="100px;" alt=""/><br /><sub><b>mahr</b></sub></a><br /><a href="#ideas-mahr" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
