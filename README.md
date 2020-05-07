@@ -70,4 +70,4 @@ libre ayudando a otros.
 
 Este proyecto sigue la especificación
 [all-contributors](https://github.com/all-contributors/all-contributors).
-¡Contribuciones de cualquier tipo bienvenidas!
+¡Contribuciones de cualquier tipo son bienvenidas!
