@@ -164,6 +164,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "CarlosAngulo",
+      "name": "Carlos Angulo",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9832291?v=4",
+      "profile": "https://github.com/CarlosAngulo",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
