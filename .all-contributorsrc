@@ -110,6 +110,15 @@
         "maintenance",
         "content"
       ]
+    },
+    {
+      "login": "brolag",
+      "name": "Alfredo Bonilla",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1393385?v=4",
+      "profile": "https://www.brolag.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
