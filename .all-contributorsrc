@@ -123,6 +123,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "LuisReinoso",
+      "name": "Luis Reinoso",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7484215?v=4",
+      "profile": "https://luisreinoso.github.io",
+      "contributions": [
+        "review",
+        "userTesting"
+      ]
     }
   ],
   "contributorsPerLine": 7,
