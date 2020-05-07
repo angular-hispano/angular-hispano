@@ -49,7 +49,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://www.DevIntent.com"><img src="https://avatars1.githubusercontent.com/u/3506071?v=4" width="100px;" alt=""/><br /><sub><b>Michael Prentice</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3ASplaktar" title="Reviewed Pull Requests">👀</a> <a href="#ideas-Splaktar" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-Splaktar" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/AXEL1988"><img src="https://avatars2.githubusercontent.com/u/24749008?v=4" width="100px;" alt=""/><br /><sub><b>Edison Fernández</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/commits?author=AXEL1988" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AXEL1988"><img src="https://avatars2.githubusercontent.com/u/24749008?v=4" width="100px;" alt=""/><br /><sub><b>Edison Fernández</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/commits?author=AXEL1988" title="Code">💻</a> <a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AAXEL1988" title="Reviewed Pull Requests">👀</a> <a href="#design-AXEL1988" title="Design">🎨</a></td>
   </tr>
 </table>
 
