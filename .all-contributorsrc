@@ -86,7 +86,9 @@
       "contributions": [
         "review",
         "ideas",
-        "translation"
+        "translation",
+        "code",
+        "design"
       ]
     },
     {
