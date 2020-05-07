@@ -40,7 +40,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.andresvillanueva.com.ve"><img src="https://avatars3.githubusercontent.com/u/1209238?v=4" width="100px;" alt=""/><br /><sub><b>Andrés Villanueva</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AVillanuevand" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://orestes.io"><img src="https://avatars2.githubusercontent.com/u/618107?v=4" width="100px;" alt=""/><br /><sub><b>Orestes Carracedo</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3Aorestes" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://orestes.io"><img src="https://avatars2.githubusercontent.com/u/618107?v=4" width="100px;" alt=""/><br /><sub><b>Orestes Carracedo</b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3Aorestes" title="Reviewed Pull Requests">👀</a> <a href="#question-orestes" title="Answering Questions">💬</a> <a href="#ideas-orestes" title="Ideas, Planning, & Feedback">🤔</a> <a href="#translation-orestes" title="Translation">🌍</a></td>
   </tr>
 </table>
 
