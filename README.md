@@ -1,6 +1,6 @@
 # Angular Hispano
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
@@ -60,6 +60,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/CarlosAngulo"><img src="https://avatars3.githubusercontent.com/u/9832291?v=4" width="100px;" alt=""/><br /><sub><b>Carlos Angulo</b></sub></a><br /><a href="#content-CarlosAngulo" title="Content">🖋</a></td>
     <td align="center"><a href="http://ni500.com"><img src="https://avatars3.githubusercontent.com/u/19766276?v=4" width="100px;" alt=""/><br /><sub><b>Nicolás Contreras V.</b></sub></a><br /><a href="#content-ni500" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.videogular.com"><img src="https://avatars3.githubusercontent.com/u/790704?v=4" width="100px;" alt=""/><br /><sub><b>Raúl Jiménez</b></sub></a><br /><a href="#ideas-Elecash" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://anacidre.com"><img src="https://avatars1.githubusercontent.com/u/19813968?v=4" width="100px;" alt=""/><br /><sub><b>Ana Cidre</b></sub></a><br /><a href="#ideas-anacidre" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
