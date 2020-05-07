@@ -46,6 +46,17 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "maleja111",
+      "name": "maleja111",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6992488?v=4",
+      "profile": "https://github.com/maleja111",
+      "contributions": [
+        "review",
+        "ideas",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
