@@ -28,6 +28,15 @@
         "ideas",
         "translation"
       ]
+    },
+    {
+      "login": "ricardochl",
+      "name": "Ricardo Chavarria",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/35105981?v=4",
+      "profile": "https://github.com/ricardochl",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
