@@ -16,7 +16,8 @@
         "question",
         "translation",
         "code",
-        "design"
+        "design",
+        "bug"
       ]
     },
     {
