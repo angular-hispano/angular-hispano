@@ -77,6 +77,17 @@
         "review",
         "translation"
       ]
+    },
+    {
+      "login": "Splaktar",
+      "name": "Michael Prentice",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3506071?v=4",
+      "profile": "https://www.DevIntent.com",
+      "contributions": [
+        "review",
+        "ideas",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
