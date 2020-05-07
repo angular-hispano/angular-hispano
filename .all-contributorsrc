@@ -99,7 +99,8 @@
         "doc",
         "content",
         "bug",
-        "a11y"
+        "a11y",
+        "fundingFinding"
       ]
     },
     {
