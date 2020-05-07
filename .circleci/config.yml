@@ -71,7 +71,7 @@ jobs:
     steps:
       - restore-repo
       - restore-deps
-      - run: npm run build:prod
+      - run: npm run build:prod:ci
       - *save_dep_cache
 
   tslint:
