@@ -34,8 +34,6 @@ Este es un trabajo de amor y todos los colaboradores son voluntarios que pasan s
 libre ayudando a otros.
 ([traducir los emojis](https://allcontributors.org/docs/en/emoji-key))
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -71,8 +69,6 @@ libre ayudando a otros.
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
 
 Este proyecto sigue la especificación
 [all-contributors](https://github.com/all-contributors/all-contributors).
