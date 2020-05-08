@@ -2,6 +2,7 @@
   <ngx-auth-firebaseui
     [providers]="[providers.Google]"
     (onSuccess)="onSuccess($event)"
+    (onError)="onError($event)"
     [signInTabText]="'ngxauthfirebaseui.signInTabText'"
     [signInCardTitleText]="'ngxauthfirebaseui.signInCardTitleText'"
     [loginButtonText]="'ngxauthfirebaseui.loginButtonText'"

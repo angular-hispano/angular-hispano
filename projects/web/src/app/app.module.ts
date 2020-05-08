@@ -74,6 +74,7 @@ export const routes: Routes = [
     AngularFireAnalyticsModule,
     AngularFirePerformanceModule,
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+    // TODO configure settings: https://github.com/anthonynahas/ngx-auth-firebaseui#configuration
     Angulartics2Module.forRoot(),
     LayoutModule,
     MatToolbarModule,
