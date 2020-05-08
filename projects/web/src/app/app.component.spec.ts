@@ -21,12 +21,20 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        NoopAnimationsModule,
         RouterTestingModule.withRoutes(routes),
+        HttpClientModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,
@@ -34,7 +42,6 @@ describe('AppComponent', () => {
         MatCardModule,
         MatSnackBarModule,
         Angulartics2Module.forRoot(),
-        NoopAnimationsModule,
         ServiceWorkerModule.register('', { enabled: false })
       ],
       declarations: [

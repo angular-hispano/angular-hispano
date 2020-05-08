@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthComponent } from './auth.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../../environments/environment';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDividerModule } from '@angular/material/divider';
 
 describe('AuthComponent', () => {
   let component: AuthComponent;
@@ -8,9 +14,15 @@ describe('AuthComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthComponent ]
-    })
-    .compileComponents();
+      imports: [
+        NoopAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        RouterTestingModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatDividerModule
+      ],
+      declarations: [AuthComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
