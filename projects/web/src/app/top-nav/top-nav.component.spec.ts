@@ -3,14 +3,28 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { TopNavComponent } from './top-nav.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../../environments/environment';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
-describe('NavSuperiorComponent', () => {
+describe('TopNavComponent', () => {
   let component: TopNavComponent;
   let fixture: ComponentFixture<TopNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatIconModule, MatToolbarModule],
+      imports: [
+        NoopAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        RouterTestingModule,
+        HttpClientModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatIconModule,
+        MatToolbarModule
+      ],
       declarations: [TopNavComponent]
     }).compileComponents();
   }));
