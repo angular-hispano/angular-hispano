@@ -18,4 +18,8 @@ export class AuthComponent implements OnInit {
   onSuccess(event: any) {
     this.router.navigate(['/']);
   }
+
+  onError(event: any) {
+    console.error(event);
+  }
 }
