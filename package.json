@@ -18,7 +18,7 @@
     "prettier": "prettier --write \"**/*.{js,json,css,scss,md,ts,html,component.html}\"",
     "lint": "ng lint",
     "smex": "source-map-explorer",
-    "stylelint": "stylelint '**/*.scss' --config .stylelintrc --syntax scss",
+    "stylelint": "stylelint \"**/*.scss\" --config .stylelintrc --syntax scss",
     "test": "ng test",
     "test:ci": "npm run ngcc && ng test --watch=false --browsers='ChromeHeadlessNoSandbox,FirefoxHeadless'",
     "update": "npm-check -u"

@@ -9,8 +9,8 @@
 version: 2.1
 
 1: &project_path ~/app
-2: &docker_image circleci/node:12.4.0
-3: &docker_image_browsers circleci/node:12.4.0-browsers
+2: &docker_image circleci/node:12.16.3
+3: &docker_image_browsers circleci/node:12.16.3-browsers
 4: &repo_key v1-repository-{{ .Environment.CIRCLE_SHA1 }}
 5: &dep_key v1-dependencies-{{ checksum "package-lock.json" }}
 6: &save_dep_cache
