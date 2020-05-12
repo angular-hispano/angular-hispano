@@ -47,6 +47,14 @@ export class MeetupsComponent implements OnInit {
       logoUrl: 'assets/meetups/ng-baires.png',
       logoType: 'png',
       meetupUrl: 'https://twitter.com/ngbaires'
+    },
+    {
+      name: 'NgGuayaquil',
+      city: 'Guayaquil',
+      country: 'Ecuador',
+      logoUrl: 'assets/meetups/ng-guayaquil.png',
+      logoType: 'png',
+      meetupUrl: 'https://www.eventbrite.com/o/ngguayaquil-28192263023'
     }
   ];
   constructor() {}
