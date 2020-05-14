@@ -3,7 +3,7 @@
     #drawer
     class="sidenav"
     fixedInViewport="true"
-    [disableClose]="!(navService.isHandset | async)"
+    [disableClose]="(navService.isHandset | async) === false"
     [attr.role]="(navService.isHandset | async) ? 'dialog' : 'navigation'"
     [mode]="(navService.isHandset | async) ? 'over' : 'side'"
     [opened]="(navService.isHandset | async) === false"

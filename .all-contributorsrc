@@ -1,0 +1,239 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Villanuevand",
+      "name": "Andrés Villanueva",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1209238?v=4",
+      "profile": "http://www.andresvillanueva.com.ve",
+      "contributions": [
+        "review",
+        "ideas",
+        "question",
+        "translation",
+        "code",
+        "design",
+        "bug",
+        "fundingFinding"
+      ]
+    },
+    {
+      "login": "orestes",
+      "name": "Orestes Carracedo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/618107?v=4",
+      "profile": "https://orestes.io",
+      "contributions": [
+        "review",
+        "question",
+        "ideas",
+        "translation",
+        "bug"
+      ]
+    },
+    {
+      "login": "ricardochl",
+      "name": "Ricardo Chavarria",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/35105981?v=4",
+      "profile": "https://github.com/ricardochl",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "jorgeucano",
+      "name": "Jorge Cano",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5982204?v=4",
+      "profile": "https://medium.com/@jorgeucano",
+      "contributions": [
+        "review",
+        "content",
+        "question"
+      ]
+    },
+    {
+      "login": "maleja111",
+      "name": "maleja111",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6992488?v=4",
+      "profile": "https://github.com/maleja111",
+      "contributions": [
+        "review",
+        "ideas",
+        "translation"
+      ]
+    },
+    {
+      "login": "mahcr",
+      "name": "Mariano Alvarez",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16544451?v=4",
+      "profile": "https://github.com/mahcr",
+      "contributions": [
+        "review",
+        "translation",
+        "infra",
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "julianduque",
+      "name": "Julián Duque",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/733877?v=4",
+      "profile": "https://julianduque.co",
+      "contributions": [
+        "review",
+        "translation"
+      ]
+    },
+    {
+      "login": "Splaktar",
+      "name": "Michael Prentice",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3506071?v=4",
+      "profile": "https://www.DevIntent.com",
+      "contributions": [
+        "review",
+        "ideas",
+        "translation",
+        "code",
+        "design",
+        "projectManagement",
+        "maintenance",
+        "infra",
+        "doc",
+        "content",
+        "bug",
+        "a11y",
+        "fundingFinding",
+        "business",
+        "financial"
+      ]
+    },
+    {
+      "login": "AXEL1988",
+      "name": "Edison Fernández",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/24749008?v=4",
+      "profile": "https://github.com/AXEL1988",
+      "contributions": [
+        "code",
+        "review",
+        "design",
+        "maintenance",
+        "content"
+      ]
+    },
+    {
+      "login": "brolag",
+      "name": "Alfredo Bonilla",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1393385?v=4",
+      "profile": "https://www.brolag.com/",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
+    },
+    {
+      "login": "LuisReinoso",
+      "name": "Luis Reinoso",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7484215?v=4",
+      "profile": "https://luisreinoso.github.io",
+      "contributions": [
+        "review",
+        "userTesting",
+        "code"
+      ]
+    },
+    {
+      "login": "Cristian-Hernandez",
+      "name": "Chernan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32974460?v=4",
+      "profile": "https://github.com/Cristian-Hernandez",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "suga0828",
+      "name": "Alexander Sandoval",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/17104960?v=4",
+      "profile": "http://suga0828.github.io/suga0828",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "vanessamarely",
+      "name": "Vanessa Aristizabal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4331491?v=4",
+      "profile": "https://github.com/vanessamarely",
+      "contributions": [
+        "content",
+        "design"
+      ]
+    },
+    {
+      "login": "CarlosAngulo",
+      "name": "Carlos Angulo",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9832291?v=4",
+      "profile": "https://github.com/CarlosAngulo",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ni500",
+      "name": "Nicolás Contreras V.",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19766276?v=4",
+      "profile": "http://ni500.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Elecash",
+      "name": "Raúl Jiménez",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/790704?v=4",
+      "profile": "http://www.videogular.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "anacidre",
+      "name": "Ana Cidre",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19813968?v=4",
+      "profile": "http://anacidre.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "christianmorante",
+      "name": "Christian Morante",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/29555498?v=4",
+      "profile": "https://github.com/christianmorante",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mgnDev",
+      "name": "Matias",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/46694122?v=4",
+      "profile": "https://github.com/mgnDev",
+      "contributions": [
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 5,
+  "projectName": "angular-hispano",
+  "projectOwner": "angular-hispano",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

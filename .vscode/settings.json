@@ -1,6 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
   // Excluya módulos de terceros y genere artefactos de los observadores / búsquedas del editor.
   "files.watcherExclude": {
     "**/.git/objects/**": true,
