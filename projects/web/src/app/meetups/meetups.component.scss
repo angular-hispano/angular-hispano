@@ -28,10 +28,12 @@ main {
         margin: 8px;
         cursor: pointer;
 
-        .mat-card-subtitle {
-          font-size: 14px;
+        .mat-card-title {
+          font-size: 18px;
         }
-
+        .mat-card-subtitle {
+          font-size: 10px;
+        }
         .mat-card-image {
           margin: 0 0 16px;
           width: 100%;
@@ -40,7 +42,7 @@ main {
 
           &.svg {
             width: 100%;
-            margin: auto;
+            margin: 0 auto;
           }
         }
 
