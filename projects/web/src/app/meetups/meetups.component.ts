@@ -92,8 +92,8 @@ export class MeetupsComponent implements OnInit {
       name: 'Angular Málaga',
       city: 'Málaga',
       country: 'España',
-      logoUrl: 'assets/meetups/angular-malaga.png',
-      logoType: 'png',
+      logoUrl: 'assets/meetups/angular-malaga.jpg',
+      logoType: 'jpg',
       meetupUrl: 'https://www.meetup.com/es-ES/Angular-Malaga/'
     },
     {
@@ -116,16 +116,16 @@ export class MeetupsComponent implements OnInit {
       name: 'NgGuayaquil',
       city: 'Guayaquil',
       country: 'Ecuador',
-      logoUrl: 'assets/meetups/ng-guayaquil.png',
-      logoType: 'png',
+      logoUrl: 'assets/meetups/ng-guayaquil.jpg',
+      logoType: 'jpg',
       meetupUrl: 'https://www.eventbrite.com/o/ngguayaquil-28192263023'
     },
     {
       name: 'NgPanama',
       city: 'Panamá',
       country: 'Panamá',
-      logoUrl: 'assets/meetups/ngPanama.png',
-      logoType: 'png',
+      logoUrl: 'assets/meetups/ngPanama.jpg',
+      logoType: 'jpg',
       meetupUrl: 'https://twitter.com/NgPanama'
     },
     {
