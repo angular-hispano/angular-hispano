@@ -6,7 +6,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 
-La Comunidad Angular de habla castellana. ([sitio web](https://angular.lat)).
+La Comunidad Angular de habla español. ([sitio web](https://angular.lat)).
 
 ## Desarrollo
 
