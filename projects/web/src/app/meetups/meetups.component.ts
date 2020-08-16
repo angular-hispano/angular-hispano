@@ -76,8 +76,8 @@ export class MeetupsComponent implements OnInit {
       name: 'Angular Costa Rica',
       city: 'Costa Rica',
       country: 'Costa Rica',
-      logoUrl: 'assets/meetups/angular-costarica.png',
-      logoType: 'png',
+      logoUrl: 'assets/meetups/angular-costarica.jpg',
+      logoType: 'jpg',
       meetupUrl: 'https://www.meetup.com/gdg-costarica/'
     },
     {
