@@ -1,30 +1,31 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-
-import { ConferencesComponent } from './conferences.component';
-import { MatIconModule } from '@angular/material/icon';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { environment } from '../../environments/environment';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { RouterTestingModule } from '@angular/router/testing';
+
+import { ConferencesComponent } from './conferences.component';
 
 describe('ConferencesComponent', () => {
   let component: ConferencesComponent;
   let fixture: ComponentFixture<ConferencesComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        MatButtonModule,
-        RouterTestingModule
-      ],
-      declarations: [ConferencesComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          MatCardModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          NoopAnimationsModule,
+          MatButtonModule,
+          RouterTestingModule
+        ],
+        declarations: [ConferencesComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ConferencesComponent);
