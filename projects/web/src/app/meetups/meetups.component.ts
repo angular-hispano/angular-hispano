@@ -108,7 +108,7 @@ export class MeetupsComponent implements OnInit {
       name: 'ngVenezuela',
       city: 'Venezuela',
       country: 'Venezuela',
-      logoUrl: 'assets/meetups/angular-venezuela.png',
+      logoUrl: 'assets/meetups/ng-venezuela.png',
       logoType: 'png',
       meetupUrl: 'https://twitter.com/ngVenezuela'
     },
