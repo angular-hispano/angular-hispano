@@ -37,8 +37,7 @@
               "projects/web/src/manifest.webmanifest"
             ],
             "styles": ["projects/web/src/styles.scss"],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "staging": {
