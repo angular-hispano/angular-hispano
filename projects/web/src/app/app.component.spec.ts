@@ -1,6 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Angulartics2Module } from 'angulartics2';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -41,7 +40,6 @@ describe('AppComponent', () => {
         MatListModule,
         MatCardModule,
         MatSnackBarModule,
-        Angulartics2Module.forRoot(),
         ServiceWorkerModule.register('', { enabled: false })
       ],
       declarations: [
