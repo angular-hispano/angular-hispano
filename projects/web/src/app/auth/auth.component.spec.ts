@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthComponent } from './auth.component';
 import { AngularFireModule } from '@angular/fire';
@@ -12,18 +12,20 @@ describe('AuthComponent', () => {
   let component: AuthComponent;
   let fixture: ComponentFixture<AuthComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        NoopAnimationsModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        RouterTestingModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        MatDividerModule
-      ],
-      declarations: [AuthComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          NoopAnimationsModule,
+          AngularFireModule.initializeApp(environment.firebase),
+          RouterTestingModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          MatDividerModule
+        ],
+        declarations: [AuthComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AuthComponent);

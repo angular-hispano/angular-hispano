@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CodeOfConductComponent } from './code-of-conduct.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,18 +12,20 @@ describe('CodeOfConductComponent', () => {
   let component: CodeOfConductComponent;
   let fixture: ComponentFixture<CodeOfConductComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        RouterTestingModule,
-        NoopAnimationsModule,
-        MatIconModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase)
-      ],
-      declarations: [CodeOfConductComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          HttpClientModule,
+          RouterTestingModule,
+          NoopAnimationsModule,
+          MatIconModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase)
+        ],
+        declarations: [CodeOfConductComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CodeOfConductComponent);
