@@ -15,15 +15,19 @@
 
 ## Comandos
 
-Renueve manualmente el certificado para chat.angular.lat
-
-```shell script
-/opt/letsencrypt/letsencrypt-auto certonly --reinstall --nginx --nginx-server-root=/opt/bitnami/nginx/conf -d chat.angular.lat &&
- sudo /opt/bitnami/ctlscript.sh restart nginx
-```
+### Recomendado
 
 Renovar automáticamente todos los certificados utilizando los argumentos originales
 
 ```shell script
 /opt/letsencrypt/letsencrypt-auto renew --post-hook "sudo /opt/bitnami/ctlscript.sh restart nginx"
+```
+
+### Otra opción
+
+Renueve manualmente el certificado para chat.angular.lat
+
+```shell script
+/opt/letsencrypt/letsencrypt-auto certonly --reinstall --nginx --nginx-server-root=/opt/bitnami/nginx/conf -d chat.angular.lat &&
+ sudo /opt/bitnami/ctlscript.sh restart nginx
 ```

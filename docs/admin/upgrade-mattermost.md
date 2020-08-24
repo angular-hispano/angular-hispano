@@ -29,15 +29,15 @@
 
 1. Haga una copia de seguridad de `config.json`
    ```bash
-   gsutil cp /opt/bitnami/apps/mattermost/server/config/config.json gs://angular-latino.appspot.com/mattermost-backups/5.9.0/
+   gsutil cp /opt/bitnami/apps/mattermost/server/config/config.json gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
    ```
 1. Crea un tarball de la pila completa de Bitnami (Mattermost, Nginx, MySQL)
    ```bash
-   sudo tar -pczvf ~/mattermost-mysql-nginx-5.9.0-backup.tar.gz /opt/bitnami
+   sudo tar -pczvf ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz /opt/bitnami
    ```
 1. Mueve el tarball a GCS
    ```bash
-   gsutil cp mattermost-mysql-nginx-5.9.0-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.9.0/
+   gsutil cp mattermost-mysql-nginx-5.19.3-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
    ```
 
 ## Haz la actualización
@@ -45,7 +45,7 @@
 ### Descargue la última versión de Mattermost
 
 - `cd /opt/bitnami/apps/mattermost/`
-- `sudo wget https://releases.mattermost.com/5.12.1/mattermost-team-5.12.1-linux-amd64.tar.gz`
+- `sudo wget https://releases.mattermost.com/5.25.3/mattermost-team-5.25.3-linux-amd64.tar.gz`
 
 ### Eliminar archivos anteriores de Mattermost
 
@@ -56,7 +56,7 @@ Asegúrese de que ya estaban respaldados en los pasos anteriores.
 ### Descomprime la nueva versión
 
 ```bash
-sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/mattermost/server --strip-components=1
+sudo tar xzf mattermost-team-5.25.3-linux-amd64.tar.gz -C /opt/bitnami/apps/mattermost/server --strip-components=1
 ```
 
 ### Haga una copia de seguridad de la configuración y restaure la configuración anterior
@@ -67,7 +67,7 @@ sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/matt
    ```
 1. Restaurar la configuración anterior
    ```bash
-   sudo gsutil cp gs://angular-latino.appspot.com/mattermost-backups/5.9.0/config.json config.json
+   sudo gsutil cp gs://angular-latino.appspot.com/mattermost-backups/5.19.3/config.json /opt/bitnami/apps/mattermost/server/config/config.json
    ```
 1. Ajustar permisos de archivo
    ```bash
@@ -81,7 +81,7 @@ sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/matt
 1. Establezca el propietario de `config.json` en`mattermost` para que la consola del sistema pueda
    realizar cambios
    ```bash
-   sudo chown mattermost config.json
+   sudo chown mattermost /opt/bitnami/apps/mattermost/server/config/config.json
    ```
 
 ### Reiniciar Mattermost, Nginx, y MySQL
@@ -92,7 +92,7 @@ sudo tar xzf mattermost-team-5.12.1-linux-amd64.tar.gz -C /opt/bitnami/apps/matt
 #### Actualice el archivo `config.json` para incluir los campos de la nueva versión
 
 1. Abra la consola del sistema y cambie una configuración, luego revísela.
-      Esto debería habilitar el botón Guardar para esa página
+   Esto debería habilitar el botón Guardar para esa página
 1. Haga clic en Guardar
 1. Actualiza la página
 
@@ -102,12 +102,12 @@ Su configuración actual se conserva y se agregan nuevas configuraciones con val
 
 - Eliminar el archivo de la nueva versión
   ```bash
-  sudo rm /opt/bitnami/apps/mattermost/mattermost-team-5.12.1-linux-amd64.tar.gz
+  sudo rm /opt/bitnami/apps/mattermost/mattermost-team-5.25.3-linux-amd64.tar.gz
   ```
 - Una vez que haya verificado que la copia de seguridad se copió correctamente al depósito de GCS,
   elimine la copia local del archivo
   ```bash
-  rm ~/mattermost-mysql-nginx-5.9.0-backup.tar.gz
+  rm ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz
   ```
 
 ### Prueba la nueva versión
@@ -115,7 +115,7 @@ Su configuración actual se conserva y se agregan nuevas configuraciones con val
 1. Revise la nueva configuración `config.json` de la nueva versión
 1. Actualice la configuración según corresponda
 1. Pruebe algunas de las nuevas funciones mencionadas en el
-      [registro de cambios](https://docs.mattermost.com/administration/changelog.html)
+   [registro de cambios](https://docs.mattermost.com/administration/changelog.html)
 1. Verifique que los diferentes clientes estén trabajando
 
 - Web
@@ -126,22 +126,22 @@ Su configuración actual se conserva y se agregan nuevas configuraciones con val
 ### Notificaciones de servidor activo
 
 1. Infórmele al [canal de Administración](https://chat.angular.lat/default/channels/administracin)
-      cuando el servidor vuelve a estar en línea. También hágales saber sobre cualquier problema que
-   haya encontrado o importante ajustes que fueron cambiados.
+   cuando el servidor vuelve a estar en línea. También hágales saber sobre cualquier problema que
+   haya encontrado o importante ajustes que fueron cambiados.
 1. Notifique el [Canal General](https://chat.angular.lat/default/channels/town-square) cuando todos
-      La verificación está completa. También hágales saber acerca de las principales características
+   La verificación está completa. También hágales saber acerca de las principales características
    nuevas que puedan afectarlos.
 
 ## Solución de problemas
 
 1. Si las imágenes de vista previa del enlace no se cargan, verifique que `config.json` tenga lo
    siguiente y no un Dirección IP:
-       - `" SiteURL ":" https://chat.angular.lat ",`
-1. Si los emojis se muestran como `????????`, verifique que el `"" SqlSettings "` en `config.json`
+   - `"SiteURL": "https://chat.angular.lat",`
+1. Si los emojis se muestran como `????????`, verifique que el `"SqlSettings"` en `config.json`
    incluya el conjunto de caracteres `utf-8` en `"DataSource"`:
-       - `? charset = utf8mb4, utf8`
+   - `? charset = utf8mb4, utf8`
 1. Si http://chat.angular.lat no se reenvía correctamente, vea la solución en
-      [#80](https://github.com/angular-hispano/angular-hispano/issues/80)
+   [#80](https://github.com/angular-hispano/angular-hispano/issues/80)
 
 ## Complementos
 
