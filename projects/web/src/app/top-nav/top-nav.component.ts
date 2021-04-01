@@ -8,8 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./top-nav.component.scss']
 })
 export class TopNavComponent implements OnInit {
-  constructor(public navService: NavService,
-              public auth: AngularFireAuth) {}
+  constructor(public navService: NavService, public auth: AngularFireAuth) {}
 
   ngOnInit() {}
 }

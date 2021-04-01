@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -14,20 +14,22 @@ describe('TopNavComponent', () => {
   let component: TopNavComponent;
   let fixture: ComponentFixture<TopNavComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        NoopAnimationsModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        RouterTestingModule,
-        HttpClientModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        MatIconModule,
-        MatToolbarModule
-      ],
-      declarations: [TopNavComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          NoopAnimationsModule,
+          AngularFireModule.initializeApp(environment.firebase),
+          RouterTestingModule,
+          HttpClientModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          MatIconModule,
+          MatToolbarModule
+        ],
+        declarations: [TopNavComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TopNavComponent);
