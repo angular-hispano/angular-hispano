@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,24 +20,26 @@ describe('NavComponent', () => {
   let component: NavComponent;
   let fixture: ComponentFixture<NavComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [NavComponent, TopNavComponent, FooterComponent],
-      imports: [
-        RouterTestingModule,
-        NoopAnimationsModule,
-        HttpClientModule,
-        LayoutModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [NavComponent, TopNavComponent, FooterComponent],
+        imports: [
+          RouterTestingModule,
+          NoopAnimationsModule,
+          HttpClientModule,
+          LayoutModule,
+          AngularFireModule.initializeApp(environment.firebase),
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          MatButtonModule,
+          MatIconModule,
+          MatListModule,
+          MatSidenavModule,
+          MatToolbarModule
+        ]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NavComponent);

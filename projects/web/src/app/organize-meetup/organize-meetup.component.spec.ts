@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OrganizeMeetupComponent } from './organize-meetup.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,18 +12,20 @@ describe('OrganizeMeetupComponent', () => {
   let component: OrganizeMeetupComponent;
   let fixture: ComponentFixture<OrganizeMeetupComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        RouterTestingModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        MatIconModule
-      ],
-      declarations: [OrganizeMeetupComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          HttpClientModule,
+          RouterTestingModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          NoopAnimationsModule,
+          MatIconModule
+        ],
+        declarations: [OrganizeMeetupComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(OrganizeMeetupComponent);

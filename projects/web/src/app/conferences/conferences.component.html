@@ -48,5 +48,17 @@
         </mat-card>
       </a>
     </ng-container>
+    <ng-container *ngIf="conferences.length === 0">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Próximamente</mat-card-title>
+          <mat-card-subtitle>Envíanos los detalles de tu evento</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content style="min-height: 100px"></mat-card-content>
+        <mat-card-actions align="end">
+          <a mat-stroked-button href="mailto:soporte@angular.lat" color="primary">Enviar</a>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
   </section>
 </main>

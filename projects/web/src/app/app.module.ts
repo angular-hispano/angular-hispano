@@ -67,7 +67,8 @@ export const routes: Routes = [
       useHash: false,
       preloadingStrategy: PreloadAllModules,
       scrollPositionRestoration: 'enabled',
-      anchorScrolling: 'enabled'
+      anchorScrolling: 'enabled',
+      relativeLinkResolution: 'legacy'
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,

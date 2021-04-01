@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MeetupsComponent } from './meetups.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,18 +12,20 @@ describe('MeetupsComponent', () => {
   let component: MeetupsComponent;
   let fixture: ComponentFixture<MeetupsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        RouterTestingModule,
-        HttpClientModule
-      ],
-      declarations: [MeetupsComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          MatCardModule,
+          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+          NoopAnimationsModule,
+          RouterTestingModule,
+          HttpClientModule
+        ],
+        declarations: [MeetupsComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MeetupsComponent);
