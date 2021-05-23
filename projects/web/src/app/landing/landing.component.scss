@@ -1,11 +1,12 @@
-@import '../../theme';
-@import '../../variables';
+@use '~@angular/material' as mat;
+@use '../../theme';
+@use '../../variables';
 
 main {
   padding: 32px 22px 80px;
 
   section {
-    max-width: $section-width;
+    max-width: variables.$section-width;
 
     &#call-to-action {
       display: flex;
@@ -40,6 +41,6 @@ main {
   }
   h1,
   h2 {
-    color: mat-color($app-primary);
+    color: mat.get-color-from-palette(theme.$app-primary);
   }
 }

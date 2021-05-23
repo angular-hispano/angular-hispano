@@ -1,4 +1,5 @@
-@import '../../theme';
+@use '~@angular/material' as mat;
+@use '../../theme';
 
 main {
   padding: 32px 22px 0;
@@ -6,7 +7,7 @@ main {
   h1,
   h2,
   h3 {
-    color: mat-color($app-primary);
+    color: mat.get-color-from-palette(theme.$app-primary);
   }
 
   section {

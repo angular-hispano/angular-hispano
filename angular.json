@@ -17,7 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/web",
             "index": "projects/web/src/index.html",
             "main": "projects/web/src/main.ts",
@@ -37,7 +36,13 @@
               "projects/web/src/manifest.webmanifest"
             ],
             "styles": ["projects/web/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "staging": {

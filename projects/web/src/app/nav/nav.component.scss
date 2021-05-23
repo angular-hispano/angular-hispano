@@ -1,4 +1,5 @@
-@import '../../theme';
+@use '~@angular/material' as mat;
+@use '../../theme';
 
 // Take care: this component has ViewEncapsulation.None
 .sidenav-container {
@@ -11,9 +12,9 @@
     background: inherit;
   }
   a.active {
-    color: mat-color($app-primary);
+    color: mat.get-color-from-palette(theme.$app-primary);
   }
   .mat-nav-list a.mat-list-item:hover {
-    background-color: mat-color($app-primary, 50);
+    background-color: mat.get-color-from-palette(theme.$app-primary, 50);
   }
 }
