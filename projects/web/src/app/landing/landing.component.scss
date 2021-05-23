@@ -7,6 +7,7 @@ main {
 
   section {
     max-width: variables.$section-width;
+    margin-bottom: 32px;
 
     &#call-to-action {
       display: flex;
@@ -37,7 +38,7 @@ main {
     }
   }
   app-sponsors {
-    padding-top: 40px;
+    padding-top: 64px;
   }
   h1,
   h2 {
