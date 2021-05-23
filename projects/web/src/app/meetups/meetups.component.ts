@@ -100,15 +100,15 @@ export class MeetupsComponent implements OnInit {
       name: 'Angular MVD',
       city: 'Montevideo',
       country: 'Uruguay',
-      logoUrl: 'assets/meetups/angular-montevideo.png',
-      logoType: 'png',
+      logoUrl: 'assets/meetups/angular-mvd.jpg',
+      logoType: 'jpg',
       meetupUrl: 'https://www.meetup.com/Angular-MVD/'
     },
     {
       name: 'ngVenezuela',
       city: 'Venezuela',
       country: 'Venezuela',
-      logoUrl: 'assets/meetups/ng-venezuela.png',
+      logoUrl: 'assets/meetups/ngVenezuela.png',
       logoType: 'png',
       meetupUrl: 'https://twitter.com/ngVenezuela'
     },
