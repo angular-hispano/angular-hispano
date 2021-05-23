@@ -1,19 +1,20 @@
-@import '../../theme';
-@import '../../variables';
+@use '~@angular/material' as mat;
+@use '../../theme';
+@use '../../variables';
 
 :host {
   display: block;
 }
 h1,
 h2 {
-  color: mat-color($app-primary);
+  color: mat.get-color-from-palette(theme.$app-primary);
 }
 section {
   display: flex;
   box-sizing: border-box;
   flex-flow: column wrap;
   align-items: center;
-  max-width: $section-width;
+  max-width: variables.$section-width;
   padding-top: 16px;
 
   > a {
