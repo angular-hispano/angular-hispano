@@ -67,7 +67,7 @@ libre ayudando a otros.
     <td align="center"><a href="https://github.com/mgnDev"><img src="https://avatars1.githubusercontent.com/u/46694122?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matias</b></sub></a><br /><a href="#content-mgnDev" title="Content">🖋</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/AntonioCardenas"><img src="https://avatars.githubusercontent.com/u/11583391?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Cardenas </b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AAntonioCardenas" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/AntonioCardenas"><img src="https://avatars.githubusercontent.com/u/11583391?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Cardenas </b></sub></a><br /><a href="https://github.com/angular-hispano/angular-hispano/pulls?q=is%3Apr+reviewed-by%3AAntonioCardenas" title="Reviewed Pull Requests">👀</a> <a href="#ideas-AntonioCardenas" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/angular-hispano/angular-hispano/commits?author=AntonioCardenas" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
