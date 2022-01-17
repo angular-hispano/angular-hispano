@@ -37,7 +37,7 @@
    ```
 1. Mueve el tarball a GCS
    ```bash
-   gsutil cp mattermost-mysql-nginx-5.19.3-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
+   gsutil cp ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
    ```
 
 ## Haz la actualización
