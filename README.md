@@ -24,7 +24,6 @@ nuestro [Código de Conducta](CODE_OF_CONDUCT.md).
 
 ## Sponsors
 
-- [Google Cloud Platform](https://cloud.google.com/)
 - [DevIntent](https://www.devintent.com/)
 
 ## Contribuyentes ✨
