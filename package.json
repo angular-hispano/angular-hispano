@@ -60,7 +60,7 @@
     "@types/jasminewd2": "^2.0.9",
     "@types/node": "^14.14.37",
     "codelyzer": "^6.0.2",
-    "firebase-tools": "^9.11.0",
+    "firebase-tools": "^11.22.0",
     "husky": "^4.3.8",
     "jasmine-core": "^3.7.1",
     "jasmine-spec-reporter": "^7.0.0",
