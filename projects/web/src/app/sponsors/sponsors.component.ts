@@ -11,7 +11,7 @@ export class SponsorsComponent implements OnInit {
     {
       url: 'https://www.devintent.com/',
       alt: 'Logo de DevIntent',
-      image: 'DevIntentLogo_40h.png'
+      image: 'devintent-logo.svg'
     }
   ];
 
