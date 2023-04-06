@@ -12,20 +12,18 @@ describe('OrganizeMeetupComponent', () => {
   let component: OrganizeMeetupComponent;
   let fixture: ComponentFixture<OrganizeMeetupComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          HttpClientModule,
-          RouterTestingModule,
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          NoopAnimationsModule,
-          MatIconModule
-        ],
-        declarations: [OrganizeMeetupComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule,
+        RouterTestingModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        NoopAnimationsModule,
+        MatIconModule
+      ],
+      declarations: [OrganizeMeetupComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(OrganizeMeetupComponent);

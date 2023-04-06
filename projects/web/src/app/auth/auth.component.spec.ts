@@ -12,20 +12,18 @@ describe('AuthComponent', () => {
   let component: AuthComponent;
   let fixture: ComponentFixture<AuthComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          NoopAnimationsModule,
-          AngularFireModule.initializeApp(environment.firebase),
-          RouterTestingModule,
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          MatDividerModule
-        ],
-        declarations: [AuthComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        NoopAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        RouterTestingModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatDividerModule
+      ],
+      declarations: [AuthComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AuthComponent);

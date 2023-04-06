@@ -12,20 +12,18 @@ describe('CodeOfConductComponent', () => {
   let component: CodeOfConductComponent;
   let fixture: ComponentFixture<CodeOfConductComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          HttpClientModule,
-          RouterTestingModule,
-          NoopAnimationsModule,
-          MatIconModule,
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase)
-        ],
-        declarations: [CodeOfConductComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule,
+        RouterTestingModule,
+        NoopAnimationsModule,
+        MatIconModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase)
+      ],
+      declarations: [CodeOfConductComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CodeOfConductComponent);

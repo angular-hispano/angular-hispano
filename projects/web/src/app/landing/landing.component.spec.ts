@@ -13,20 +13,18 @@ describe('LandingComponent', () => {
   let component: LandingComponent;
   let fixture: ComponentFixture<LandingComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          NoopAnimationsModule,
-          RouterTestingModule,
-          HttpClientModule,
-          MatIconModule
-        ],
-        declarations: [LandingComponent, SponsorsComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        NoopAnimationsModule,
+        RouterTestingModule,
+        HttpClientModule,
+        MatIconModule
+      ],
+      declarations: [LandingComponent, SponsorsComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LandingComponent);

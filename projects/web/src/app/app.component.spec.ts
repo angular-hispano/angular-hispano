@@ -26,38 +26,36 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 describe('AppComponent', () => {
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          NoopAnimationsModule,
-          RouterTestingModule.withRoutes(routes),
-          HttpClientModule,
-          AngularFireModule.initializeApp(environment.firebase),
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          MatSidenavModule,
-          MatToolbarModule,
-          MatIconModule,
-          MatListModule,
-          MatCardModule,
-          MatSnackBarModule,
-          ServiceWorkerModule.register('', { enabled: false })
-        ],
-        declarations: [
-          AppComponent,
-          NavComponent,
-          TopNavComponent,
-          FooterComponent,
-          LandingComponent,
-          CodeOfConductComponent,
-          OrganizeMeetupComponent,
-          ConferencesComponent,
-          PageNotFoundComponent,
-          SponsorsComponent
-        ]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        NoopAnimationsModule,
+        RouterTestingModule.withRoutes(routes),
+        HttpClientModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatListModule,
+        MatCardModule,
+        MatSnackBarModule,
+        ServiceWorkerModule.register('', { enabled: false })
+      ],
+      declarations: [
+        AppComponent,
+        NavComponent,
+        TopNavComponent,
+        FooterComponent,
+        LandingComponent,
+        CodeOfConductComponent,
+        OrganizeMeetupComponent,
+        ConferencesComponent,
+        PageNotFoundComponent,
+        SponsorsComponent
+      ]
+    }).compileComponents();
+  }));
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);

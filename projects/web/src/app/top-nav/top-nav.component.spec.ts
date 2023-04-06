@@ -14,22 +14,20 @@ describe('TopNavComponent', () => {
   let component: TopNavComponent;
   let fixture: ComponentFixture<TopNavComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          NoopAnimationsModule,
-          AngularFireModule.initializeApp(environment.firebase),
-          RouterTestingModule,
-          HttpClientModule,
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          MatIconModule,
-          MatToolbarModule
-        ],
-        declarations: [TopNavComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        NoopAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        RouterTestingModule,
+        HttpClientModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatIconModule,
+        MatToolbarModule
+      ],
+      declarations: [TopNavComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TopNavComponent);

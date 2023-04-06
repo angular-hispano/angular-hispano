@@ -12,21 +12,19 @@ describe('PageNotFoundComponent', () => {
   let component: PageNotFoundComponent;
   let fixture: ComponentFixture<PageNotFoundComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          RouterTestingModule,
-          MatIconModule,
-          NoopAnimationsModule,
-          HttpClientModule,
-          NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-          MatIconModule
-        ],
-        declarations: [PageNotFoundComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        MatIconModule,
+        NoopAnimationsModule,
+        HttpClientModule,
+        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+        MatIconModule
+      ],
+      declarations: [PageNotFoundComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PageNotFoundComponent);
