@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AuthProvider } from 'ngx-auth-firebaseui';
 import { Router } from '@angular/router';
 
@@ -8,12 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
   providers = AuthProvider;
 
   constructor(private router: Router) {}
-
-  ngOnInit() {}
 
   onSuccess(event: any) {
     this.router.navigate(['/']);
