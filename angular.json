@@ -21,7 +21,7 @@
             "index": "projects/web/src/index.html",
             "main": "projects/web/src/main.ts",
             "polyfills": "projects/web/src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "projects/web/tsconfig.app.json",
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/apple-touch-icon.png",
@@ -125,7 +125,7 @@
           "options": {
             "main": "projects/web/src/test.ts",
             "polyfills": "projects/web/src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "projects/web/tsconfig.spec.json",
             "karmaConfig": "projects/web/karma.conf.js",
             "styles": ["projects/web/src/styles.scss"],
             "scripts": [],
@@ -145,10 +145,9 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": ["projects/web/**/*.ts", "projects/web/**/*.html"]
           }
         },
         "deploy": {
@@ -160,6 +159,7 @@
   },
   "defaultProject": "web",
   "cli": {
-    "analytics": "dc47fe7b-beed-4782-ae42-d417a7f0c053"
+    "analytics": "dc47fe7b-beed-4782-ae42-d417a7f0c053",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
