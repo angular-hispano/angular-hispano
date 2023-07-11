@@ -157,9 +157,8 @@
       }
     }
   },
-  "defaultProject": "web",
   "cli": {
     "analytics": "dc47fe7b-beed-4782-ae42-d417a7f0c053",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }
