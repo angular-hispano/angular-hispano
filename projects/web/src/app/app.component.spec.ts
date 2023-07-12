@@ -20,7 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';

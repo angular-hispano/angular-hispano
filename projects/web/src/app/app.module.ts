@@ -1,8 +1,8 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirePerformanceModule } from '@angular/fire/performance';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirePerformanceModule } from '@angular/fire/compat/performance';
 import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,7 +31,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { MeetupsComponent } from './meetups/meetups.component';
 import { AuthComponent } from './auth/auth.component';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'acerca' },
