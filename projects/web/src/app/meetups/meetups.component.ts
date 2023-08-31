@@ -137,5 +137,4 @@ export class MeetupsComponent {
       meetupUrl: 'https://twitter.com/AngularBA'
     }
   ];
-  constructor() {}
 }

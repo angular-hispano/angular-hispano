@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './organize-meetup.component.html',
   styleUrls: ['./organize-meetup.component.scss']
 })
-export class OrganizeMeetupComponent {
-  constructor() {}
-}
+export class OrganizeMeetupComponent {}

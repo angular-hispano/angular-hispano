@@ -14,6 +14,4 @@ export class SponsorsComponent {
       image: 'devintent-logo.svg'
     }
   ];
-
-  constructor() {}
 }

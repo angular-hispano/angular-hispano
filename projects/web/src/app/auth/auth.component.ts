@@ -13,7 +13,7 @@ export class AuthComponent {
 
   constructor(private router: Router) {}
 
-  onSuccess(event: any) {
+  onSuccess() {
     this.router.navigate(['/']);
   }
 
