@@ -17,6 +17,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
