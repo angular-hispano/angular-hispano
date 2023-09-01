@@ -8,110 +8,97 @@
 
 version: 2.1
 
-1: &project_path ~/app
-2: &docker_image circleci/node:14.16.1
-3: &docker_image_browsers circleci/node:14.16.1-browsers
-4: &repo_key v1-repository-{{ .Environment.CIRCLE_SHA1 }}
-5: &dep_key v1-dependencies-{{ checksum "package-lock.json" }}
-6: &save_dep_cache
-  save_cache:
-    paths:
-      - "node_modules"
-      - "$HOME/.npm"
-    key: *dep_key
-7: &save_repo_cache
-  save_cache:
-    key: *repo_key
-    paths:
-      - *project_path
+# Settings common to each job
+job_defaults: &job_defaults
+  working_directory: ~/angular-hispano
+  docker:
+    - image: cimg/node:16.17.0-browsers
+
+orbs:
+  node: circleci/node@5.0.2
+  build-tools: circleci/build-tools@3.0.0
+  browser-tools: circleci/browser-tools@1.4.4
 
 commands:
-  restore-deps:
-    description: 'Restore dependencies'
-    steps:
-      - restore_cache:
-          keys:
-            - *dep_key
-            - v1-dependencies-
-  restore-repo:
-    steps:
-      - restore_cache:
-          key: *repo_key
-          paths:
-            - *project_path
-
-executors:
-  exc-node:
-    docker:
-      - image: *docker_image
-    working_directory: *project_path
-
-  exc-node-browsers:
-    docker:
-      - image: *docker_image_browsers
-    working_directory: *project_path
-
-jobs:
-  checkout-code:
-    executor: exc-node
+  # Command for checking out the source code from GitHub. This also ensures that the source code
+  # can be merged to the master branch without conflicts.
+  checkout_and_rebase:
+    description: Checkout and verify clean merge with master
     steps:
       - checkout
-      - *save_repo_cache
-
-  install-dependencies:
-    executor: exc-node
+      - run:
+          name: Set git user.name and user.email for rebase.
+          # User is required for rebase.
+          command: |
+            git config user.name "angular-hispano-ci"
+            git config user.email "soporte@angular.lat"
+      - build-tools/merge-with-parent:
+          parent: master
+  setup:
+    description: 'Set up executor'
     steps:
-      - restore-repo
-      - restore-deps
-      - run: npm ci
-      - *save_dep_cache
+      - attach_workspace:
+          at: ~/
 
-  build-prod:
-    executor: exc-node
+jobs:
+  # ----------------------------------
+  # initialize job
+  # ----------------------------------
+  initialize:
+    <<: *job_defaults
     steps:
-      - restore-repo
-      - restore-deps
-      - run: npm run build:prod:ci
-      - *save_dep_cache
+      - checkout_and_rebase
+      - node/install-packages
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - angular-hispano
 
-  tslint:
-    executor: exc-node
+  # ----------------------------------
+  # Lint job. Runs the lint task.
+  # ----------------------------------
+  lint:
+    <<: *job_defaults
     steps:
-      - restore-repo
-      - restore-deps
+      - setup
       - run: npm run lint
-
-  stylelint:
-    executor: exc-node
-    steps:
-      - restore-repo
-      - restore-deps
       - run: npm run stylelint
 
+  # ----------------------------------
+  # Tests job.
+  # ----------------------------------
   unit-test:
-    executor: exc-node-browsers
+    <<: *job_defaults
     steps:
-      - restore-repo
-      - restore-deps
+      - browser-tools/install-chrome
+      - browser-tools/install-firefox
+      - setup
       - run: npm run test:ci
+
+  # -----------------------------------
+  # Build Prod job.
+  # -----------------------------------
+  build-prod:
+    <<: *job_defaults
+    steps:
+      - setup
+      - run: npm run build:prod:ci
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - angular-hispano/dist
 
 workflows:
   version: 2
   build_and_test:
     jobs:
-      - checkout-code
-      - install-dependencies:
+      - initialize
+      - lint:
           requires:
-            - checkout-code
-      - build-prod:
-          requires:
-            - install-dependencies
-      - tslint:
-          requires:
-            - install-dependencies
-      - stylelint:
-          requires:
-            - install-dependencies
+            - initialize
       - unit-test:
           requires:
-            - install-dependencies
+            - initialize
+      - build-prod:
+          requires:
+            - initialize
