@@ -80,7 +80,7 @@
     "lint-staged": "^11.0.0",
     "minimatch": "^3.0.8",
     "npm-check": "^6.0.1",
-    "postcss": "^8.2.15",
+    "postcss": "^8.4.31",
     "prettier": "~2.6.2",
     "protractor": "~7.0.0",
     "source-map-explorer": "^2.5.3",
