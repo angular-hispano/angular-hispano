@@ -23,7 +23,6 @@ import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
@@ -33,7 +32,6 @@ describe('AppComponent', () => {
         RouterTestingModule.withRoutes(routes),
         HttpClientModule,
         AngularFireModule.initializeApp(environment.firebase),
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,

@@ -3,8 +3,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { LandingComponent } from './landing.component';
 import { SponsorsComponent } from '../sponsors/sponsors.component';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -15,13 +13,7 @@ describe('LandingComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        RouterTestingModule,
-        HttpClientModule,
-        MatIconModule
-      ],
+      imports: [NoopAnimationsModule, RouterTestingModule, HttpClientModule, MatIconModule],
       declarations: [LandingComponent, SponsorsComponent]
     }).compileComponents();
   }));

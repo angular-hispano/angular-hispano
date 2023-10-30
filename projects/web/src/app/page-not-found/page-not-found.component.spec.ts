@@ -3,8 +3,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { PageNotFoundComponent } from './page-not-found.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,7 +17,6 @@ describe('PageNotFoundComponent', () => {
         MatIconModule,
         NoopAnimationsModule,
         HttpClientModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
         MatIconModule
       ],
       declarations: [PageNotFoundComponent]

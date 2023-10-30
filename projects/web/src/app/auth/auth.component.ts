@@ -1,23 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { AuthProvider } from 'ngx-auth-firebaseui';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent {
-  providers = AuthProvider;
-
-  constructor(private router: Router) {}
-
-  onSuccess() {
-    this.router.navigate(['/']);
-  }
-
-  onError(event: any) {
-    console.error(event);
-  }
-}
+export class AuthComponent {}

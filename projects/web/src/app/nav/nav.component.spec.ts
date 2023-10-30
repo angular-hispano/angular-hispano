@@ -14,7 +14,6 @@ import { FooterComponent } from '../footer/footer.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 describe('NavComponent', () => {
   let component: NavComponent;
@@ -29,7 +28,6 @@ describe('NavComponent', () => {
         HttpClientModule,
         LayoutModule,
         AngularFireModule.initializeApp(environment.firebase),
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
         MatButtonModule,
         MatIconModule,
         MatListModule,
