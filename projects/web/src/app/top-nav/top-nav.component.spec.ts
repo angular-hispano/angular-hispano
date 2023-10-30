@@ -8,7 +8,6 @@ import { environment } from '../../environments/environment';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 describe('TopNavComponent', () => {
   let component: TopNavComponent;
@@ -21,7 +20,6 @@ describe('TopNavComponent', () => {
         AngularFireModule.initializeApp(environment.firebase),
         RouterTestingModule,
         HttpClientModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
         MatIconModule,
         MatToolbarModule
       ],

@@ -15,7 +15,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { environment } from '../environments/environment';
 
@@ -72,8 +71,6 @@ export const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirePerformanceModule,
-    // TODO configure settings: https://github.com/anthonynahas/ngx-auth-firebaseui#configuration
-    NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,

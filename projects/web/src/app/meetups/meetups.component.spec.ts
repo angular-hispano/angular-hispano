@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MeetupsComponent } from './meetups.component';
 import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,13 +11,7 @@ describe('MeetupsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        RouterTestingModule,
-        HttpClientModule
-      ],
+      imports: [MatCardModule, NoopAnimationsModule, RouterTestingModule, HttpClientModule],
       declarations: [MeetupsComponent]
     }).compileComponents();
   }));

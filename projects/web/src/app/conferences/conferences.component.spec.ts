@@ -3,8 +3,6 @@ import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/lega
 import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 
 import { ConferencesComponent } from './conferences.component';
 
@@ -14,13 +12,7 @@ describe('ConferencesComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        MatButtonModule,
-        RouterTestingModule
-      ],
+      imports: [MatCardModule, NoopAnimationsModule, MatButtonModule, RouterTestingModule],
       declarations: [ConferencesComponent]
     }).compileComponents();
   }));

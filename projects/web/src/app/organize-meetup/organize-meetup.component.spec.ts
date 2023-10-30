@@ -4,8 +4,6 @@ import { OrganizeMeetupComponent } from './organize-meetup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatIconModule } from '@angular/material/icon';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('OrganizeMeetupComponent', () => {
@@ -14,13 +12,7 @@ describe('OrganizeMeetupComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        RouterTestingModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-        NoopAnimationsModule,
-        MatIconModule
-      ],
+      imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule],
       declarations: [OrganizeMeetupComponent]
     }).compileComponents();
   }));

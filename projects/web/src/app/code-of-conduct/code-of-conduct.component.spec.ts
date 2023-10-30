@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
-import { environment } from '../../environments/environment';
 
 describe('CodeOfConductComponent', () => {
   let component: CodeOfConductComponent;
@@ -14,13 +12,7 @@ describe('CodeOfConductComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        RouterTestingModule,
-        NoopAnimationsModule,
-        MatIconModule,
-        NgxAuthFirebaseUIModule.forRoot(environment.firebase)
-      ],
+      imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule],
       declarations: [CodeOfConductComponent]
     }).compileComponents();
   }));
