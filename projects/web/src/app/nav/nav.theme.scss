@@ -1,0 +1,43 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@mixin nav-color($config-or-theme) {
+  $config: mat.get-color-config($config-or-theme);
+
+  $primary: map.get($config, primary);
+  $foreground: map.get($config, foreground);
+
+  .mat-sidenav.sidenav {
+    .mat-toolbar {
+      background: inherit;
+    }
+
+    .mat-mdc-nav-list {
+      .mat-mdc-list-item {
+        &:hover {
+          background-color: map.get($primary, 50);
+        }
+
+        .mat-mdc-list-item-icon,
+        .mat-mdc-list-item-title {
+          color: map.get($foreground, text);
+        }
+
+        &.active {
+          .mat-mdc-list-item-icon,
+          .mat-mdc-list-item-title {
+            color: map.get($primary, 700);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin nav-theme($theme) {
+  $color: mat.get-color-config($theme);
+
+  @if $color != null {
+    @include nav-color($color);
+  }
+}

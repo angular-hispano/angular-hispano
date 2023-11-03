@@ -1,9 +1,9 @@
 <main>
-  <h1 class="mat-display-1">Próximas Conferencias</h1>
+  <h1 class="mat-headline-4">Próximas Conferencias</h1>
   <section>
     <ng-container *ngFor="let conference of conferences">
       <a [href]="conference.siteUrl" rel="noopener" target="_blank">
-        <mat-card>
+        <mat-card appearance="outlined">
           <mat-card-header>
             <mat-card-title>{{ conference.name }}</mat-card-title>
             <mat-card-subtitle>{{ conference.city }}, {{ conference.country }}</mat-card-subtitle>
@@ -49,7 +49,7 @@
       </a>
     </ng-container>
     <ng-container *ngIf="conferences.length === 0">
-      <mat-card>
+      <mat-card appearance="outlined">
         <mat-card-header>
           <mat-card-title>Próximamente</mat-card-title>
           <mat-card-subtitle>Envíanos los detalles de tu evento</mat-card-subtitle>

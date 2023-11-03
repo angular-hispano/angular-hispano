@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
 import { NavService } from '../nav.service';
@@ -7,8 +7,7 @@ import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements AfterViewInit {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
