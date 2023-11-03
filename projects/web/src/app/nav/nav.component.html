@@ -11,34 +11,34 @@
     <mat-toolbar>Menú</mat-toolbar>
     <mat-nav-list (click)="onNavigation()">
       <a mat-list-item [routerLink]="['acerca']" routerLinkActive="active">
-        <mat-icon matListIcon>group</mat-icon>
-        Conócenos
+        <mat-icon matListItemIcon>group</mat-icon>
+        <span matListItemTitle>Conócenos</span>
       </a>
       <a mat-list-item href="https://discord.gg/4cWb6SKUcb" target="_blank" rel="noopener">
-        <mat-icon matListIcon>chat</mat-icon>
+        <mat-icon matListItemIcon>chat</mat-icon>
         Chatear
       </a>
       <a mat-list-item [routerLink]="['coc']" routerLinkActive="active">
-        <mat-icon matListIcon>verified_user</mat-icon>
-        Código de Conducta
+        <mat-icon matListItemIcon>verified_user</mat-icon>
+        <span matListItemTitle>Código de Conducta</span>
       </a>
       <a mat-list-item [routerLink]="['conferencias']" routerLinkActive="active">
-        <mat-icon matListIcon>group_work</mat-icon>
-        Conferencias
+        <mat-icon matListItemIcon>group_work</mat-icon>
+        <span matListItemTitle>Conferencias</span>
       </a>
       <a mat-list-item [routerLink]="['meetups']" routerLinkActive="active">
-        <mat-icon matListIcon>list_alt</mat-icon>
-        Meetups
+        <mat-icon matListItemIcon>list_alt</mat-icon>
+        <span matListItemTitle>Meetups</span>
       </a>
       <a mat-list-item href="https://docs.angular.lat" target="_blank" rel="noopener">
-        <mat-icon matListIcon>description</mat-icon>
-        Documentación
+        <mat-icon matListItemIcon>description</mat-icon>
+        <span matListItemTitle>Documentación</span>
       </a>
       <mat-list>
         <h3 matSubheader>Guías</h3>
         <a mat-list-item [routerLink]="['organizar/meetup']" routerLinkActive="active">
-          <mat-icon matListIcon>event_available</mat-icon>
-          Organizar un Meetup
+          <mat-icon matListItemIcon>event_available</mat-icon>
+          <span matListItemTitle>Organizar un Meetup</span>
         </a>
       </mat-list>
     </mat-nav-list>

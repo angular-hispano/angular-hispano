@@ -22,20 +22,20 @@ main {
       width: 100%;
       max-width: 400px;
 
-      .mat-card {
+      .mat-mdc-card {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         margin: 8px;
         cursor: pointer;
 
-        .mat-card-title {
+        .mat-mdc-card-title {
           font-size: 18px;
         }
-        .mat-card-subtitle {
+        .mat-mdc-card-subtitle {
           font-size: 10px;
         }
-        .mat-card-image {
+        .mat-mdc-card-image {
           margin: 0 0 16px;
           width: 100%;
           height: 100%;
@@ -47,10 +47,10 @@ main {
           }
         }
 
-        .mat-card-actions {
+        .mat-mdc-card-actions {
           padding: 0;
 
-          .mat-button {
+          .mat-mdc-button {
             text-transform: uppercase;
           }
         }
@@ -74,11 +74,11 @@ main {
         width: auto;
         max-width: none;
 
-        .mat-card {
+        .mat-mdc-card {
           width: 212px;
           height: 375px;
 
-          .mat-card-image {
+          .mat-mdc-card-image {
             margin: 0 0 4px;
             max-height: 260px;
           }

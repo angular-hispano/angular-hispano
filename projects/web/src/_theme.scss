@@ -30,11 +30,21 @@ mat.$light-theme-background-palette: (
   disabled-list-option: map.get(mat.$grey-palette, 200)
 );
 
-// Create the theme object (a Sass map containing all of the palettes).
-$app-theme: mat.define-light-theme($app-primary, $app-accent, $app-warn);
+$custom-typography: mat.define-typography-config(
+  $body-2: mat.define-typography-level(16px, 24px, 400)
+);
 
-$custom-typography: mat.define-legacy-typography-config(
-  $body-1: mat.define-typography-level(16px, 24px, 400)
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-primary,
+      accent: $app-accent,
+      warn: $app-warn
+    ),
+    typography: $custom-typography,
+    density: 0
+  )
 );
 
 $light-primary-text: white;

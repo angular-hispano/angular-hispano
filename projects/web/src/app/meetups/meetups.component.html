@@ -1,9 +1,9 @@
 <main>
-  <h1 class="mat-display-1">Listado de Meetups</h1>
+  <h1 class="mat-headline-4">Listado de Meetups</h1>
   <section>
     <ng-container *ngFor="let meeting of meetings">
       <a [href]="meeting.meetupUrl" [title]="meeting.name" rel="noopener" target="_blank">
-        <mat-card>
+        <mat-card appearance="outlined">
           <mat-card-header>
             <mat-card-title>{{ meeting.name }}</mat-card-title>
             <mat-card-subtitle>{{ meeting.city }}, {{ meeting.country }}</mat-card-subtitle>
