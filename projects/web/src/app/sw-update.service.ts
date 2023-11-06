@@ -9,7 +9,10 @@ export class SwUpdateService {
   private START_CHECK_FOR_UPDATE = 5000; // milliseconds
   private CHECK_FOR_UPDATE_INTERVAL = 1000 * 60 * 60; // 60 minutes
 
-  constructor(private swUpdate: SwUpdate, snackBar: MatSnackBar) {
+  constructor(
+    private swUpdate: SwUpdate,
+    snackBar: MatSnackBar
+  ) {
     swUpdate.available
       .pipe(
         mergeMap((event: UpdateAvailableEvent) => {
