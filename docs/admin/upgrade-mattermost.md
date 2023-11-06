@@ -29,15 +29,15 @@
 
 1. Haga una copia de seguridad de `config.json`
    ```bash
-   gsutil cp /opt/bitnami/apps/mattermost/server/config/config.json gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
+   gsutil cp /opt/bitnami/apps/mattermost/server/config/config.json gs://angular-latino.appspot.com/mattermost-backups/5.39.3/config.json
    ```
 1. Crea un tarball de la pila completa de Bitnami (Mattermost, Nginx, MySQL)
    ```bash
-   sudo tar -pczvf ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz /opt/bitnami
+   sudo tar -pczvf ~/mattermost-mysql-nginx-5.39.3-backup.tar.gz /opt/bitnami
    ```
 1. Mueve el tarball a GCS
    ```bash
-   gsutil cp ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.19.3/
+   gsutil cp ~/mattermost-mysql-nginx-5.39.3-backup.tar.gz gs://angular-latino.appspot.com/mattermost-backups/5.39.3/
    ```
 
 ## Haz la actualización
@@ -67,7 +67,7 @@ sudo tar xzf mattermost-team-5.25.3-linux-amd64.tar.gz -C /opt/bitnami/apps/matt
    ```
 1. Restaurar la configuración anterior
    ```bash
-   sudo gsutil cp gs://angular-latino.appspot.com/mattermost-backups/5.19.3/config.json /opt/bitnami/apps/mattermost/server/config/config.json
+   sudo gsutil cp gs://angular-latino.appspot.com/mattermost-backups/5.39.3/config.json /opt/bitnami/apps/mattermost/server/config/config.json
    ```
 1. Ajustar permisos de archivo
    ```bash
@@ -107,7 +107,7 @@ Su configuración actual se conserva y se agregan nuevas configuraciones con val
 - Una vez que haya verificado que la copia de seguridad se copió correctamente al depósito de GCS,
   elimine la copia local del archivo
   ```bash
-  rm ~/mattermost-mysql-nginx-5.19.3-backup.tar.gz
+  rm ~/mattermost-mysql-nginx-5.39.3-backup.tar.gz
   ```
 
 ### Prueba la nueva versión
