@@ -13,7 +13,7 @@ main {
       display: flex;
       box-sizing: border-box;
       flex-flow: column wrap;
-      place-content: center;
+      place-content: start;
       padding-top: 24px;
 
       > a {
