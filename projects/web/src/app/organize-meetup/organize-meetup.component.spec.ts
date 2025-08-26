@@ -12,9 +12,8 @@ describe('OrganizeMeetupComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule],
-      declarations: [OrganizeMeetupComponent]
-    }).compileComponents();
+    imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule, OrganizeMeetupComponent]
+}).compileComponents();
   }));
 
   beforeEach(() => {

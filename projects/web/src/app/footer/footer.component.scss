@@ -6,7 +6,7 @@ footer {
   box-sizing: border-box;
   flex-flow: row wrap;
   place-content: center;
-  background: mat.get-color-from-palette(theme.$app-primary, 700);
+  background: mat.m2-get-color-from-palette(theme.$app-primary, 700);
   color: theme.$light-primary-text;
   padding: 64px 16px 48px;
 
@@ -29,7 +29,7 @@ footer {
 
       &:hover,
       &:focus {
-        color: mat.get-color-from-palette(theme.$app-primary, 50);
+        color: mat.m2-get-color-from-palette(theme.$app-primary, 50);
         text-decoration: underline;
       }
     }

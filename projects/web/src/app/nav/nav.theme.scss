@@ -2,7 +2,7 @@
 @use 'sass:map';
 
 @mixin nav-color($config-or-theme) {
-  $config: mat.get-color-config($config-or-theme);
+  $config: mat.m2-get-color-config($config-or-theme);
 
   $primary: map.get($config, primary);
   $foreground: map.get($config, foreground);
@@ -35,7 +35,7 @@
 }
 
 @mixin nav-theme($theme) {
-  $color: mat.get-color-config($theme);
+  $color: mat.m2-get-color-config($theme);
 
   @if $color != null {
     @include nav-color($color);

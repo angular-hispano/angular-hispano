@@ -2,11 +2,13 @@
 @use 'theme';
 @use 'app/nav/nav.theme.scss';
 
-@include mat.core();
+@include mat.elevation-classes();
+@include mat.app-background();
 @include mat.typography-hierarchy(theme.$custom-typography);
 
 // Include theme styles for core and each component used in your app.
-@include mat.core-theme(theme.$app-theme);
+@include mat.elevation-classes();
+@include mat.app-background();
 @include mat.toolbar-theme(theme.$app-theme);
 @include mat.icon-theme(theme.$app-theme);
 @include mat.tooltip-theme(theme.$app-theme);

@@ -12,9 +12,8 @@ describe('CodeOfConductComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule],
-      declarations: [CodeOfConductComponent]
-    }).compileComponents();
+    imports: [HttpClientModule, RouterTestingModule, NoopAnimationsModule, MatIconModule, CodeOfConductComponent]
+}).compileComponents();
   }));
 
   beforeEach(() => {

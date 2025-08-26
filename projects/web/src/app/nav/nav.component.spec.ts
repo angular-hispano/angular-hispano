@@ -21,8 +21,7 @@ describe('NavComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [NavComponent, TopNavComponent, FooterComponent],
-      imports: [
+    imports: [
         RouterTestingModule,
         NoopAnimationsModule,
         HttpClientModule,
@@ -32,9 +31,10 @@ describe('NavComponent', () => {
         MatIconModule,
         MatListModule,
         MatSidenavModule,
-        MatToolbarModule
-      ]
-    }).compileComponents();
+        MatToolbarModule,
+        NavComponent, TopNavComponent, FooterComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

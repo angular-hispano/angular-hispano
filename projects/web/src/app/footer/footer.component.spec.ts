@@ -12,9 +12,8 @@ describe('FooterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, NoopAnimationsModule, HttpClientModule, MatIconModule],
-      declarations: [FooterComponent]
-    }).compileComponents();
+    imports: [RouterTestingModule, NoopAnimationsModule, HttpClientModule, MatIconModule, FooterComponent]
+}).compileComponents();
   }));
 
   beforeEach(() => {

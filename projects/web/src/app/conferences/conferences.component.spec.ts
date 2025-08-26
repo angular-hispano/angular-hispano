@@ -12,9 +12,8 @@ describe('ConferencesComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatCardModule, NoopAnimationsModule, MatButtonModule, RouterTestingModule],
-      declarations: [ConferencesComponent]
-    }).compileComponents();
+    imports: [MatCardModule, NoopAnimationsModule, MatButtonModule, RouterTestingModule, ConferencesComponent]
+}).compileComponents();
   }));
 
   beforeEach(() => {

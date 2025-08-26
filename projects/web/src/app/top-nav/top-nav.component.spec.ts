@@ -5,9 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TopNavComponent } from './top-nav.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../environments/environment';
-import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 
 describe('TopNavComponent', () => {
   let component: TopNavComponent;
@@ -18,12 +19,11 @@ describe('TopNavComponent', () => {
       imports: [
         NoopAnimationsModule,
         AngularFireModule.initializeApp(environment.firebase),
-        RouterTestingModule,
-        HttpClientModule,
         MatIconModule,
-        MatToolbarModule
+        MatToolbarModule,
+        TopNavComponent
       ],
-      declarations: [TopNavComponent]
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])]
     }).compileComponents();
   }));
 

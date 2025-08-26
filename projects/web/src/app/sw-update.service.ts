@@ -1,28 +1,31 @@
 import { Injectable } from '@angular/core';
-import { SwUpdate, UpdateAvailableEvent } from '@angular/service-worker';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { timer } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
+import { filter, mergeMap } from 'rxjs/operators';
+import { inject } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class SwUpdateService {
+  private swUpdate = inject(SwUpdate);
+  private snackBar = inject(MatSnackBar);
   private START_CHECK_FOR_UPDATE = 5000; // milliseconds
   private CHECK_FOR_UPDATE_INTERVAL = 1000 * 60 * 60; // 60 minutes
 
-  constructor(
-    private swUpdate: SwUpdate,
-    snackBar: MatSnackBar
-  ) {
-    swUpdate.available
+  constructor() {
+    this.swUpdate.versionUpdates
       .pipe(
-        mergeMap((event: UpdateAvailableEvent) => {
-          console.log('La versión actual de la aplicación es: ', event.current);
-          console.log('La versión de la aplicación disponible es: ', event.available);
-          return snackBar.open('Hay una versión nueva disponible', 'ACTUALIZAR', {}).onAction();
+        filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+        mergeMap((event: VersionReadyEvent) => {
+          console.log('La versión actual de la aplicación es: ', event.currentVersion);
+          console.log('La versión de la aplicación disponible es: ', event.latestVersion);
+          return this.snackBar
+            .open('Hay una versión nueva disponible', 'ACTUALIZAR', {})
+            .onAction();
         })
       )
       .subscribe(() => {
-        swUpdate.activateUpdate().then(() => document.location.reload());
+        this.swUpdate.activateUpdate().then(() => document.location.reload());
       });
   }
 
