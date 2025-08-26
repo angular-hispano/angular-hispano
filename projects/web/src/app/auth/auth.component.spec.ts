@@ -13,14 +13,14 @@ describe('AuthComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
+    imports: [
         NoopAnimationsModule,
         AngularFireModule.initializeApp(environment.firebase),
         RouterTestingModule,
-        MatDividerModule
-      ],
-      declarations: [AuthComponent]
-    }).compileComponents();
+        MatDividerModule,
+        AuthComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

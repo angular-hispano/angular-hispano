@@ -1,7 +1,7 @@
 <main>
   <h1 class="mat-headline-4">Próximas Conferencias</h1>
   <section>
-    <ng-container *ngFor="let conference of conferences">
+    @for (conference of conferences; track conference) {
       <a [href]="conference.siteUrl" rel="noopener" target="_blank">
         <mat-card appearance="outlined">
           <mat-card-header>
@@ -14,51 +14,54 @@
             [src]="conference.logoUrl"
             [alt]="conference.name + ' logo'"
             [ngClass]="conference.logoType"
-          />
+            />
           <mat-card-actions align="end">
-            <a
-              mat-button
-              [href]="conference.siteUrl"
-              *ngIf="conference.siteUrl"
-              color="accent"
-              rel="noopener"
-              target="_blank"
-              >Sitio</a
-            >
-            <a
-              mat-button
-              [href]="conference.ticketsUrl"
-              *ngIf="conference.ticketsUrl"
-              color="accent"
-              rel="noopener"
-              target="_blank"
-              >Entradas</a
-            >
-            <a
-              mat-button
-              [href]="conference.cfpUrl"
-              *ngIf="conference.cfpUrl"
-              color="accent"
-              matTooltip="Convocatoria Para Presentadores"
-              rel="noopener"
-              target="_blank"
-              >CFP</a
-            >
-          </mat-card-actions>
-        </mat-card>
-      </a>
-    </ng-container>
-    <ng-container *ngIf="conferences.length === 0">
-      <mat-card appearance="outlined">
-        <mat-card-header>
-          <mat-card-title>Próximamente</mat-card-title>
-          <mat-card-subtitle>Envíanos los detalles de tu evento</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content style="min-height: 100px"></mat-card-content>
-        <mat-card-actions align="end">
-          <a mat-stroked-button href="mailto:soporte@angular.lat" color="primary">Enviar</a>
-        </mat-card-actions>
-      </mat-card>
-    </ng-container>
-  </section>
-</main>
+            @if (conference.siteUrl) {
+              <a
+                mat-button
+                [href]="conference.siteUrl"
+                color="accent"
+                rel="noopener"
+                target="_blank"
+                >Sitio</a
+                >
+              }
+              @if (conference.ticketsUrl) {
+                <a
+                  mat-button
+                  [href]="conference.ticketsUrl"
+                  color="accent"
+                  rel="noopener"
+                  target="_blank"
+                  >Entradas</a
+                  >
+                }
+                @if (conference.cfpUrl) {
+                  <a
+                    mat-button
+                    [href]="conference.cfpUrl"
+                    color="accent"
+                    matTooltip="Convocatoria Para Presentadores"
+                    rel="noopener"
+                    target="_blank"
+                    >CFP</a
+                    >
+                  }
+                </mat-card-actions>
+              </mat-card>
+            </a>
+          }
+          @if (conferences.length === 0) {
+            <mat-card appearance="outlined">
+              <mat-card-header>
+                <mat-card-title>Próximamente</mat-card-title>
+                <mat-card-subtitle>Envíanos los detalles de tu evento</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content style="min-height: 100px"></mat-card-content>
+              <mat-card-actions align="end">
+                <a mat-stroked-button href="mailto:soporte@angular.lat" color="primary">Enviar</a>
+              </mat-card-actions>
+            </mat-card>
+          }
+        </section>
+      </main>

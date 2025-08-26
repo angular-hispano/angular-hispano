@@ -1,11 +1,12 @@
 <h2>Patrocinadores</h2>
 <section>
-  <a
-    *ngFor="let sponsor of sponsors"
-    [href]="sponsor.url"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img width="150px" [alt]="sponsor.alt" [src]="'assets/' + sponsor.image" />
-  </a>
+  @for (sponsor of sponsors; track sponsor) {
+    <a
+      [href]="sponsor.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      >
+      <img width="150px" [alt]="sponsor.alt" [src]="'assets/' + sponsor.image" />
+    </a>
+  }
 </section>

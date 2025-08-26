@@ -1,18 +1,57 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatDrawer } from '@angular/material/sidenav';
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
+import {
+  MatDrawer,
+  MatSidenavContainer,
+  MatSidenav,
+  MatSidenavContent
+} from '@angular/material/sidenav';
 
 import { NavService } from '../nav.service';
 import { take } from 'rxjs/operators';
+import { MatToolbar } from '@angular/material/toolbar';
+import {
+  MatNavList,
+  MatListItem,
+  MatListItemIcon,
+  MatListItemTitle,
+  MatList,
+  MatListSubheaderCssMatStyler
+} from '@angular/material/list';
+import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
+import { TopNavComponent } from '../top-nav/top-nav.component';
+import { FooterComponent } from '../footer/footer.component';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
+  imports: [
+    MatSidenavContainer,
+    MatSidenav,
+    MatToolbar,
+    MatNavList,
+    MatListItem,
+    RouterLinkActive,
+    RouterLink,
+    MatIcon,
+    MatListItemIcon,
+    MatListItemTitle,
+    MatList,
+    MatListSubheaderCssMatStyler,
+    MatSidenavContent,
+    TopNavComponent,
+    RouterOutlet,
+    FooterComponent,
+    AsyncPipe
+  ]
 })
 export class NavComponent implements AfterViewInit {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
+  public readonly navService = inject(NavService);
 
-  constructor(public navService: NavService) {}
+  constructor() {}
 
   ngAfterViewInit(): void {
     if (this.drawer) {

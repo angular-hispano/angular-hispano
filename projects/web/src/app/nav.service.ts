@@ -1,5 +1,5 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { MatDrawer, MatDrawerToggleResult } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -7,6 +7,7 @@ import { FocusOrigin } from '@angular/cdk/a11y';
 
 @Injectable({ providedIn: 'root' })
 export class NavService {
+  private readonly breakpointObserver = inject(BreakpointObserver);
   private _drawer: MatDrawer | undefined;
   public get drawer(): MatDrawer | undefined {
     return this._drawer;
@@ -16,8 +17,6 @@ export class NavService {
     map(result => result.matches),
     shareReplay(1)
   );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
 
   public setDrawer(value: MatDrawer) {
     this._drawer = value;

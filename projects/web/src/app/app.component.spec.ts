@@ -1,13 +1,12 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
-import { routes } from './app.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
@@ -22,15 +21,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        NoopAnimationsModule,
-        RouterTestingModule.withRoutes(routes),
-        HttpClientModule,
         AngularFireModule.initializeApp(environment.firebase),
         MatSidenavModule,
         MatToolbarModule,
@@ -38,10 +34,7 @@ describe('AppComponent', () => {
         MatListModule,
         MatCardModule,
         MatSnackBarModule,
-        ServiceWorkerModule.register('', { enabled: false })
-      ],
-      declarations: [
-        AppComponent,
+        ServiceWorkerModule.register('', { enabled: false }),
         NavComponent,
         TopNavComponent,
         FooterComponent,
@@ -50,8 +43,10 @@ describe('AppComponent', () => {
         OrganizeMeetupComponent,
         ConferencesComponent,
         PageNotFoundComponent,
-        SponsorsComponent
-      ]
+        SponsorsComponent,
+        AppComponent
+      ],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])]
     }).compileComponents();
   }));
 
