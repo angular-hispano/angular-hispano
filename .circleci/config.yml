@@ -12,12 +12,11 @@ version: 2.1
 job_defaults: &job_defaults
   working_directory: ~/angular-hispano
   docker:
-    - image: cimg/node:16.17.0-browsers
+    - image: cimg/node:lts-browsers
 
 orbs:
-  node: circleci/node@5.0.2
-  build-tools: circleci/build-tools@3.0.0
-  browser-tools: circleci/browser-tools@1.4.4
+  node: circleci/node@7.1.1
+  browser-tools: circleci/browser-tools@2.3.1
 
 commands:
   # Command for checking out the source code from GitHub. This also ensures that the source code
@@ -32,8 +31,10 @@ commands:
           command: |
             git config user.name "angular-hispano-ci"
             git config user.email "soporte@angular.lat"
-      - build-tools/merge-with-parent:
-          parent: master
+      - run:
+          name: Rebase with master branch
+          command: |
+            git rebase origin/master
   setup:
     description: 'Set up executor'
     steps:
@@ -70,8 +71,8 @@ jobs:
   unit-test:
     <<: *job_defaults
     steps:
-      - browser-tools/install-chrome
-      - browser-tools/install-firefox
+      - browser-tools/install_chrome
+      - browser-tools/install_firefox
       - setup
       - run: npm run test:ci
 
@@ -82,7 +83,7 @@ jobs:
     <<: *job_defaults
     steps:
       - setup
-      - run: npm run build:prod:ci
+      - run: npm run build:prod
       - persist_to_workspace:
           root: ~/
           paths:
