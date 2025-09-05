@@ -33,13 +33,15 @@ import { MatButtonModule } from '@angular/material/button';
 export class ConferencesComponent {
   conferences: Conference[] = [
     {
-      country: "Perú",
-      city: "Lima",
-      name: "NgConf Perú 2025",
-      logoUrl: "https://ngconf.angular-peru.com/angular-logo.png",
-      logoType: "png",
-      dateString: "2025-09-06", siteUrl: "https://ngconf.angular-peru.com/",
-      ticketsUrl: "https://ngconf.angular-peru.com/", cfpUrl: "https://sessionize.com/ng-conf-peru-2025/"
+      country: 'Perú',
+      city: 'Lima',
+      name: 'NgConf Perú 2025',
+      logoUrl: 'https://ngconf.angular-peru.com/angular-logo.png',
+      logoType: 'png',
+      dateString: '2025-09-06',
+      siteUrl: 'https://ngconf.angular-peru.com/',
+      ticketsUrl: 'https://ngconf.angular-peru.com/',
+      cfpUrl: 'https://sessionize.com/ng-conf-peru-2025/'
     }
   ];
 }

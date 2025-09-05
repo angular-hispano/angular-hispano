@@ -1,14 +1,30 @@
 import { Component } from '@angular/core';
 import { Meetup } from './meetup';
-import { MatCard, MatCardHeader, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardActions } from '@angular/material/card';
+import {
+  MatCard,
+  MatCardHeader,
+  MatCardTitle,
+  MatCardSubtitle,
+  MatCardImage,
+  MatCardActions
+} from '@angular/material/card';
 import { NgClass } from '@angular/common';
 import { MatButton } from '@angular/material/button';
 
 @Component({
-    selector: 'app-meetups',
-    templateUrl: './meetups.component.html',
-    styleUrls: ['./meetups.component.scss'],
-    imports: [MatCard, MatCardHeader, MatCardTitle, MatCardSubtitle, MatCardImage, NgClass, MatCardActions, MatButton]
+  selector: 'app-meetups',
+  templateUrl: './meetups.component.html',
+  styleUrls: ['./meetups.component.scss'],
+  imports: [
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardSubtitle,
+    MatCardImage,
+    NgClass,
+    MatCardActions,
+    MatButton
+  ]
 })
 export class MeetupsComponent {
   meetings: Meetup[] = [

@@ -12,15 +12,15 @@ describe('PageNotFoundComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [
+      imports: [
         RouterTestingModule,
         MatIconModule,
         NoopAnimationsModule,
         HttpClientModule,
         MatIconModule,
         PageNotFoundComponent
-    ]
-}).compileComponents();
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

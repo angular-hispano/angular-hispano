@@ -11,8 +11,14 @@ describe('MeetupsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [MatCardModule, NoopAnimationsModule, RouterTestingModule, HttpClientModule, MeetupsComponent]
-}).compileComponents();
+      imports: [
+        MatCardModule,
+        NoopAnimationsModule,
+        RouterTestingModule,
+        HttpClientModule,
+        MeetupsComponent
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

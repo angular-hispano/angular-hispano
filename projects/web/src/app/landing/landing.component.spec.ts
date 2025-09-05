@@ -13,8 +13,15 @@ describe('LandingComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [NoopAnimationsModule, RouterTestingModule, HttpClientModule, MatIconModule, LandingComponent, SponsorsComponent]
-}).compileComponents();
+      imports: [
+        NoopAnimationsModule,
+        RouterTestingModule,
+        HttpClientModule,
+        MatIconModule,
+        LandingComponent,
+        SponsorsComponent
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
