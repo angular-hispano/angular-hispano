@@ -40,8 +40,8 @@ export class ConferencesComponent {
       logoType: 'png',
       dateString: '2025-09-06',
       siteUrl: 'https://ngconf.angular-peru.com/',
-      ticketsUrl: 'https://ngconf.angular-peru.com/',
-      cfpUrl: 'https://sessionize.com/ng-conf-peru-2025/'
+      ticketsUrl: null,
+      cfpUrl: null
     }
   ];
 }
