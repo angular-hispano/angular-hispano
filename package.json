@@ -27,7 +27,7 @@
     "@angular/cdk": "^20.2.1",
     "@angular/common": "^20.2.2",
     "@angular/compiler": "^20.2.2",
-    "@angular/core": "^20.2.2",
+    "@angular/core": "^20.3.16",
     "@angular/fire": "^20.0.1",
     "@angular/forms": "^20.2.2",
     "@angular/material": "^20.2.1",
