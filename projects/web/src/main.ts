@@ -10,9 +10,6 @@ import {
   provideRouter,
   PreloadAllModules
 } from '@angular/router';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { AngularFirePerformanceModule } from '@angular/fire/compat/performance';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +20,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { provideFirebaseApp } from './app/firebase/firebase-app.provider';
+import { provideFirebaseAnalytics } from './app/firebase/firebase-analytics.provider';
+import { provideFirebasePerformance } from './app/firebase/firebase-performance.provider';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
 
@@ -33,12 +33,12 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
   providers: [
     provideZonelessChangeDetection(),
+    provideFirebaseApp(),
+    provideFirebaseAnalytics(),
+    provideFirebasePerformance(),
     importProvidersFrom(
       BrowserModule,
       CommonModule,
-      AngularFireModule.initializeApp(environment.firebase),
-      AngularFireAnalyticsModule,
-      AngularFirePerformanceModule,
       LayoutModule,
       MatToolbarModule,
       MatButtonModule,
@@ -50,9 +50,6 @@ bootstrapApplication(AppComponent, {
       MatTooltipModule,
       ServiceWorkerModule.register('ngsw-worker.js', {
         enabled: environment.production,
-        // Workaround, debido a que hay un bug con el modulo de AngularFirePerformanceModule
-        // el service worker se va registrar apenas inicie el app
-        // Referencia: https://github.com/angular/angularfire2/issues/2110
         registrationStrategy: 'registerWithDelay:5000'
       })
     ),
