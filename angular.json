@@ -29,11 +29,6 @@
               "projects/web/src/assets",
               "projects/web/src/robots.txt",
               "projects/web/src/sitemap.xml",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ngx-auth-firebaseui/assets/",
-                "output": "./assets/"
-              },
               "projects/web/src/manifest.webmanifest"
             ],
             "styles": ["projects/web/src/styles.scss"],
@@ -129,11 +124,6 @@
               "projects/web/src/assets",
               "projects/web/src/robots.txt",
               "projects/web/src/sitemap.xml",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ngx-auth-firebaseui/assets/",
-                "output": "./assets/"
-              },
               "projects/web/src/manifest.webmanifest"
             ]
           }
@@ -143,10 +133,6 @@
           "options": {
             "lintFilePatterns": ["projects/web/**/*.ts", "projects/web/**/*.html"]
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {}
         }
       }
     }
