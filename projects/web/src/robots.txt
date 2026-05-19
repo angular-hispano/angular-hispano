@@ -1,2 +1,17 @@
+# Block OpenAI
+User-agent: GPTBot
+Disallow: /
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Block Microsoft/Bing AI
+User-agent: bingbot
+Disallow: /
+
+# Block Common Crawl
+User-agent: CCBot
+Disallow: /
+
+# Allow all other normal search engines (like Google)
 User-agent: *
 Disallow:
