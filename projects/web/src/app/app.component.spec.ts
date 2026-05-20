@@ -1,4 +1,4 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,15 +19,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from '../environments/environment';
 import { provideRouter } from '@angular/router';
 
 describe('AppComponent', () => {
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [
-        AngularFireModule.initializeApp(environment.firebase),
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,
@@ -48,7 +45,7 @@ describe('AppComponent', () => {
       ],
       providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])]
     }).compileComponents();
-  }));
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
