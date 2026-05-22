@@ -13,7 +13,6 @@
     "importHelpers": true,
     "target": "ES2022",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["ES2022", "dom"],
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
