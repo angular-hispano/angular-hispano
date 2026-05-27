@@ -63,7 +63,7 @@
     "@typescript-eslint/types": "^8.59.4",
     "@typescript-eslint/utils": "^8.59.4",
     "eslint": "^8.57.0",
-    "firebase-tools": "^14.27.0",
+    "firebase-tools": "^15.18.0",
     "husky": "^9.1.7",
     "jasmine-core": "^6.2.0",
     "jasmine-spec-reporter": "^7.0.0",
